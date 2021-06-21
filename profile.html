@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBG | Profile</title>
+    <link rel="icon" href="src/images/logo.png">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+    <!-- import fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- import google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">OBG</a>
+            </div>
+            <form class="navbar-form navbar-left">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search" style="width: 500px;">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notification
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Empty</a></li>
+                    </ul>
+                </li>
+                <li><a href="charity.html">Charity</a></li>
+                <li><a href="signin-signup.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <div class="container" style="max-width: 1100px; margin: 0 auto;">
+        <div class="row" style=" margin-top: 50px;">
+            <div class="col-md-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="src/images/profile/avatar.jpg" style="height: 185px; overflow: hidden;" alt=""/>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5 style="font-size: 2rem;">
+                                        Some Name
+                                    </h5>
+                                    <h6 class="d-block"><a href="javascript:void(0)">15</a> Product Uploads</h6>
+                                    <h6 class="d-block"><a href="javascript:void(0)">30</a> Bought</h6>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="button" class="btn btn-primary d-none" id="btnDiscard"
+                                        value="Edit your profile" data-toggle="modal" data-target="#myModal" /> 
+                    </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#about">About</a></li>
+                                    <li><a data-toggle="tab" href="#timeline">Timeline</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="tab-content">
+                                    <div id="about" class="tab-pane fade in active">
+                                        <h4>Name:</h4>
+                                        <p>Some Name</p>
+                                        <h4>Phone number:</h4>
+                                        <p>123 456 789</p>
+                                        <h4>Address:</h4>
+                                        <p>Quang Binh</p>
+                                        <h4>Email:</h4>
+                                        <p>someone@gmail.com</p>
+                                    </div>
+                                    <div id="timeline" class="tab-pane fade">
+                                        <h3>On deal</h3>
+                                        <div class="row">
+                                            
+                                            <div class="col-md-3">
+                                                <div class="card" style="width: 200px; height: 400px;">
+                                                    <img src="src/images/fashion/fashion1-1.jpg" style="width: 100%;" alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Trousers</h5>
+                                                        <p class="card-text">Country Collection Foxham wool mix check trousers Size 14, 29.5"
+                                                            inside leg VGC.</p>
+                                                        <a href="#" class="btn btn-primary">View more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card" style="width: 200px; height: 400px;">
+                                                    <img src="src/images/fashion/fashion1-1.jpg" style="width: 100%;" alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Trousers</h5>
+                                                        <p class="card-text">Country Collection Foxham wool mix check trousers Size 14, 29.5"
+                                                            inside leg VGC.</p>
+                                                        <a href="#" class="btn btn-primary">View more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card" style="width: 200px; height: 400px;">
+                                                    <img src="src/images/fashion/fashion1-1.jpg" style="width: 100%;" alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Trousers</h5>
+                                                        <p class="card-text">Country Collection Foxham wool mix check trousers Size 14, 29.5"
+                                                            inside leg VGC.</p>
+                                                        <a href="#" class="btn btn-primary">View more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card" style="width: 200px; height: 400px;">
+                                                    <img src="src/images/fashion/fashion1-1.jpg" style="width: 100%;" alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Trousers</h5>
+                                                        <p class="card-text">Country Collection Foxham wool mix check trousers Size 14, 29.5"
+                                                            inside leg VGC.</p>
+                                                        <a href="#" class="btn btn-primary">View more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <h3>Bought</h3>
+                                        <div class="row">
+                                            
+                                            <div class="col-md-3">
+                                                <div class="card" style="width: 200px; height: 400px;">
+                                                    <img src="src/images/fashion/fashion1-1.jpg" style="width: 100%;" alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Trousers</h5>
+                                                        <p class="card-text">Country Collection Foxham wool mix check trousers Size 14, 29.5"
+                                                            inside leg VGC.</p>
+                                                        <a href="#" class="btn btn-primary">View more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card" style="width: 200px; height: 400px;">
+                                                    <img src="src/images/fashion/fashion1-1.jpg" style="width: 100%;" alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Trousers</h5>
+                                                        <p class="card-text">Country Collection Foxham wool mix check trousers Size 14, 29.5"
+                                                            inside leg VGC.</p>
+                                                        <a href="#" class="btn btn-primary">View more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card" style="width: 200px; height: 400px;">
+                                                    <img src="src/images/fashion/fashion1-1.jpg" style="width: 100%;" alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Trousers</h5>
+                                                        <p class="card-text">Country Collection Foxham wool mix check trousers Size 14, 29.5"
+                                                            inside leg VGC.</p>
+                                                        <a href="#" class="btn btn-primary">View more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="card" style="width: 200px; height: 400px;">
+                                                    <img src="src/images/fashion/fashion1-1.jpg" style="width: 100%;" alt="">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Trousers</h5>
+                                                        <p class="card-text">Country Collection Foxham wool mix check trousers Size 14, 29.5"
+                                                            inside leg VGC.</p>
+                                                        <a href="#" class="btn btn-primary">View more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content"  >
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Edit profile</h4>
+                                </div>
+                                <div class="modal-body" >
+                                    <form class="form-horizontal" >
+                                        <div class="row-name " style="display: flex; justify-content: space-between;
+                                        align-items: center; margin: 0 70px;">
+                                            <div class="control-group ">
+                                                <label class="control-label" for="inputFirst">First Name</label>
+                                                <div class="controls">
+                                                    <input id="inputFirst" placeholder=
+                                                    "E.g. Ashwin" type="text" style="padding: 5px 12px;" max-width="150px">
+                                                </div>
+                                            </div>
+                
+                                            <div class="control-group ">
+                                                <label class="control-label" for="inputLast">Last
+                                                 Name</label>
+                                            
+                                                <div class="controls">
+                                                    <input id="inputLast" placeholder="E.g. Hegde"
+                                                    type="text" style="padding: 5px 12px;" max-width="150px">
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                        <div class="control-group" style="margin-left: 70px;">
+                                            <label class="control-label" for=
+                                            "inputAddress">Address</label>
+                
+                                            <div class="controls" width="500px">
+                                                <input id="inputAddress" placeholder=
+                                                "Some where" type="text" style="padding: 5px 12px; min-width: 427px;" >
+                                            </div>
+                                        </div>
+                
+                                        
+                
+                                        <div class="control-group" style="margin-left: 70px;">
+                                            <label class="control-label" for=
+                                            "inputEmail">Email</label>
+                
+                                            <div class="controls">
+                                                <input id="inputEmail" placeholder=
+                                                "E.g. ashwinh@cybage.com" type="text" style="padding: 5px 12px; min-width: 427px;">
+                                            </div>
+                                        </div>
+                
+                                        <div class="control-group" style="margin-left: 70px;">
+                                            <label class="control-label" for=
+                                            "inputUser">Username</label>
+                
+                                            <div class="controls">
+                                                <input id="inputUser" placeholder=
+                                                "E.g. ashwinhegde" type="text" style="padding: 5px 12px; min-width: 427px;">
+                                            </div>
+                                        </div>
+                
+                                        <div class="control-group" style="margin-left: 70px;">
+                                            <label class="control-label" for=
+                                            "inputPassword">Phone Number</label>
+                
+                                            <div class="controls">
+                                                <input id="inputPassword" placeholder=
+                                                "0123 456 789" type="text" style="padding: 5px 12px; min-width: 427px;">
+                                            </div>
+                                        </div>
+                
+                                        <div class="control-group" style="margin-left: 70px;">
+                                            <div class="controls">
+                                                <label class="checkbox" style="margin-left: 20px;"><input type="checkbox">
+                                                I agree all your <a href="#">Terms of
+                                                Services</a></label> <button class=
+                                                "btn btn-success" type="submit">Save Profile</button> <button class="btn" type=
+                                                "button">Help</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        window.onload = function () {
+
+            var options = {
+                animationEnabled: true,
+                title: {
+                    text: "Monthly Sales - 2017"
+                },
+                axisX: {
+                    valueFormatString: "MMM"
+                },
+                axisY: {
+                    title: "Sales (in USD)",
+                    prefix: "$"
+                },
+                data: [{
+                    yValueFormatString: "$#,###",
+                    xValueFormatString: "MMMM",
+                    type: "spline",
+                    dataPoints: [
+                        { x: new Date(2017, 0), y: 25060 },
+                        { x: new Date(2017, 1), y: 27980 },
+                        { x: new Date(2017, 2), y: 33800 },
+                        { x: new Date(2017, 3), y: 49400 },
+                        { x: new Date(2017, 4), y: 40260 },
+                        { x: new Date(2017, 5), y: 33900 },
+                        { x: new Date(2017, 6), y: 48000 },
+                        { x: new Date(2017, 7), y: 31500 },
+                        { x: new Date(2017, 8), y: 32300 },
+                        { x: new Date(2017, 9), y: 42000 },
+                        { x: new Date(2017, 10), y: 52160 },
+                        { x: new Date(2017, 11), y: 49400 }
+                    ]
+                }]
+            };
+            $("#chartContainer").CanvasJSChart(options);
+
+        }
+
+
+       
+    </script>
+</body>
+
+</html>

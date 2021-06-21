@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBG | Charity</title>
+    <link rel="icon" href="src/images/logo.png">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- import fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- import google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="charity.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">OBG</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notification
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Empty</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Charity</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="home">
+        <div class="free-collection">
+            <div class="detail">
+                <h1 class="slogan">Free collection service</h1>
+                <p class="script">We offer a free collection service for your furniture, electricals, homewares and more
+                </p>
+                <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Book a free
+                    collection</button>
+
+            </div>
+            <img src="src/images/charity/free_collection.png" alt="photo">
+        </div>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Free collection</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Full name</label>
+                                    <input type="text" class="form-control" id="inputName" placeholder="Full name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPhone">Phone number</label>
+                                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone number">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputAddress">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress"
+                                        placeholder="1234 Main St">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-check col-md-12">
+                                    <label>
+                                        Thanks for your giving. We will contact to you soon
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="submit" class="btn btn-primary col-md-12">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="transfer" style="background-image: url(src/images/charity/background.jpg);">
+            <div class="detail">
+                <h1 class="slogan">Transfer money</h1>
+                <p class="script">Simple - Easy - Quick</p>
+            </div>
+            <div class="card">
+                <form>
+                    <h1 class="card__title">Payment Information</h1>
+                    <div class="card__row">
+                        <div class="card__col">
+                            <label for="cardNumber" class="card__label">Card Number</label>
+                            <span>123456789</span>
+                        </div>
+                        <div class="card__col card__chip">
+                            <img src="src/images/charity/chip.svg" alt="chip" />
+                        </div>
+                    </div>
+                    <div class="card__row">
+                        <div class="card__col">
+                            <label for="cardExpiry" class="card__label">Bank Name</label>
+                            <span>Vietnam Bank for Agriculture and <br>Rural Development</span>
+                        </div>
+                        <div class="card__col">
+                            <label for="cardCcv" class="card__label">Account Name</label>
+                            <span>For Love</span>
+                        </div>
+                        <div class="card__col card__brand"><i id="cardBrand"></i></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="scroll">
+        <div class="main-content">
+            <div class="left box">
+                <h2>About us</h2>
+                <div class="content">
+                    <p>OBG is a marketplace where people can purchase, sell, swap, and donate unwanted products. All
+                        you have to do is provide us with some details and photos about the item you no longer need,
+                        and we'll take care of the rest. Our goal is to encourage people to live a more frugal
+                        lifestyle and to minimize waste as much as possible.</p>
+                    <div class="social">
+                        <a href="#"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#"><span class="fab fa-twitter"></span></a>
+                        <a href="#"><span class="fab fa-instagram"></span></a>
+                        <a href="#"><span class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Ngu Hanh Son, Da Nang</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-mobile-alt"></span>
+                        <span class="text">0906066078</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">abc@example.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right box">
+                <h2>Feedback</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message *</div>
+                            <textarea rows="2" cols="25" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <center>
+                <span class="credit">Created By VKU | </span>
+                <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
+            </center>
+        </div>
+    </footer>
+</body>
+
+</html>
