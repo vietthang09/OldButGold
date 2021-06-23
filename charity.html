@@ -24,10 +24,16 @@
 
 <body>
     <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">OBG</a>
+        <div class="container-fluid ">
+            <div class="header">
+                <div class="navbar-header icon-menu">
+                    <i class="fas fa-bars navbar-brand" style="font-size: 25px; "></i>
+                </div>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">OBG</a>
+                </div>
             </div>
+
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notification
@@ -45,7 +51,8 @@
     </nav>
     <div class="home">
         <div class="free-collection">
-            <div class="detail">
+
+            <div class="detail col-2">
                 <h1 class="slogan">Free collection service</h1>
                 <p class="script">We offer a free collection service for your furniture, electricals, homewares and more
                 </p>
@@ -53,7 +60,10 @@
                     collection</button>
 
             </div>
-            <img src="src/images/charity/free_collection.png" alt="photo">
+            <div class="col-2">
+                <img src="src/images/charity/free_collection.png" alt="photo">
+            </div>
+
         </div>
         <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog">
@@ -102,11 +112,11 @@
             </div>
         </div>
         <div class="transfer" style="background-image: url(src/images/charity/background.jpg);">
-            <div class="detail">
+            <div class="detail col-3">
                 <h1 class="slogan">Transfer money</h1>
                 <p class="script">Simple - Easy - Quick</p>
             </div>
-            <div class="card">
+            <div class="card col-3">
                 <form>
                     <h1 class="card__title">Payment Information</h1>
                     <div class="card__row">
@@ -197,6 +207,19 @@
             </center>
         </div>
     </footer>
+    <script>
+        var menu = document.getElementsByClassName("icon-menu");
+        var popup= document.getElementsByClassName("navbar-right");
+        menu.onclick = function(){
+            if(popup.style.display == "none"){
+                popup.style.display ="inline-block";
+            }
+            else{
+                popup.style.display = "none"
+            }
+
+        }
+    </script>
 </body>
 
 </html>
