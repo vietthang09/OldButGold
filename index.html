@@ -52,7 +52,16 @@
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
-                            Empty :(
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -68,7 +77,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="btn me-5">
+                    <a href="cart.html" class="btn me-5">
                         <i class="fas fa-shopping-cart" data-bs-toggle="tooltip" data-bs-placement="bottom"
                             title="Cart"></i>
                     </a>
@@ -98,21 +107,61 @@
     <div class="modal" id="Modal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title text-white" id="exampleModalLabel">Post</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="project-add-details" role="tabpanel">
+                            <h6>Description</h6>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingTitle"
+                                    placeholder="name@example.com">
+                                <label for="floatingTitle">Title</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control" id="floatingDescription"
+                                    placeholder="Leave a description here"></textarea>
+                                <label for="floatingDescription">Description</label>
+                            </div>
+                            <hr>
+                            <h6>Category</h6>
+                            <input class="form-control" list="datalistOptions" id="DataList"
+                                placeholder="Type to search...">
+                            <datalist id="datalistOptions">
+                                <option value="Fashion">
+                                <option value="Electronic">
+                                <option value="Children">
+                                <option value="Household">
+                                <option value="Vehicle">
+                                <option value="Other">
+                            </datalist>
+                            <hr>
+                            <h6>Optimization</h6>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="switchExchange">
+                                <label class="form-check-label" for="switchExchange">Exchange</label>
+                            </div>
+
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="switchSale">
+                                <label class="form-check-label" for="switchSale">Sale</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingPrice"
+                                    placeholder="name@example.com">
+                                <label for="floatingPrice">Price</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- End Navbar for desktop-->
 
     <!-- Navbar for mobile -->
@@ -131,7 +180,14 @@
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        Empty :(
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
                     </div>
                 </div>
             </li>
@@ -159,14 +215,16 @@
     </nav>
 
     <!-- End Navbar for mobile -->
-    <div id="Toast-add-to-cart" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; bottom: 100px; right: 20px; z-index: 99;">
+    <div id="Toast-add-to-cart" class="toast align-items-center text-white bg-success border-0" role="alert"
+        aria-live="assertive" aria-atomic="true" style="position: fixed; bottom: 100px; right: 20px; z-index: 99;">
         <div class="d-flex">
-          <div class="toast-body">
-            Successfully added to cart
-          </div>
-          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            <div class="toast-body">
+                Successfully added to cart
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
         </div>
-      </div>
+    </div>
     <script>
         var option =
         {
@@ -275,7 +333,8 @@
                                     width="100%" height="225" class="rounded-3 img-hover">
                             </a>
                             <div class="card-body rounded-3">
-                                <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Quebec</p>
+                                <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Quebec
+                                </p>
                                 <h5 class="card-title hover-color-red fs-base">Trousers</h5>
                             </div>
                             <div class="card-footer bg-white">
@@ -291,7 +350,7 @@
                                         <button class="btn" onclick="Toasty( )">
                                             <i class="fas fa-cart-plus"></i>
                                         </button>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -309,7 +368,8 @@
                                     width="100%" height="225" class="rounded-3 img-hover">
                             </a>
                             <div class="card-body rounded-3">
-                                <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Quebec</p>
+                                <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Quebec
+                                </p>
                                 <h5 class="card-title hover-color-red fs-base">Trousers</h5>
                             </div>
                             <div class="card-footer bg-white">
@@ -325,7 +385,7 @@
                                         <button class="btn" onclick="Toasty( )">
                                             <i class="fas fa-cart-plus"></i>
                                         </button>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -343,7 +403,8 @@
                                     width="100%" height="225" class="rounded-3 img-hover">
                             </a>
                             <div class="card-body rounded-3">
-                                <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Quebec</p>
+                                <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Quebec
+                                </p>
                                 <h5 class="card-title hover-color-red fs-base">Trousers</h5>
                             </div>
                             <div class="card-footer bg-white">
@@ -359,7 +420,7 @@
                                         <button class="btn" onclick="Toasty( )">
                                             <i class="fas fa-cart-plus"></i>
                                         </button>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -377,7 +438,8 @@
                                     width="100%" height="225" class="rounded-3 img-hover">
                             </a>
                             <div class="card-body rounded-3">
-                                <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Quebec</p>
+                                <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Quebec
+                                </p>
                                 <h5 class="card-title hover-color-red fs-base">Trousers</h5>
                             </div>
                             <div class="card-footer bg-white">
@@ -393,7 +455,7 @@
                                         <button class="btn" onclick="Toasty( )">
                                             <i class="fas fa-cart-plus"></i>
                                         </button>
-                                        
+
                                     </div>
                                 </div>
                             </div>

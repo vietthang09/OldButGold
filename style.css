@@ -1,5 +1,7 @@
 /* f7f9fc */
-
+body{
+    font-family: 'Poppins', sans-serif;
+}
 /* Navbar */
 .navbar-brand{
     color: #e85a4f;
@@ -50,6 +52,7 @@
     transition: 0.3s;
 }
 .card-hover:hover{
+    transform: translateY(-10px);
     transition: 0.3s;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px;
 }
@@ -59,7 +62,7 @@
 }
 .img-hover:hover{
     transition: 0.3s ease-in-out;
-    transform: scale(1.02);
+    /* transform: scale(1.02); */
 }
 /* End Animation */
 
