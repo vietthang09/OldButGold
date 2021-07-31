@@ -47,22 +47,23 @@ body{
 
 
 /* Amination */
+.fade-out{
+    transition: all 0.3s;
+}
 .fade-out:hover{
     transform: scale(1.01);
-    transition: 0.3s;
+}
+.card{
+    transition: all 300ms;
 }
 .card-hover:hover{
     transform: translateY(-10px);
-    transition: 0.3s;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px;
+    box-shadow: rgba(217, 210, 200, 0.51) 6px 6px 16px 0px,
+                rgba(255, 255, 255, 0.83) -6px -6px 26px 0px;
 }
 .hover-color-red:hover{
     transition: 0.3s;
     color: #e85a4f;
-}
-.img-hover:hover{
-    transition: 0.3s ease-in-out;
-    /* transform: scale(1.02); */
 }
 /* End Animation */
 
