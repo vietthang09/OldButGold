@@ -65,6 +65,9 @@ body{
     transition: 0.3s;
     color: #e85a4f;
 }
+.text-hover:hover{
+    text-decoration: underline;
+}
 /* End Animation */
 
 /* Big tablet to 1200px; */
