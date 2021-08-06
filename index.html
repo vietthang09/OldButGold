@@ -24,11 +24,14 @@
     <link rel="icon" href="resources/images/logo.png">
 
     <title>OBG | Home</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 
 <body>
     <!-- Navbar for desktop -->
-
     <nav class="navbar fixed-top bg-white shadow-sm rounded">
         <div class="container">
             <a class="navbar-brand" href="index.html">OBG</a>
@@ -238,16 +241,71 @@
         }
 
     </script>
+
+    <!-- Hero -->
+    <section id="hero" class="hero mt-5 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                    <h1>Buy anything without spending money</h1>
+                    <div class="text-center text-lg-start">
+                        <a href="#categories"
+                            class="btn-get-started d-inline-flex align-items-center justify-content-center align-self-center">
+                            <span>Get Started</span><i class="fas fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="resources/images/hero/saving.png" class="img-fluid" alt="hero_img">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- End Hero -->
+
+    <!-- Advertisement -->
+    <!-- <div class="container-fluid mt-5">
+        <div id="carousel " class="carousel owl-carousel" data-bs-ride="carousel">
+            <img src="resources/images/carousel/advertisement1.jpg" class="d-block w-100" alt="advertisement1">
+            <img src="resources/images/carousel/advertisement2.jpg" class="d-block w-100" alt="advertisement2">
+            <img src="resources/images/carousel/advertisement3.jpg" class="d-block w-100" alt="advertisement3">
+        </div>
+    </div>
+    <script>
+        $(".carousel").owlCarousel({
+        margin: 10,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items: 1,
+            // nav: false,
+          },
+          600:{
+            items: 1,
+            // nav: false,
+          },
+          1000:{
+            items: 1,
+            // nav: false,
+          }
+        }
+      });
+    </script> -->
+    <!-- End Advertisement -->
+
     <!-- Categories -->
-    <div class="mt-5">
+    <div class="mt-2" id="categories">
         <div class="container py-4">
             <div class="mb-4">
                 <a href="#" class="remove-underline">
                     <div class="container-fluid p-5 rounded-3 fade-out"
                         style="background-image: url(resources/images/categories/fashion.jpg); background-position: center left; background-size: cover;">
                         <h1 class="display-5 fw-bold text-white text-hover">Fashion</h1>
-                        <p class="col-md-8 fs-4 text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Perferendis, ea.</p>
+                        <p class="col-md-8 fs-4 text-white">Clothing, footwear, lifestyle, accessories, makeup,...</p>
                     </div>
                 </a>
 
@@ -258,10 +316,9 @@
                     <a href="#" class="remove-underline">
                         <div class="h-100 p-5 text-white rounded-3 fade-out"
                             style="background-image: url(resources/images/categories/electronic.jpg); background-position: center left; background-size: cover;">
-                            <h2 class="text-hover">Electronic</h2>
-                            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the
-                                jumbotron
-                                look.</p>
+                            <h2 class="text-hover">Electronics</h2>
+                            <p>Flatscreen TVs, television sets, MP3 players, video recorders, DVD players, radio
+                                receivers,...</p>
                         </div>
                     </a>
 
@@ -270,9 +327,9 @@
                     <a href="#" class="remove-underline">
                         <div class="h-100 p-5 rounded-3 fade-out"
                             style="background-image: url(resources/images/categories/children.jpg); background-position: center left;background-size: cover;">
-                            <h2 class="text-white text-hover">Children</h2>
-                            <p class="text-white">Or, keep it light and add a border for some added definition to the
-                                boundaries of your content.</p>
+                            <h2 class="text-white text-hover">Kids' Furniture</h2>
+                            <p class="text-white">Backpacks & Lunch Boxes, Bedding & Slumber Bags, Indoor Furniture,
+                                Outdoor Furniture</p>
                         </div>
                     </a>
                 </div>
@@ -283,8 +340,7 @@
                         <div class="h-75 p-5 rounded-3 fade-out"
                             style="background-image: url(resources/images/categories/household.jpg); background-position: center left;background-size: cover;">
                             <h2 class="text-white text-hover">Household</h2>
-                            <p class="text-white">Or, keep it light and add a border for some added definition to the
-                                boundaries of your content.</p>
+                            <p class="text-white">Kitchenware, furniture, clothing, bedding, books, tools,...</p>
                         </div>
                     </a>
                 </div>
@@ -293,8 +349,7 @@
                         <div class="h-75 p-5 rounded-3 fade-out"
                             style="background-image: url(resources/images/categories/vehicle.jpg); background-position: center left;background-size: cover;">
                             <h2 class="text-white text-hover">Vehicle</h2>
-                            <p class="text-white">Or, keep it light and add a border for some added definition to the
-                                boundaries of your content.</p>
+                            <p class="text-white">Bicycles, motorcycles, cars, trucks,...</p>
                         </div>
                     </a>
                 </div>
@@ -303,8 +358,7 @@
                         <div class="h-75 p-5 rounded-3 fade-out"
                             style="background-image: url(resources/images/categories/all.jpg); background-position: center left;background-size: cover;">
                             <h2 class="text-white text-hover">All</h2>
-                            <p class="text-white">Or, keep it light and add a border for some added definition to the
-                                boundaries of your content.</p>
+                            <p class="text-white">Anything</p>
                         </div>
                     </a>
                 </div>
@@ -468,31 +522,7 @@
     </div>
     <!-- End New -->
 
-    <!-- Advertisement -->
-    <div class="container mb-5">
-        <div id="carouselInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="resources/images/carousel/advertisement1.jpg" class="d-block w-100" alt="advertisement1">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <img src="resources/images/carousel/advertisement2.jpg" class="d-block w-100" alt="advertisement2">
-                </div>
-                <div class="carousel-item">
-                    <img src="resources/images/carousel/advertisement3.jpg" class="d-block w-100" alt="advertisement3">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselInterval" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselInterval" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <!-- End Advertisement -->
+
 
     <!-- Most Popular -->
     <div class="container">
@@ -690,7 +720,65 @@
     </div>
     <!-- End Donors -->
 
-    <!-- Footer -->
+    <!-- Test -->
+
+    <!-- End Test -->
+    <footer id="footer" class="footer mb-3">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 footer-info">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <span> About OBG</span>
+                        </a>
+                        <p>OBG is a marketplace where people can purchase, sell, swap, and donate unwanted products. All
+                            you have to do is provide us with some details and photos about the item you no longer need,
+                            and we'll take care of the rest. Our goal is to encourage people to live a more frugal
+                            lifestyle and to minimize waste as much as possible.</p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-links">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Fashion</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Electronics</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Kids' Furniture</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Household</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Vehicle</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                        <h4>Contact Us</h4>
+                        <p>
+                            470 Tran Dai Nghia<br>
+                            Ngu Hanh Son, Da Nang<br>
+                            Viet Nam<br><br>
+                            <strong>Phone:</strong> 18006789<br>
+                            <strong>Email:</strong> obg@gmail.com<br>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>OBG</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="#">Fabulous 3</a>
+            </div>
+        </div>
+    </footer>
     <!-- End Footer -->
 
     <!-- Bootstrap Bundle with Popper -->
