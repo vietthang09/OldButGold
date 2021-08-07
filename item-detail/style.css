@@ -18,6 +18,87 @@
   }
  /* End Reset  */
 
+ /* Button */
+ .btn-twitter{
+   color: #1da1f2;
+   padding: 5px;
+   border-radius: 5px;
+   background: rgba(29,161,242,.08);
+   transition: 0.2s;
+ }
+ .btn-twitter:hover{
+   color: #ffffff;
+   background: #1da1f2;
+ }
+ .btn-instagram{
+   padding: 5px;
+   border-radius: 5px;
+   color: #5851db;
+   background: rgba(88,81,219,.08);
+   transition: 0.2s;
+ }
+ .btn-instagram:hover{
+   color: #ffffff;
+   background: #5851db;
+ }
+ .btn-facebook{
+  padding: 5px;
+  border-radius: 5px;
+  color: #3b5998;
+  background: rgba(59,89,152,.08);
+  transition: 0.2s;
+}
+.btn-facebook:hover{
+  color: #ffffff;
+  background: #3b5998;
+}
+.nav-pills .nav-item .nav-link{
+  color: #e85a4f;
+  border: #e85a4f 2px solid;
+}
+.nav-pills .nav-item .active{
+  color: #ffffff;
+  font-weight: 500;
+  background: #e85a4f;
+  box-shadow: 0px 5px 10px rgba(253, 90, 79, 0.4);
+}
+.btn-thumbs-up{
+  background: #ffffff;
+  border: none;
+  color: #42d697;
+}
+.btn-thumbs-down{
+  background: #ffffff;
+  border: none;
+  color: #f34770;
+}
+.btn-submit{
+  background: #fe696a;
+  color: #ffffff;
+  box-shadow: 0px 5px 10px rgba(253, 90, 79, 0.4);
+}
+.btn-submit:hover{
+  background: #e85a4f;
+  color: #ffffff;
+}
+.btn-load{
+  color: #4e54c8;
+  border: #4e54c8 1px solid;
+  transition: 0.2s;
+}
+.btn-load:hover{
+  background: #4e54c8;
+  color: #ffffff;
+}
+ /* End Button */
+
+ .bg-primary{
+   background: #f6f9fc !important;
+ }
+ .form-control{
+   background-color: #fff !important;
+ }
+
 /* Navbar */
 .navbar-brand{
     color: #e85a4f;
@@ -32,6 +113,16 @@
 }
 .form-control:focus{
     box-shadow: none;
+}
+.btn-primary-outline{
+  background: #ffffff;
+  border: none;
+  color: #e85a4f;
+}
+.btn-primary-outline:hover{
+  color: #ffffff;
+  background-color: #e85a4f;
+  box-shadow: 0px 5px 10px rgba(253, 90, 79, 0.4);
 }
 .btn-like{
     font-size: 18px;
@@ -67,6 +158,17 @@
     overflow: hidden;
 }
 /* End Product gallery */
+
+/* Product detail */
+.accordion-button:hover{
+  color: #e85a4f;
+}
+.accordion-button:focus{
+  box-shadow: none;
+  background: #ffffff;
+  color: black;
+}
+/* End Product detail */
 
 /* Footer */
 .footer {

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -30,6 +31,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
+
 <body>
     <!-- Navbar for desktop -->
     <nav class="navbar fixed-top bg-white shadow-sm rounded">
@@ -46,22 +48,28 @@
                     <button class="btn me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
                         <i class="far fa-bell" data-bs-toggle="tooltip" data-bs-placement="bottom"
                             title="Notification"></i>
+                        <span class="position-relative top-0 start-0 translate-middle badge bg-danger"
+                            style="font-size: 10px;">2</span>
                     </button>
+
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
                         aria-labelledby="offcanvasRightLabel">
                         <div class="offcanvas-header">
-                            <h5 id="offcanvasRightLabel">Notification</h5>
+                            <h5 id="offcanvasRightLabel"><i class="far fa-bell"></i> Notification</h5>
                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                                <strong>Dennis</strong> wants to buy your stuff
+                                <br>
+                                <a href="#" class="text-success">Click here to view more</a>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"
                                     aria-label="Close"></button>
                             </div>
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                                <strong>Bryan</strong> wants to exchange items with you
+                                <a href="#" class="text-success">Click here to view more</a>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"
                                     aria-label="Close"></button>
                             </div>
@@ -111,10 +119,139 @@
             <div class="modal-content">
                 <div class="modal-header bg-primary">
                     <h5 class="modal-title text-white" id="exampleModalLabel">Post</h5>
+                    <!-- <div class="progress-bar">
+                        <div class="step">
+                            <p>
+                                Name
+                            </p>
+                            <div class="bullet">
+                                <span>1</span>
+                            </div>
+                            <div class="check fas fa-check"></div>
+                        </div>
+                        <div class="step">
+                            <p>
+                                Contact
+                            </p>
+                            <div class="bullet">
+                                <span>2</span>
+                            </div>
+                            <div class="check fas fa-check"></div>
+                        </div>
+                        <div class="step">
+                            <p>
+                                Birth
+                            </p>
+                            <div class="bullet">
+                                <span>3</span>
+                            </div>
+                            <div class="check fas fa-check"></div>
+                        </div>
+                        <div class="step">
+                            <p>
+                                Submit
+                            </p>
+                            <div class="bullet">
+                                <span>4</span>
+                            </div>
+                            <div class="check fas fa-check"></div>
+                        </div>
+                    </div> -->
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="tab-content">
+                    <div class="form-outer">
+                        <form action="#">
+                            <div class="page slide-page">
+                                <div class="title">
+                                    Basic Info:
+                                </div>
+                                <div class="field">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="email" placeholder="name@example.com">
+                                        <label for="floatingInput" id="labelemail">Email address</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Last Name
+                                    </div>
+                                    <input type="text">
+                                </div>
+                                <div class="field">
+                                    <button class="firstNext next">Next</button>
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div class="title">
+                                    Contact Info:
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Email Address
+                                    </div>
+                                    <input type="text">
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Phone Number
+                                    </div>
+                                    <input type="Number">
+                                </div>
+                                <div class="field btns">
+                                    <button class="prev-1 prev">Previous</button>
+                                    <button class="next-1 next">Next</button>
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div class="title">
+                                    Date of Birth:
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Date
+                                    </div>
+                                    <input type="text">
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Gender
+                                    </div>
+                                    <select>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="field btns">
+                                    <button class="prev-2 prev">Previous</button>
+                                    <button class="next-2 next">Next</button>
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div class="title">
+                                    Login Details:
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Username
+                                    </div>
+                                    <input type="text">
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Password
+                                    </div>
+                                    <input type="password">
+                                </div>
+                                <div class="field btns">
+                                    <button class="prev-3 prev">Previous</button>
+                                    <button class="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="tab-content">
                         <div class="tab-pane fade show active" id="project-add-details" role="tabpanel">
                             <h6>Description</h6>
                             <div class="form-floating mb-3">
@@ -156,18 +293,99 @@
                                 <label for="floatingPrice">Price</label>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                     <button type="button" class="btn">Save changes</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
+    <script>
+        const slidePage = document.querySelector(".slide-page");
+        const nextBtnFirst = document.querySelector(".firstNext");
+        const prevBtnSec = document.querySelector(".prev-1");
+        const nextBtnSec = document.querySelector(".next-1");
+        const prevBtnThird = document.querySelector(".prev-2");
+        const nextBtnThird = document.querySelector(".next-2");
+        const prevBtnFourth = document.querySelector(".prev-3");
+        const submitBtn = document.querySelector(".submit");
+        const progressText = document.querySelectorAll(".step p");
+        const progressCheck = document.querySelectorAll(".step .check");
+        const bullet = document.querySelectorAll(".step .bullet");
+        let current = 1;
+        nextBtnFirst.addEventListener("click", function (event) {
+            let x = document.getElementById("email").value;
+            let text;
+            if(isNaN(x) || x<1 || x>10){
+                text = "Loi";
+                document.getElementById("labelemail").innerHTML = text;
+            } else{
+                text = "Email address";
+                event.preventDefault();
+                slidePage.style.marginLeft = "-25%";
+                bullet[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                current += 1;
+                document.getElementById("labelemail").innerHTML = text;
+            }
+            
+        });
+        nextBtnSec.addEventListener("click", function (event) {
+            event.preventDefault();
+            slidePage.style.marginLeft = "-50%";
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
+        });
+        nextBtnThird.addEventListener("click", function (event) {
+            event.preventDefault();
+            slidePage.style.marginLeft = "-75%";
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
+        });
+        submitBtn.addEventListener("click", function () {
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
+            setTimeout(function () {
+                alert("Your Form Successfully Signed up");
+                location.reload();
+            }, 800);
+        });
+        prevBtnSec.addEventListener("click", function (event) {
+            event.preventDefault();
+            slidePage.style.marginLeft = "0%";
+            bullet[current - 2].classList.remove("active");
+            progressCheck[current - 2].classList.remove("active");
+            progressText[current - 2].classList.remove("active");
+            current -= 1;
+        });
+        prevBtnThird.addEventListener("click", function (event) {
+            event.preventDefault();
+            slidePage.style.marginLeft = "-25%";
+            bullet[current - 2].classList.remove("active");
+            progressCheck[current - 2].classList.remove("active");
+            progressText[current - 2].classList.remove("active");
+            current -= 1;
+        });
+        prevBtnFourth.addEventListener("click", function (event) {
+            event.preventDefault();
+            slidePage.style.marginLeft = "-50%";
+            bullet[current - 2].classList.remove("active");
+            progressCheck[current - 2].classList.remove("active");
+            progressText[current - 2].classList.remove("active");
+            current -= 1;
+        });
+    </script>
     <!-- End Navbar for desktop-->
 
     <!-- Navbar for mobile -->
-
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-bottom justify-content-center">
         <ul class="nav for-mobile">
             <li class="nav-item">
@@ -183,11 +401,14 @@
                     </div>
                     <div class="offcanvas-body">
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <strong>Dennis</strong> wants to buy your stuff
+                            <br>
+                            <a href="#" class="text-success">Click here to view more</a>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                         <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                            <strong>Bryan</strong> wants to exchange items with you
+                            <a href="#" class="text-success">Click here to view more</a>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
                     </div>
@@ -215,8 +436,8 @@
             </li>
         </ul>
     </nav>
-
     <!-- End Navbar for mobile -->
+
     <div id="Toast-add-to-cart" class="toast align-items-center text-white bg-success border-0" role="alert"
         aria-live="assertive" aria-atomic="true" style="position: fixed; bottom: 100px; right: 20px; z-index: 99;">
         <div class="d-flex">
@@ -274,30 +495,34 @@
                     <a href="index.html" class="remove-underline">
                         <div class="container-fluid p-5 rounded-3 fade-out"
                             style="background-image: url(resources/images/categories/fashion.jpg); background-position: center left; background-size: cover;">
-                            <p class="fs-4 fw-bold text-white text-hover badge bg-danger"><i class="fas fa-tag"></i> Fashion</p>
-                            <p class="col-md-8 fs-4 text-white">Clothing, footwear, lifestyle, accessories, makeup,...</p>
+                            <p class="fs-4 fw-bold text-white text-hover badge bg-danger"><i class="fas fa-tag"></i>
+                                Fashion</p>
+                            <p class="col-md-8 fs-4 text-white">Clothing, footwear, lifestyle, accessories, makeup,...
+                            </p>
                         </div>
                     </a>
-    
+
                 </div>
-    
+
                 <div class="row align-items-md-stretch mb-4">
                     <div class="col-md-6 mb-4">
                         <a href="#" class="remove-underline">
                             <div class="h-100 p-5 text-white rounded-3 fade-out"
                                 style="background-image: url(resources/images/categories/electronic.jpg); background-position: center left; background-size: cover;">
-                                <p class="fs-4 fw-bold text-white text-hover badge bg-warning"><i class="fas fa-tag"></i> Electronics</p>
+                                <p class="fs-4 fw-bold text-white text-hover badge bg-warning"><i
+                                        class="fas fa-tag"></i> Electronics</p>
                                 <p>Flatscreen TVs, television sets, MP3 players, video recorders, DVD players, radio
                                     receivers,...</p>
                             </div>
                         </a>
-    
+
                     </div>
                     <div class="col-md-6 mb-4">
                         <a href="#" class="remove-underline">
                             <div class="h-100 p-5 rounded-3 fade-out"
                                 style="background-image: url(resources/images/categories/children.jpg); background-position: center left;background-size: cover;">
-                                <p class="fs-4 fw-bold text-white text-hover badge bg-info"><i class="fas fa-tag"></i> Kids' Furniture</p>
+                                <p class="fs-4 fw-bold text-white text-hover badge bg-info"><i class="fas fa-tag"></i>
+                                    Kids' Furniture</p>
                                 <p class="text-white">Backpacks & Lunch Boxes, Bedding & Slumber Bags, Indoor Furniture,
                                     Outdoor Furniture</p>
                             </div>
@@ -309,7 +534,8 @@
                         <a href="#" class="remove-underline">
                             <div class="h-75 p-5 rounded-3 fade-out"
                                 style="background-image: url(resources/images/categories/household.jpg); background-position: center left;background-size: cover;">
-                                <p class="fs-4 fw-bold text-white text-hover badge bg-success"><i class="fas fa-tag"></i> Household</p>
+                                <p class="fs-4 fw-bold text-white text-hover badge bg-success"><i
+                                        class="fas fa-tag"></i> Household</p>
                                 <p class="text-white">Kitchenware, furniture, clothing, bedding, books, tools,...</p>
                             </div>
                         </a>
@@ -318,7 +544,8 @@
                         <a href="#" class="remove-underline">
                             <div class="h-75 p-5 rounded-3 fade-out"
                                 style="background-image: url(resources/images/categories/vehicle.jpg); background-position: center left;background-size: cover;">
-                                <p class="fs-4 fw-bold text-white text-hover badge bg-secondary"><i class="fas fa-tag"></i> Vehicle</p>
+                                <p class="fs-4 fw-bold text-white text-hover badge bg-secondary"><i
+                                        class="fas fa-tag"></i> Vehicle</p>
                                 <p class="text-white">Bicycles, motorcycles, cars, trucks,...</p>
                             </div>
                         </a>
@@ -327,7 +554,8 @@
                         <a href="#" class="remove-underline">
                             <div class="h-75 p-5 rounded-3 fade-out"
                                 style="background-image: url(resources/images/categories/all.jpg); background-position: center left;background-size: cover;">
-                                <p class="fs-4 fw-bold text-white text-hover badge bg-primary"><i class="fas fa-tag"></i> All</p>
+                                <p class="fs-4 fw-bold text-white text-hover badge bg-primary"><i
+                                        class="fas fa-tag"></i> All</p>
                                 <p class="text-white">Anything</p>
                             </div>
                         </a>
@@ -351,7 +579,7 @@
                             <span class="d-table badge bg-success mb-1">Exchange</span>
                             <span class="d-table badge bg-danger">Sale</span>
                         </div>
-                        <a href="#">
+                        <a href="item-detail/trousers.html">
 
                             <img src="resources/images/fashion/fashion1-1.jpg" alt="" width="100%" height="225"
                                 class="rounded-3 img-hover">
@@ -359,7 +587,9 @@
                         <div class="card-body rounded-3">
                             <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Quebec
                             </p>
-                            <h5 class="card-title hover-color-red fs-base">Trousers</h5>
+                            <a href="item-detail/trousers.html" class="text-dark">
+                                <h5 class="card-title hover-color-red fs-base">Trousers</h5>
+                            </a>
                         </div>
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
@@ -397,8 +627,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/02.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/02.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Dennis</a>
@@ -430,8 +660,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/03.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/03.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Bryan</a>
@@ -457,14 +687,15 @@
                                 class="rounded-3 img-hover">
                         </a>
                         <div class="card-body rounded-3">
-                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Fredericton    </p>
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Fredericton
+                            </p>
                             <h5 class="card-title hover-color-red fs-base">Fridge</h5>
                         </div>
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/04.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/04.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Louis</a>
@@ -498,8 +729,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/05.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/05.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Jacqueline</a>
@@ -532,8 +763,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/06.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/06.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Carolyn</a>
@@ -559,15 +790,16 @@
                                 class="rounded-3 img-hover">
                         </a>
                         <div class="card-body rounded-3">
-                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Charlottetown
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i>
+                                Charlottetown
                             </p>
                             <h5 class="card-title hover-color-red fs-base">CHILD'S CAR SEAT</h5>
                         </div>
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/07.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/07.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Lori</a>
@@ -600,8 +832,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/08.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/08.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Joan</a>
@@ -668,8 +900,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/02.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/02.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Dennis</a>
@@ -699,8 +931,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/03.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/03.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Bryan</a>
@@ -724,14 +956,15 @@
                                 class="rounded-3 img-hover">
                         </a>
                         <div class="card-body rounded-3">
-                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Fredericton    </p>
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Fredericton
+                            </p>
                             <h5 class="card-title hover-color-red fs-base">Fridge</h5>
                         </div>
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/04.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/04.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Louis</a>
@@ -800,7 +1033,7 @@
                             <span class="d-table badge bg-danger">Sale</span>
                         </div>
                         <a href="#">
-    
+
                             <img src="resources/images/fashion/fashion1-1.jpg" alt="" width="100%" height="225"
                                 class="rounded-3 img-hover">
                         </a>
@@ -845,8 +1078,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/02.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/02.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Dennis</a>
@@ -878,8 +1111,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/03.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/03.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Bryan</a>
@@ -905,14 +1138,15 @@
                                 class="rounded-3 img-hover">
                         </a>
                         <div class="card-body rounded-3">
-                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Fredericton    </p>
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Fredericton
+                            </p>
                             <h5 class="card-title hover-color-red fs-base">Fridge</h5>
                         </div>
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/04.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/04.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Louis</a>
@@ -946,8 +1180,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/05.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/05.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Jacqueline</a>
@@ -968,7 +1202,7 @@
                             <span class="d-table badge bg-danger">Sale</span>
                         </div>
                         <a href="#">
-    
+
                             <img src="resources/images/electronic/electronic5-1.jpg" alt="" width="100%" height="225"
                                 class="rounded-3 img-hover">
                         </a>
@@ -980,8 +1214,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/06.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/06.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Carolyn</a>
@@ -1002,20 +1236,21 @@
                             <span class="d-table badge bg-danger">Sale</span>
                         </div>
                         <a href="#">
-    
+
                             <img src="resources/images/children/children4-1.jpg" alt="" width="100%" height="225"
                                 class="rounded-3 img-hover">
                         </a>
                         <div class="card-body rounded-3">
-                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Charlottetown
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i>
+                                Charlottetown
                             </p>
                             <h5 class="card-title hover-color-red fs-base">CHILD'S CAR SEAT</h5>
                         </div>
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/07.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/07.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Lori</a>
@@ -1048,8 +1283,8 @@
                         <div class="card-footer bg-white">
                             <div class="row align-items-center g-0">
                                 <div class="col-auto">
-                                    <img src="resources/images/avatar/08.jpg" width="32" height="32" class="rounded-circle"
-                                        alt="">
+                                    <img src="resources/images/avatar/08.jpg" width="32" height="32"
+                                        class="rounded-circle" alt="">
                                 </div>
                                 <div class="col ms-2">
                                     <a href="#" class="text-muted">Joan</a>
@@ -1080,29 +1315,29 @@
                     <div class="card card-hover card-cover h-100 remove-border overflow-hidden text-white rounded-5"
                         style="background-image: url('resources/images/donors/donor1.jpg'); background-size: cover; cursor: default;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white">
-                            <h2 class="pt-5 mt-5 mb-5 fw-bold text-hover">VKU Corporation</h2>
+                            <h2 class="pt-5 mt-5 mb-5 fw-bold text-hover">VKU <br> Corporation</h2>
                             <img src="resources/images/donors/logovku.png" alt="Bootstrap" width="32" height="32"
                                 class="rounded-circle border border-white">
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col mb-5">
                     <div class="card card-hover card-cover remove-border h-100 overflow-hidden text-white rounded-5"
                         style="background-image: url('resources/images/donors/donor2.jpg'); background-size: cover; cursor: default;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white">
-                            <h2 class="pt-5 mt-5 mb-5 fw-bold text-hover">VKU<br>Charity fund</h2>
+                            <h2 class="pt-5 mt-5 mb-5 fw-bold text-hover">VKU <br> Charity fund</h2>
                             <img src="resources/images/donors/logovku.png" alt="Bootstrap" width="32" height="32"
                                 class="rounded-circle border border-white">
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col mb-5">
                     <div class="card card-hover card-cover pb-5 h-100 remove-border overflow-hidden text-white rounded-5"
                         style="background-image: url('resources/images/donors/donor3.jpg'); background-size: cover; cursor: default;">
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                            <h2 class="pt-5 mt-5 mb-5 fw-bold text-hover">OBG Corporation</h2>
+                            <h2 class="pt-5 mt-5 mb-5 fw-bold text-hover">OBG <br> Corporation</h2>
                             <img src="resources/images/donors/logovku.png" alt="Bootstrap" width="32" height="32"
                                 class="rounded-circle border border-white">
                         </div>
@@ -1113,6 +1348,7 @@
     </section>
     <!-- End Donors -->
 
+    <!-- Footer -->
     <footer id="footer" class="footer mb-3">
         <div class="footer-top">
             <div class="container">
@@ -1181,7 +1417,7 @@
         });
     </script>
     <!-- End Loading -->
-    
+
     <!-- Back to top -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
