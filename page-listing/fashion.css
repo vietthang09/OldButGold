@@ -1,0 +1,24 @@
+ul li{
+    list-style: none;
+}
+ul li:hover{
+    color: #e85a4f;
+}
+.btn:focus{
+    box-shadow: none;
+}
+.btn-outline-secondary {
+    border-color: #dae1e7 !important;
+    color: #4b566b !important;
+}
+.btn-outline-secondary:hover {
+    color: #000;
+    background-color: #f3f5f9;
+    border-color: #f3f5f9;
+}
+.nav-link-style{
+    color: #e85a4f;
+}
+.nav-link-style:hover{
+    color: #ec2213;
+}
