@@ -34,10 +34,14 @@
 
 <body>
     <!-- Navbar for desktop -->
-    <nav class="navbar fixed-top bg-white shadow-sm rounded">
+    <nav class="navbar fixed-top bg-white shadow-sm rounded navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">OBG</a>
-            <form class="d-flex">
+            <a class="navbar-brand" href="index.html">
+                <img src="resources/images/logo.png" alt="" width="24" height="24"
+                    class="d-inline-block align-text-top">
+                OBG
+            </a>
+            <form class="d-flex w-50">
                 <input type="text" class="form-control" placeholder="Search...">
                 <button class="btn btn-outline-primary border-0">
                     <i class="fas fa-search"></i>
@@ -48,8 +52,6 @@
                     <button class="btn me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
                         <i class="far fa-bell" data-bs-toggle="tooltip" data-bs-placement="bottom"
                             title="Notification"></i>
-                        <span class="position-relative top-0 start-0 translate-middle badge bg-danger"
-                            style="font-size: 10px;">2</span>
                     </button>
 
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
@@ -77,10 +79,10 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn me-2" data-bs-toggle="modal" data-bs-target="#Modal">
+                    <a href="post.html" class="btn me-2">
                         <i class="far fa-clipboard" data-bs-toggle="tooltip" data-bs-placement="bottom"
                             title="Post"></i>
-                    </button>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a href="charity.html" class="btn me-2">
@@ -102,7 +104,7 @@
                         </a>
                         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                             <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">My order</a></li>
+                            <li><a class="dropdown-item" href="orders.html">My orders</a></li>
                             <li><a class="dropdown-item" href="#">My Timeline</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -114,276 +116,6 @@
             </ul>
         </div>
     </nav>
-
-    <div class="modal" id="Modal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary">
-                    <h5 class="modal-title text-white" id="exampleModalLabel">Post</h5>
-                    <!-- <div class="progress-bar">
-                        <div class="step">
-                            <p>
-                                Name
-                            </p>
-                            <div class="bullet">
-                                <span>1</span>
-                            </div>
-                            <div class="check fas fa-check"></div>
-                        </div>
-                        <div class="step">
-                            <p>
-                                Contact
-                            </p>
-                            <div class="bullet">
-                                <span>2</span>
-                            </div>
-                            <div class="check fas fa-check"></div>
-                        </div>
-                        <div class="step">
-                            <p>
-                                Birth
-                            </p>
-                            <div class="bullet">
-                                <span>3</span>
-                            </div>
-                            <div class="check fas fa-check"></div>
-                        </div>
-                        <div class="step">
-                            <p>
-                                Submit
-                            </p>
-                            <div class="bullet">
-                                <span>4</span>
-                            </div>
-                            <div class="check fas fa-check"></div>
-                        </div>
-                    </div> -->
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-outer">
-                        <form action="#">
-                            <div class="page slide-page">
-                                <div class="title">
-                                    Basic Info:
-                                </div>
-                                <div class="field">
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="email" placeholder="name@example.com">
-                                        <label for="floatingInput" id="labelemail">Email address</label>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Last Name
-                                    </div>
-                                    <input type="text">
-                                </div>
-                                <div class="field">
-                                    <button class="firstNext next">Next</button>
-                                </div>
-                            </div>
-                            <div class="page">
-                                <div class="title">
-                                    Contact Info:
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Email Address
-                                    </div>
-                                    <input type="text">
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Phone Number
-                                    </div>
-                                    <input type="Number">
-                                </div>
-                                <div class="field btns">
-                                    <button class="prev-1 prev">Previous</button>
-                                    <button class="next-1 next">Next</button>
-                                </div>
-                            </div>
-                            <div class="page">
-                                <div class="title">
-                                    Date of Birth:
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Date
-                                    </div>
-                                    <input type="text">
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Gender
-                                    </div>
-                                    <select>
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                        <option>Other</option>
-                                    </select>
-                                </div>
-                                <div class="field btns">
-                                    <button class="prev-2 prev">Previous</button>
-                                    <button class="next-2 next">Next</button>
-                                </div>
-                            </div>
-                            <div class="page">
-                                <div class="title">
-                                    Login Details:
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Username
-                                    </div>
-                                    <input type="text">
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Password
-                                    </div>
-                                    <input type="password">
-                                </div>
-                                <div class="field btns">
-                                    <button class="prev-3 prev">Previous</button>
-                                    <button class="submit">Submit</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- <div class="tab-content">
-                        <div class="tab-pane fade show active" id="project-add-details" role="tabpanel">
-                            <h6>Description</h6>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingTitle"
-                                    placeholder="name@example.com">
-                                <label for="floatingTitle">Title</label>
-                            </div>
-                            <div class="form-floating">
-                                <textarea class="form-control" id="floatingDescription"
-                                    placeholder="Leave a description here"></textarea>
-                                <label for="floatingDescription">Description</label>
-                            </div>
-                            <hr>
-                            <h6>Category</h6>
-                            <input class="form-control" list="datalistOptions" id="DataList"
-                                placeholder="Type to search...">
-                            <datalist id="datalistOptions">
-                                <option value="Fashion">
-                                <option value="Electronic">
-                                <option value="Children">
-                                <option value="Household">
-                                <option value="Vehicle">
-                                <option value="Other">
-                            </datalist>
-                            <hr>
-                            <h6>Optimization</h6>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="switchExchange">
-                                <label class="form-check-label" for="switchExchange">Exchange</label>
-                            </div>
-
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="switchSale">
-                                <label class="form-check-label" for="switchSale">Sale</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingPrice"
-                                    placeholder="name@example.com">
-                                <label for="floatingPrice">Price</label>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn">Save changes</button>
-                </div> -->
-            </div>
-        </div>
-    </div>
-    <script>
-        const slidePage = document.querySelector(".slide-page");
-        const nextBtnFirst = document.querySelector(".firstNext");
-        const prevBtnSec = document.querySelector(".prev-1");
-        const nextBtnSec = document.querySelector(".next-1");
-        const prevBtnThird = document.querySelector(".prev-2");
-        const nextBtnThird = document.querySelector(".next-2");
-        const prevBtnFourth = document.querySelector(".prev-3");
-        const submitBtn = document.querySelector(".submit");
-        const progressText = document.querySelectorAll(".step p");
-        const progressCheck = document.querySelectorAll(".step .check");
-        const bullet = document.querySelectorAll(".step .bullet");
-        let current = 1;
-        nextBtnFirst.addEventListener("click", function (event) {
-            let x = document.getElementById("email").value;
-            let text;
-            if(isNaN(x) || x<1 || x>10){
-                text = "Loi";
-                document.getElementById("labelemail").innerHTML = text;
-            } else{
-                text = "Email address";
-                event.preventDefault();
-                slidePage.style.marginLeft = "-25%";
-                bullet[current - 1].classList.add("active");
-                progressCheck[current - 1].classList.add("active");
-                progressText[current - 1].classList.add("active");
-                current += 1;
-                document.getElementById("labelemail").innerHTML = text;
-            }
-            
-        });
-        nextBtnSec.addEventListener("click", function (event) {
-            event.preventDefault();
-            slidePage.style.marginLeft = "-50%";
-            bullet[current - 1].classList.add("active");
-            progressCheck[current - 1].classList.add("active");
-            progressText[current - 1].classList.add("active");
-            current += 1;
-        });
-        nextBtnThird.addEventListener("click", function (event) {
-            event.preventDefault();
-            slidePage.style.marginLeft = "-75%";
-            bullet[current - 1].classList.add("active");
-            progressCheck[current - 1].classList.add("active");
-            progressText[current - 1].classList.add("active");
-            current += 1;
-        });
-        submitBtn.addEventListener("click", function () {
-            bullet[current - 1].classList.add("active");
-            progressCheck[current - 1].classList.add("active");
-            progressText[current - 1].classList.add("active");
-            current += 1;
-            setTimeout(function () {
-                alert("Your Form Successfully Signed up");
-                location.reload();
-            }, 800);
-        });
-        prevBtnSec.addEventListener("click", function (event) {
-            event.preventDefault();
-            slidePage.style.marginLeft = "0%";
-            bullet[current - 2].classList.remove("active");
-            progressCheck[current - 2].classList.remove("active");
-            progressText[current - 2].classList.remove("active");
-            current -= 1;
-        });
-        prevBtnThird.addEventListener("click", function (event) {
-            event.preventDefault();
-            slidePage.style.marginLeft = "-25%";
-            bullet[current - 2].classList.remove("active");
-            progressCheck[current - 2].classList.remove("active");
-            progressText[current - 2].classList.remove("active");
-            current -= 1;
-        });
-        prevBtnFourth.addEventListener("click", function (event) {
-            event.preventDefault();
-            slidePage.style.marginLeft = "-50%";
-            bullet[current - 2].classList.remove("active");
-            progressCheck[current - 2].classList.remove("active");
-            progressText[current - 2].classList.remove("active");
-            current -= 1;
-        });
-    </script>
     <!-- End Navbar for desktop-->
 
     <!-- Navbar for mobile -->

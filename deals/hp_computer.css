@@ -1,0 +1,35 @@
+/* Reset */
+.text-danger{
+    color: #e85a4f;
+}
+.btn:focus{
+    box-shadow: none;
+}
+body{
+    background: #f5f9fe;
+}
+.form-check-input:focus{
+    box-shadow: none;
+}
+/* End Reset */
+
+/* Deal */
+.fa-arrow-left{
+    transition: 0.2s;
+}
+.back-to-deal:hover
+.fa-arrow-left{
+    transform: translateX(-10px);
+}
+/* End Deal */
+
+/* Small phones from 0 to 480px; */
+@media only screen and (max-width: 480px){
+    .img-fluid{
+        width: 350px;
+        height: 300px;
+    }
+}
+
+
+/* End Items */

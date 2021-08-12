@@ -1,0 +1,65 @@
+/* Reset */
+.text-danger{
+    color: #e85a4f;
+}
+.btn:focus{
+    box-shadow: none;
+}
+body{
+    background: #f5f9fe;
+}
+.form-check-input:focus{
+    box-shadow: none;
+}
+/* End Reset */
+
+/* List */
+.list-group-item,
+.fa-arrow-right{
+    transition: 0.2s;
+}
+.list-group-item:hover{
+    background: #f5f9fe;
+}
+.list-group-item:hover
+.fa-arrow-right{
+    transform: translateX(10px);
+}
+/* End List */
+
+/* Inbox */
+.btn-type{
+    background: #ffffff;
+}
+#button,
+#button2{
+    display: none;
+}
+#button:checked~.fas,
+#button2:checked~.fas {
+    display: inline-block !important;
+}
+
+#button:checked~.far,
+#button2:checked~.far {
+    display: none;
+}
+.name{
+    font-weight: 600;
+    transition: 0.2s;
+}
+.name:hover{
+    color: #e85a4f;
+}
+/* End Inbox */
+
+/* Small phones from 0 to 480px; */
+@media only screen and (max-width: 480px){
+    .img-fluid{
+        width: 350px;
+        height: 300px;
+    }
+}
+
+
+/* End Items */

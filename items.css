@@ -1,0 +1,53 @@
+/* Reset */
+.text-danger{
+    color: #e85a4f;
+}
+.btn:focus{
+    box-shadow: none;
+}
+body{
+    background: #f5f9fe;
+}
+/* End Reset */
+
+/* List */
+.list-group-item,
+.fa-arrow-right{
+    transition: 0.2s;
+}
+.list-group-item:hover{
+    background: #f5f9fe;
+}
+.list-group-item:hover
+.fa-arrow-right{
+    transform: translateX(10px);
+}
+/* End List */
+
+/* Items */
+.btn-submit-new-item{
+    border: #e85a4f 1px solid;
+    color: #e85a4f;
+    transition: 0.2s;
+}
+.btn-submit-new-item:hover{
+    background: #e85a4f;
+    color: #ffffff;
+}
+.img-fluid{
+    height: 200px;
+    width: 200px;
+}
+.time{
+    color: #424767;
+}
+/* Small phones from 0 to 480px; */
+@media only screen and (max-width: 480px){
+    .img-fluid{
+        width: 350px;
+        height: 300px;
+    }
+}
+
+
+/* End Items */

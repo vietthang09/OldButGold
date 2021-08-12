@@ -24,12 +24,417 @@
 <body>
 
     <!-- Navigation -->
+    <!-- Navbar for desktop -->
+    <nav class="navbar fixed-top bg-white shadow-sm rounded">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">OBG</a>
+            <form class="d-flex">
+                <input type="text" class="form-control" placeholder="Search...">
+                <button class="btn btn-outline-primary border-0">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <ul class="nav for-desktop">
+                <li class="nav-item">
+                    <button class="btn me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                        <i class="far fa-bell" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Notification"></i>
+                        <span class="position-relative top-0 start-0 translate-middle badge bg-danger"
+                            style="font-size: 10px;">2</span>
+                    </button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel"><i class="far fa-bell"></i> Notification</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Dennis</strong> wants to buy your stuff
+                                <br>
+                                <a href="#" class="text-success">Click here to view more</a>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Bryan</strong> wants to exchange items with you
+                                <a href="#" class="text-success">Click here to view more</a>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn me-2" data-bs-toggle="modal" data-bs-target="#Modal">
+                        <i class="far fa-clipboard" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Post"></i>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a href="charity.html" class="btn me-2">
+                        <i class="fas fa-gift" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Charity"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="btn me-5">
+                        <i class="fas fa-shopping-cart" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Cart"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <div class="flex-shrink-0 dropdown mt-2">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
+                                class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">My order</a></li>
+                            <li><a class="dropdown-item" href="#">My Timeline</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="modal" id="Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title text-white" id="exampleModalLabel">Post</h5>
+                    <!-- <div class="progress-bar">
+                        <div class="step">
+                            <p>
+                                Name
+                            </p>
+                            <div class="bullet">
+                                <span>1</span>
+                            </div>
+                            <div class="check fas fa-check"></div>
+                        </div>
+                        <div class="step">
+                            <p>
+                                Contact
+                            </p>
+                            <div class="bullet">
+                                <span>2</span>
+                            </div>
+                            <div class="check fas fa-check"></div>
+                        </div>
+                        <div class="step">
+                            <p>
+                                Birth
+                            </p>
+                            <div class="bullet">
+                                <span>3</span>
+                            </div>
+                            <div class="check fas fa-check"></div>
+                        </div>
+                        <div class="step">
+                            <p>
+                                Submit
+                            </p>
+                            <div class="bullet">
+                                <span>4</span>
+                            </div>
+                            <div class="check fas fa-check"></div>
+                        </div>
+                    </div> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-outer">
+                        <form action="#">
+                            <div class="page slide-page">
+                                <div class="title">
+                                    Basic Info:
+                                </div>
+                                <div class="field">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="email" placeholder="name@example.com">
+                                        <label for="floatingInput" id="labelemail">Email address</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Last Name
+                                    </div>
+                                    <input type="text">
+                                </div>
+                                <div class="field">
+                                    <button class="firstNext next">Next</button>
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div class="title">
+                                    Contact Info:
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Email Address
+                                    </div>
+                                    <input type="text">
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Phone Number
+                                    </div>
+                                    <input type="Number">
+                                </div>
+                                <div class="field btns">
+                                    <button class="prev-1 prev">Previous</button>
+                                    <button class="next-1 next">Next</button>
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div class="title">
+                                    Date of Birth:
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Date
+                                    </div>
+                                    <input type="text">
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Gender
+                                    </div>
+                                    <select>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="field btns">
+                                    <button class="prev-2 prev">Previous</button>
+                                    <button class="next-2 next">Next</button>
+                                </div>
+                            </div>
+                            <div class="page">
+                                <div class="title">
+                                    Login Details:
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Username
+                                    </div>
+                                    <input type="text">
+                                </div>
+                                <div class="field">
+                                    <div class="label">
+                                        Password
+                                    </div>
+                                    <input type="password">
+                                </div>
+                                <div class="field btns">
+                                    <button class="prev-3 prev">Previous</button>
+                                    <button class="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <div class="tab-content">
+                        <div class="tab-pane fade show active" id="project-add-details" role="tabpanel">
+                            <h6>Description</h6>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingTitle"
+                                    placeholder="name@example.com">
+                                <label for="floatingTitle">Title</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control" id="floatingDescription"
+                                    placeholder="Leave a description here"></textarea>
+                                <label for="floatingDescription">Description</label>
+                            </div>
+                            <hr>
+                            <h6>Category</h6>
+                            <input class="form-control" list="datalistOptions" id="DataList"
+                                placeholder="Type to search...">
+                            <datalist id="datalistOptions">
+                                <option value="Fashion">
+                                <option value="Electronic">
+                                <option value="Children">
+                                <option value="Household">
+                                <option value="Vehicle">
+                                <option value="Other">
+                            </datalist>
+                            <hr>
+                            <h6>Optimization</h6>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="switchExchange">
+                                <label class="form-check-label" for="switchExchange">Exchange</label>
+                            </div>
+
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="switchSale">
+                                <label class="form-check-label" for="switchSale">Sale</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingPrice"
+                                    placeholder="name@example.com">
+                                <label for="floatingPrice">Price</label>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn">Save changes</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script>
+        const slidePage = document.querySelector(".slide-page");
+        const nextBtnFirst = document.querySelector(".firstNext");
+        const prevBtnSec = document.querySelector(".prev-1");
+        const nextBtnSec = document.querySelector(".next-1");
+        const prevBtnThird = document.querySelector(".prev-2");
+        const nextBtnThird = document.querySelector(".next-2");
+        const prevBtnFourth = document.querySelector(".prev-3");
+        const submitBtn = document.querySelector(".submit");
+        const progressText = document.querySelectorAll(".step p");
+        const progressCheck = document.querySelectorAll(".step .check");
+        const bullet = document.querySelectorAll(".step .bullet");
+        let current = 1;
+        nextBtnFirst.addEventListener("click", function (event) {
+            let x = document.getElementById("email").value;
+            let text;
+            if(isNaN(x) || x<1 || x>10){
+                text = "Loi";
+                document.getElementById("labelemail").innerHTML = text;
+            } else{
+                text = "Email address";
+                event.preventDefault();
+                slidePage.style.marginLeft = "-25%";
+                bullet[current - 1].classList.add("active");
+                progressCheck[current - 1].classList.add("active");
+                progressText[current - 1].classList.add("active");
+                current += 1;
+                document.getElementById("labelemail").innerHTML = text;
+            }
+            
+        });
+        nextBtnSec.addEventListener("click", function (event) {
+            event.preventDefault();
+            slidePage.style.marginLeft = "-50%";
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
+        });
+        nextBtnThird.addEventListener("click", function (event) {
+            event.preventDefault();
+            slidePage.style.marginLeft = "-75%";
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
+        });
+        submitBtn.addEventListener("click", function () {
+            bullet[current - 1].classList.add("active");
+            progressCheck[current - 1].classList.add("active");
+            progressText[current - 1].classList.add("active");
+            current += 1;
+            setTimeout(function () {
+                alert("Your Form Successfully Signed up");
+                location.reload();
+            }, 800);
+        });
+        prevBtnSec.addEventListener("click", function (event) {
+            event.preventDefault();
+            slidePage.style.marginLeft = "0%";
+            bullet[current - 2].classList.remove("active");
+            progressCheck[current - 2].classList.remove("active");
+            progressText[current - 2].classList.remove("active");
+            current -= 1;
+        });
+        prevBtnThird.addEventListener("click", function (event) {
+            event.preventDefault();
+            slidePage.style.marginLeft = "-25%";
+            bullet[current - 2].classList.remove("active");
+            progressCheck[current - 2].classList.remove("active");
+            progressText[current - 2].classList.remove("active");
+            current -= 1;
+        });
+        prevBtnFourth.addEventListener("click", function (event) {
+            event.preventDefault();
+            slidePage.style.marginLeft = "-50%";
+            bullet[current - 2].classList.remove("active");
+            progressCheck[current - 2].classList.remove("active");
+            progressText[current - 2].classList.remove("active");
+            current -= 1;
+        });
+    </script>
+    <!-- End Navbar for desktop-->
+
+    <!-- Navbar for mobile -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-bottom justify-content-center">
+        <ul class="nav for-mobile">
+            <li class="nav-item">
+                <button class="btn me-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight-mobile">
+                    <i class="far fa-bell"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-mobile"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Notification</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Dennis</strong> wants to buy your stuff
+                            <br>
+                            <a href="#" class="text-success">Click here to view more</a>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Bryan</strong> wants to exchange items with you
+                            <a href="#" class="text-success">Click here to view more</a>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn me-4" data-bs-toggle="modal" data-bs-target="#Modal">
+                    <i class="far fa-clipboard"></i>
+                </button>
+            </li>
+            <li class="nav-item">
+                <a href="charity.html" class="btn me-4">
+                    <i class="fas fa-gift"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="btn me-4">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="d-block link-dark text-decoration-none">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- End Navbar for mobile -->
     <!-- End Navigation -->
 
     <!-- Content -->
     <div class="container mt-5">
         <!-- Filters -->
-        <div class="d-flex justify-content-between shadow-sm p-3 mb-3 rounded-3">
+        <div class="d-flex justify-content-between shadow-sm p-3">
             <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#filters"
                 aria-expanded="false" aria-controls="collapseExample">
                 <i class="fas fa-filter"></i>
@@ -42,17 +447,38 @@
                 <a class="nav-link-style ms-3" href="#"><i class="fas fa-chevron-right"></i></a>
             </div>
         </div>
-        <div class="collapse mt-3 mb-3" id="filters">
-            <div class="card card-body">
+        <div class="collapse mb-3" id="filters">
+            <div class="card card-body remove-border shadow-sm">
                 <div class="row">
                     <div class="col-lg-4">
-                        <h6 class="widget-title">Categories</h6>
-                        <ul>
-                            <li>Fashion</li>
-                            <li>Fashion</li>
-                            <li>Fashion</li>
-                            <li>Fashion</li>
-                        </ul>
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="widget-title ">Categories</h6>
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li>
+                                        <a href="fashion.html" class="text-decoration-none active">Fashion</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none">Electronics</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none">Kids' Furniture</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none">Household</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none">Vehicle</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-decoration-none">All</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="col-lg-4">
                         <div class="card mb-grid-gutter">
@@ -337,7 +763,7 @@
         <!-- End Filters -->
 
         <!-- Products -->
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-lg-3 col-md-6">
                 <div class="card remove-border card-hover mb-5">
                     <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
@@ -477,6 +903,23 @@
             </div>
         </div>
         <!-- End Products -->
+        <nav class="d-flex justify-content-between pt-2" aria-label="Page navigation">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#"><i class="ci-arrow-left me-2"></i>Prev</a></li>
+            </ul>
+            <ul class="pagination">
+              <li class="page-item d-sm-none"><span class="page-link page-link-static">1 / 5</span></li>
+              <li class="page-item active d-none d-sm-block" aria-current="page"><span class="page-link">1<span class="visually-hidden">(current)</span></span></li>
+              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">2</a></li>
+              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">3</a></li>
+              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">4</a></li>
+              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">5</a></li>
+            </ul>
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#" aria-label="Next">Next<i class="ci-arrow-right ms-2"></i></a></li>
+            </ul>
+          </nav>
+        
     </div>
     <!-- End Content -->
 

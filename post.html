@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="post.css">
+
+    <!-- Google font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="icon" href="resources/images/logo.png">
+
+    <title>OBG | New Post</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+
+<body>
+    <!-- Navbar for desktop -->
+    <nav class="navbar fixed-top bg-white shadow-sm rounded navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="resources/images/logo.png" alt="" width="24" height="24"
+                    class="d-inline-block align-text-top">
+                OBG
+            </a>
+            <form class="d-flex w-50">
+                <input type="text" class="form-control" placeholder="Search...">
+                <button class="btn btn-outline-primary border-0">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <ul class="nav for-desktop">
+                <li class="nav-item">
+                    <button class="btn me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                        <i class="far fa-bell" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Notification"></i>
+                    </button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel"><i class="far fa-bell"></i> Notification</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Dennis</strong> wants to buy your stuff
+                                <br>
+                                <a href="#" class="text-success">Click here to view more</a>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Bryan</strong> wants to exchange items with you
+                                <a href="#" class="text-success">Click here to view more</a>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="post.html" class="btn me-2">
+                        <i class="far fa-clipboard" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Post"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="charity.html" class="btn me-2">
+                        <i class="fas fa-gift" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Charity"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="btn me-5">
+                        <i class="fas fa-shopping-cart" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Cart"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <div class="flex-shrink-0 dropdown mt-2">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
+                                class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">My order</a></li>
+                            <li><a class="dropdown-item" href="#">My Timeline</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End Navbar for desktop-->
+
+    <!-- Navbar for mobile -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-bottom justify-content-center">
+        <ul class="nav for-mobile">
+            <li class="nav-item">
+                <button class="btn me-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight-mobile">
+                    <i class="far fa-bell"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-mobile"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Notification</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Dennis</strong> wants to buy your stuff
+                            <br>
+                            <a href="#" class="text-success">Click here to view more</a>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Bryan</strong> wants to exchange items with you
+                            <a href="#" class="text-success">Click here to view more</a>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn me-4" data-bs-toggle="modal" data-bs-target="#Modal">
+                    <i class="far fa-clipboard"></i>
+                </button>
+            </li>
+            <li class="nav-item">
+                <a href="charity.html" class="btn me-4">
+                    <i class="fas fa-gift"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="btn me-4">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="d-block link-dark text-decoration-none">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- End Navbar for mobile -->
+
+    <!-- Post -->
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4 mt-4" src="resources/images/post/post.png" alt="" width="150px">
+                <h2>What do you want to post?</h2>
+                <p class="lead">Please fill out enough information for buyers to easily contact</p>
+            </div>
+
+            <div class="row g-5 shadow-sm mb-3 p-4">
+                <div class="col-md-5 col-lg-4 order-md-last">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-danger">Your information</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Your name: </h6>
+                            </div>
+                            <span class="text-muted">William Tom</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Phone number:</h6>
+                            </div>
+                            <span class="text-muted">0123456789</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Email:</h6>
+                            </div>
+                            <span class="text-muted">info@gmail.com</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Address:</h6>
+                            </div>
+                            <span class="text-muted">Somewhere</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-center lh-sm">
+                            <a href="profile.html" class="btn btn-edit w-50">Edit</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-7 col-lg-8">
+                    <h4 class="mb-3">Billing address</h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-sm-12">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" class="form-control" id="title" placeholder="" value="" required>
+                                <div class="invalid-feedback">
+                                    Valid title is required.
+                                </div>
+                            </div>
+                            
+                            <div class="col-sm-12">
+                                <label for="description" class="form-label">Description</label>
+                                <textarea class="form-control" id="description" rows="5"></textarea>
+                                <div class="invalid-feedback">
+                                    Valid description is required.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="brand" class="form-label">Brand</label>
+                                <input type="text" class="form-control" id="brand" required>
+                                <div class="invalid-feedback">
+                                    Valid brand is required.
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="amount" class="form-label">Amount</label>
+                                <input type="number" class="form-control" id="amount" min="1" required>
+                                <div class="invalid-feedback">
+                                    Valid title is required.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <label for="upload" class="form-label">Upload </label>
+                                <textarea class="form-control" id="upload" rows="5"
+                                    placeholder="Your images will display here"></textarea>
+                                <div class="file btn btn-edit">
+                                    Choose from files
+                                    <input type="file" name="file" />
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <hr class="my-4">
+
+                        <h4 class="mb-3">Option</h4>
+
+                        <div class="my-3">
+                            <div class="form-check">
+                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
+                                    required>
+                                <label class="form-check-label" for="credit">Exchange</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="debit">Sale</label>
+                            </div>
+                        </div>
+
+                        <div class="row gy-3">
+                            <div class="col-md-12">
+                                <label for="cc-name" class="form-label">Price</label>
+                                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                                <div class="invalid-feedback">
+                                    Name on card is required
+                                </div>
+                            </div>
+
+                            <a class="w-100 text-center btn-edit btn-lg" type="submit">Confirm</a>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- End Post -->
+
+    <!-- Footer -->
+    <footer id="footer" class="footer mb-3">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 footer-info">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <span> About OBG</span>
+                        </a>
+                        <p>OBG is a marketplace where people can purchase, sell, swap, and donate unwanted products. All
+                            you have to do is provide us with some details and photos about the item you no longer need,
+                            and we'll take care of the rest. Our goal is to encourage people to live a more frugal
+                            lifestyle and to minimize waste as much as possible.</p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-links">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Fashion</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Electronics</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Kids' Furniture</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Household</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Vehicle</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                        <h4>Contact Us</h4>
+                        <p>
+                            470 Tran Dai Nghia<br>
+                            Ngu Hanh Son, Da Nang<br>
+                            Viet Nam<br><br>
+                            <strong>Phone:</strong> 18006789<br>
+                            <strong>Email:</strong> obg@gmail.com<br>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>OBG</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="#">Fabulous 3</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- Tooltip -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <!-- End Tooltip -->
+</body>
+
+</html>

@@ -1,9 +1,16 @@
 ul li{
     list-style: none;
 }
-ul li:hover{
+ul li .active{
     color: #e85a4f;
 }
+a{
+    color: #000;
+}
+a:hover{
+    color: #e85a4f;
+}
+/* Reset */
 .btn:focus{
     box-shadow: none;
 }
@@ -16,9 +23,42 @@ ul li:hover{
     background-color: #f3f5f9;
     border-color: #f3f5f9;
 }
+.remove-border{
+    border: none;
+}
+/* End Reset */
 .nav-link-style{
     color: #e85a4f;
 }
 .nav-link-style:hover{
     color: #ec2213;
 }
+/* Big tablet to 1200px; */
+@media only screen  and (min-width:1200px){
+    .for-mobile{
+        display: none;
+    }
+  }
+   
+  /* Small tablet to big tablet from 768x to 1023px */
+  @media only screen and (min-width:1023px){
+      .for-mobile{
+          display: none;
+      }
+  }
+   
+  /* Small phones to small tablets */
+  @media only screen and (max-width: 767px){
+      .for-desktop{
+          display: none;
+      }
+  }
+   
+  /* Small phones from 0 to 480px; */
+  @media only screen and (max-width: 480px){
+      .for-desktop{
+          display: none;
+      }
+      
+  }
+  
