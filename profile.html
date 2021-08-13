@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <title>Hello, Tom!</title>
 
     <!-- CSS -->
@@ -22,192 +29,233 @@
     <link rel="icon" href="resources/images/logo.png">
 </head>
 
-<body>  
-    
+<body>
+
     <!-- Navbar for desktop -->
-    <nav class="navbar fixed-top bg-white shadow-sm rounded">
+    <nav class="navbar fixed-top bg-white shadow-sm rounded navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="resources/images/logo.png" width="34px" height="34px" alt="">
+                <img src="resources/images/logo.png" alt="" width="24" height="24"
+                    class="d-inline-block align-text-top">
+                OBG
             </a>
+            <form class="d-flex w-50">
+                <input type="text" class="form-control search-box" placeholder="Search...">
+                <button class="btn btn-search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
             <ul class="nav for-desktop">
                 <li class="nav-item">
-                    <button class="btn me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
-                        <a class="text-decoration-none text-muted nav-header-hover fw-bold me-4"
-                            href="index.html">Home</a>
+                    <button class="btn btn-nav me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                        <i class="far fa-bell" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Notification"></i>
                     </button>
+
+
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn me-2" data-bs-toggle="modal" data-bs-target="#Modal">
-                        <a class="text-decoration-none text-danger nav-header-hover fw-bold me-4"
-                            href="profile.html">Profile</a>
-                    </button>
+                    <a href="post.html" class="btn btn-nav me-2">
+                        <i class="far fa-clipboard" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Post"></i>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn me-2" data-bs-toggle="modal" data-bs-target="#Modal">
-                        <a class="text-decoration-none text-muted nav-header-hover fw-bold me-4" href="#">My order</a>
-                    </button>
+                    <a href="charity.html" class="btn btn-nav me-2">
+                        <i class="fas fa-gift" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Charity"></i>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn me-2" data-bs-toggle="modal" data-bs-target="#Modal">
-                        <a class="text-decoration-none text-muted nav-header-hover fw-bold" href="#">My timeline</a>
-                    </button>
+                    <a href="cart.html" class="btn btn-nav me-5">
+                        <i class="fas fa-shopping-cart" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Cart"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <div class="flex-shrink-0 dropdown mt-2">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
+                                class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="orders.html">My orders</a></li>
+                            <li><a class="dropdown-item" href="#">My Timeline</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
         </div>
     </nav>
     <!-- End Navbar for desktop-->
 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel"><i class="far fa-bell"></i> Notification</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Dennis</strong> wants to buy your stuff
+                <br>
+                <a href="#" class="text-success">Click here to view more</a>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Bryan</strong> wants to exchange items with you
+                <a href="#" class="text-success">Click here to view more</a>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
     <!-- Navbar for mobile -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-bottom justify-content-center">
         <ul class="nav for-mobile">
             <li class="nav-item">
-                <button class="btn me-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight-mobile">
+                <button class="btn btn-nav me-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
                     <i class="far fa-bell"></i>
                 </button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn me-4" data-bs-toggle="modal" data-bs-target="#Modal">
+                <a href="post.html" class="btn btn-nav me-4">
                     <i class="far fa-clipboard"></i>
-                </button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="charity.html" class="btn me-4">
+                <a href="charity.html" class="btn btn-nav me-4">
                     <i class="fas fa-gift"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="btn me-4">
+                <a href="#" class="btn btn-nav me-4">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="d-block link-dark text-decoration-none">
+                <a href="profile.html" class="d-block link-dark text-decoration-none">
                     <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                 </a>
             </li>
         </ul>
     </nav>
     <!-- End Navbar for mobile -->
-
-    <div class="container mt-5 p-2">
-        <div class="mt-5 p-4 shadow rounded-3">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="profile-img">
-                        <img src="https://github.com/mdo.png" alt="" />
-                        <div class="file btn btn-lg btn-primary">
-                            Change Photo
-                            <input type="file" name="file" />
-                        </div>
+    <div class="mt-3">-</div>
+    <!-- Information -->
+    <div class="container mt-5 mb-5">
+        <div class="row"> 
+            <div class="col-lg-4 shadow-sm bg-white rounded-3 h-50">
+                <div class="avatar">
+                    <div class="d-flex justify-content-center">
+                        <img src="https://github.com/mdo.png" alt="avatar" width="120" height="120"
+                            class="rounded-circle">
                     </div>
-                    <div class="d-flex pt-2 justify-content-center">
-                        <a class="btn-facebook me-4 my-2 text-decoration-none" data-bs-toggle="modal"
-                            data-bs-target="#editinfo" href="#">
-                            <i class="fas fa-user-edit"></i> Edit</a>
-                    </div>
+                    <h4 class="text-center">William Tom</h4>
                 </div>
-                <div class="modal fade" id="editinfo" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Edit profile</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-floating mb-3">
-                                                <input type="email" class="form-control" id="floatingInput" value="William Tom">
-                                                <label for="floatingInput">Name</label>
-                                              </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control" id="floatingEmail" value="info@gmail.com">
-                                                <label for="floatingEmail">Email</label>
-                                              </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-floating mb-3">
-                                                <input type="email" class="form-control" id="floatingPhone" value="012345678">
-                                                <label for="floatingPhone">Phone number</label>
-                                              </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control" id="floatingAddress" value="Somewhere">
-                                                <label for="floatingAddress">Address</label>
-                                              </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                                        <label for="floatingTextarea">Description</label>
-                                      </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <h3>William Tom</h3>
-                    <span class="d-table badge bg-success mb-1">Exchange: 10 Items</span>
-                    <span class="d-table badge bg-danger">Buy: 20 Items</span>
-                    <div class="d-flex pt-2">
-                        <a class="btn-share btn-twitter me-2 my-2 text-decoration-none" href="#"><i
-                                class="fab fa-twitter"></i> Twitter</a>
-                        <a class="btn-share btn-instagram me-2 my-2 text-decoration-none" href="#"><i
-                                class="fab fa-instagram"></i> Instagram</a>
-                        <a class="btn-share btn-facebook my-2 text-decoration-none" href="#"><i
-                                class="fab fa-facebook"></i> Facebook</a>
-                    </div>
-                    <h3>About</h3>
-                    <hr>
-                    <div class="row mb-4">
-                        <div class="col-lg-6">
-                            <strong>Email</strong>
-                        </div>
-                        <div class="col-lg-6">
-                            <span class="text-muted">info@gmail.com</span>
-                        </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-lg-6">
-                            <strong>Phone number</strong>
-                        </div>
-                        <div class="col-lg-6">
-                            <span class="text-muted">0123456789</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <strong>Address</strong>
-                        </div>
-                        <div class="col-lg-6">
-                            <span class="text-muted">Somewhere</span>
-                        </div>
-                    </div>
+                <div class="list">
+                    <ul class="list-group p-4">
+                        <li class="border-top-0 border-start-0 border-end-0 list-group-item ">
+                            <a href="profile.html"
+                                class="text-decoration-none d-flex justify-content-between align-items-center text-danger">
+                                Profile <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li class="border-top-0 border-start-0 border-end-0 list-group-item ">
+                            <a href="orders.html" class="d-flex justify-content-between align-items-center text-dark">
+                                Orders <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li class="border-top-0 border-start-0 border-end-0 list-group-item ">
+                            <a href="deal.html" class="d-flex justify-content-between align-items-center text-dark">
+                                Deal <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li class="border-top-0 border-start-0 border-end-0 list-group-item ">
+                            <a href="items.html" class="d-flex justify-content-between align-items-center text-dark">
+                                My items <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="row ps-lg-5 pe-lg-5 ps-md-1 pe-md-1">
-                <h3>Description</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit neque sed fugit voluptates facilis
-                    sint provident dignissimos a delectus, quidem magnam alias illo, dolores id, minus repudiandae. Et
-                    blanditiis pariatur harum</p>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-7 shadow-sm bg-white rounded-3">
+                <div class="p-4">
+                    <h5>General information</h5>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control form-control-input" id="firstName"
+                                placeholder="William">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control form-control-input" id="lastName"
+                                placeholder="Tom">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-6">
+                            <label for="date" class="form-label">Birthday</label>
+                            <input type="text" class="form-control form-control-input" id="date" placeholder="09/10/2002">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select class="form-select form-control-input">
+                                <option value="1">Female</option>
+                                <option selected value="2">Male</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-input" id="email" placeholder="info@gmail.com">
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="text" class="form-control form-control-input" id="phone" placeholder="012345678">
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h5>Address</h5>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control form-control-input" id="address"
+                                placeholder="somewhere">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-4">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control form-control-input" id="city" placeholder="City">
+                        </div>
+                        <div class="col-lg-4">
+                            <label for="country" class="form-label">Country</label>
+                            <select class="form-select form-control-input">
+                                <option selected value="1">Canada</option>
+                                <option value="2">United Stated</option>
+                                <option value="3">Italys</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                            <label for="zip" class="form-label">Zip</label>
+                            <input type="text" class="form-control form-control-input" id="zip" placeholder="ZIP">
+                        </div>
+                    </div>
+                    <button class="mt-2 btn btn-save">Save All</button>
+                </div>
             </div>
         </div>
     </div>
-
+    <!-- End Information -->
 
     <!-- Footer -->
     <footer id="footer" class="footer mb-3">
@@ -271,6 +319,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+    <!-- Tooltip -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <!-- End Tooltip -->
 </body>
 
 </html>

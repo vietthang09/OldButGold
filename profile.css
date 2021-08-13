@@ -1,51 +1,85 @@
 
 /* Reset */
+body{
+  background: #f5f9fe;
+  font-family: 'Poppins', sans-serif;
+}
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
-.text-danger{
-    color: #e85a4f !important;
+.form-control:focus{
+  box-shadow: none;
 }
-.btn-twitter{
-    color: #1da1f2;
-    padding: 5px;
-    border-radius: 5px;
-    background: rgba(29,161,242,.08);
-    transition: 0.2s;
-  }
-  .btn-twitter:hover{
-    color: #ffffff;
-    background: #1da1f2;
-  }
-  .btn-instagram{
-    padding: 5px;
-    border-radius: 5px;
-    color: #5851db;
-    background: rgba(88,81,219,.08);
-    transition: 0.2s;
-  }
-  .btn-instagram:hover{
-    color: #ffffff;
-    background: #5851db;
-  }
-  .btn-facebook{
-   padding: 5px;
-   border-radius: 5px;
-   color: #3b5998;
-   background: rgba(59,89,152,.08);
-   transition: 0.2s;
- }
- .btn-facebook:hover{
-   color: #ffffff;
-   background: #3b5998;
- }
+.form-control-input:focus{
+  border: #e85a4f 1px solid;
+}
+.form-select:focus{
+  box-shadow: none;
+}
+.btn:focus{
+  box-shadow: none;
+}
 /* End Reset */
 
-/* Navigation */
-.nav-header-hover:hover{
-    color: #e85a4f !important;
+/* Navbar */
+.navbar-brand{
+  font-weight: 500;
+  color: #e85a4f;
 }
-/* End Navigation */
+.navbar-brand:hover{
+  color: #e85a4f;
+}
+.search-box{
+  border: none;
+  background-color: #f7f9fc;
+}
+.search-box:focus{
+  background-color: #f7f9fc;
+}
+.btn-search,
+.btn-nav{
+  font-size: 20px;
+  color: #e85a4f;
+  background: none;
+  border: none;
+  transition: 0.2s;
+}
+.btn-search:hover{
+  color: #ffffff;
+  background: #e85a4f;
+  box-shadow: 0px 5px 10px rgba(253, 90, 79, 0.4);
+}
+.btn-nav:hover{
+  color: #ffffff;
+  background: #e85a4f;
+  box-shadow: 0px 5px 10px rgba(253, 90, 79, 0.4);
+}
+/* End Navbar */
+
+/* Information */
+/* List */
+.list-group-item,
+.fa-arrow-right{
+    transition: 0.2s;
+}
+.list-group-item:hover{
+    background: #f5f9fe;
+}
+.list-group-item:hover
+.fa-arrow-right{
+    transform: translateX(10px);
+}
+/* End List */
+.btn-save{
+  background: #e85a4f;
+  color: #ffffff;
+  transition: 0.2s;
+}
+.btn-save:hover{
+  background: #161616;
+  color: #ffffff;
+}
+/* End Information */
 
 /* Profile */
 .emp-profile{
