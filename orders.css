@@ -1,38 +1,100 @@
 /* Reset */
+body{
+  background: #f5f9fe;
+  font-family: 'Poppins', sans-serif;
+}
 a{
-    text-decoration: none;
+  text-decoration: none;
+}
+.form-control:focus{
+  box-shadow: none;
+}
+.form-control-input:focus{
+  border: #e85a4f 1px solid;
+}
+.form-select:focus{
+  box-shadow: none;
+}
+.btn:focus{
+  box-shadow: none;
 }
 /* End Reset */
 
 /* Navbar */
 .navbar-brand{
-    color: #e85a4f;
-    font-weight: 700;
+  font-weight: 500;
+  color: #e85a4f;
 }
 .navbar-brand:hover{
-    color: #e85a4f;
+  color: #e85a4f;
 }
-.form-control{
-    border: none;
-    background-color: #f7f9fc;
+.search-box{
+  border: none;
+  background-color: #f7f9fc;
 }
-.form-control:focus{
-    box-shadow: none;
+.search-box:focus{
+  background-color: #f7f9fc;
 }
-.btn{
-    font-size: 20px;
-    color: #e85a4f;
-    transition: 0.2s;
+.btn-search,
+.btn-nav{
+  font-size: 20px;
+  color: #e85a4f;
+  background: none;
+  border: none;
+  transition: 0.2s;
 }
-.btn:hover{
-    color: #ffffff;
-    background-color: #e85a4f;
-    box-shadow: 0px 5px 10px rgba(253, 90, 79, 0.4);
+.btn-search:hover{
+  color: #ffffff;
+  background: #e85a4f;
+  box-shadow: 0px 5px 10px rgba(253, 90, 79, 0.4);
 }
-.btn:focus{
-    box-shadow: none;
+.btn-nav:hover{
+  color: #ffffff;
+  background: #e85a4f;
+  box-shadow: 0px 5px 10px rgba(253, 90, 79, 0.4);
 }
 /* End Navbar */
+
+/* Tracking */
+/* List */
+.list-group-item,
+.fa-arrow-right{
+    transition: 0.2s;
+}
+.list-group-item:hover{
+    background: #f5f9fe;
+}
+.list-group-item:hover
+.fa-arrow-right{
+    transform: translateX(10px);
+}
+/* End List */
+.item-header{
+  background: #f5f5f5;
+}
+.tracking-title{
+  font-size: 12px;
+}
+.tracking-content{
+  font-size: 14px;
+  font-weight: 600;
+}
+.btn-order-details{
+  border-radius: 0;
+  border: #e85a4f 1px solid;
+  color: #e85a4f;
+  transition: 0.1s;
+}
+.btn-order-details:hover{
+  background: #e85a4f;
+  color: #ffffff;
+}
+.btn-more{
+  width: 100px;
+  font-weight: 500;
+  background: #f5f5f5;
+}
+/* End Tracking */
 
 /* Footer */
 .footer {

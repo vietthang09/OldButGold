@@ -15,7 +15,7 @@
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="orders.css">
+    <link rel="stylesheet" href="order1.css">
 
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,9 +25,9 @@
         rel="stylesheet">
 
     <!-- Icon -->
-    <link rel="icon" href="resources/images/logo.png">
+    <link rel="icon" href="../resources/images/logo.png">
 
-    <title>OBG | Orders</title>
+    <title>OBG | My Order</title>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -38,8 +38,8 @@
     <!-- Navbar for desktop -->
     <nav class="navbar fixed-top bg-white shadow-sm rounded navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="resources/images/logo.png" alt="" width="24" height="24"
+            <a class="navbar-brand" href="../index.html">
+                <img src="../resources/images/logo.png" alt="" width="24" height="24"
                     class="d-inline-block align-text-top">
                 OBG
             </a>
@@ -59,18 +59,18 @@
 
                 </li>
                 <li class="nav-item">
-                    <a href="post.html" class="btn btn-nav me-2">
+                    <a href="../post.html" class="btn btn-nav me-2">
                         <i class="far fa-clipboard" data-bs-toggle="tooltip" data-bs-placement="bottom"
                             title="Post"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="charity.html" class="btn btn-nav me-2">
+                    <a href="../charity.html" class="btn btn-nav me-2">
                         <i class="fas fa-gift" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Charity"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="cart.html" class="btn btn-nav me-5">
+                    <a href="../cart.html" class="btn btn-nav me-5">
                         <i class="fas fa-shopping-cart" data-bs-toggle="tooltip" data-bs-placement="bottom"
                             title="Cart"></i>
                     </a>
@@ -83,8 +83,8 @@
                                 class="rounded-circle">
                         </a>
                         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                            <li><a class="dropdown-item" href="orders.html">Orders</a></li>
+                            <li><a class="dropdown-item" href="../profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="../orders.html">Orders</a></li>
                             <li><a class="dropdown-item" href="#">My Timeline</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -127,22 +127,22 @@
                 </button>
             </li>
             <li class="nav-item">
-                <a href="post.html" class="btn btn-nav me-4">
+                <a href="../post.html" class="btn btn-nav me-4">
                     <i class="far fa-clipboard"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="charity.html" class="btn btn-nav me-4">
+                <a href="../charity.html" class="btn btn-nav me-4">
                     <i class="fas fa-gift"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="btn btn-nav me-4">
+                <a href="../cart.html" class="btn btn-nav me-4">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="profile.html" class="d-block link-dark text-decoration-none">
+                <a href="../profile.html" class="d-block link-dark text-decoration-none">
                     <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                 </a>
             </li>
@@ -150,10 +150,10 @@
     </nav>
     <!-- End Navbar for mobile -->
 
-    <!-- Tracking --> 
+    <!-- Tracking -->
     <div class="mt-3">_</div>
     <div class="container mt-5 mb-5">
-        <div class="row"> 
+        <div class="row">
             <div class="col-lg-4 shadow-sm bg-white rounded-3 h-50">
                 <div class="avatar">
                     <div class="d-flex justify-content-center">
@@ -165,23 +165,24 @@
                 <div class="list">
                     <ul class="list-group p-4">
                         <li class="border-top-0 border-start-0 border-end-0 list-group-item ">
-                            <a href="profile.html"
+                            <a href="../profile.html"
                                 class="text-decoration-none d-flex justify-content-between align-items-center text-dark">
                                 Profile <i class="fas fa-arrow-right"></i>
                             </a>
                         </li>
                         <li class="border-top-0 border-start-0 border-end-0 list-group-item ">
-                            <a href="orders.html" class="d-flex justify-content-between align-items-center text-danger">
+                            <a href="../orders.html"
+                                class="d-flex justify-content-between align-items-center text-danger">
                                 Orders <i class="fas fa-arrow-right"></i>
                             </a>
                         </li>
                         <li class="border-top-0 border-start-0 border-end-0 list-group-item ">
-                            <a href="deal.html" class="d-flex justify-content-between align-items-center text-dark">
+                            <a href="../deal.html" class="d-flex justify-content-between align-items-center text-dark">
                                 Deal <i class="fas fa-arrow-right"></i>
                             </a>
                         </li>
                         <li class="border-top-0 border-start-0 border-end-0 list-group-item ">
-                            <a href="items.html" class="d-flex justify-content-between align-items-center text-dark">
+                            <a href="../items.html" class="d-flex justify-content-between align-items-center text-dark">
                                 My items <i class="fas fa-arrow-right"></i>
                             </a>
                         </li>
@@ -189,7 +190,7 @@
                 </div>
             </div>
             <div class="col-lg-1"></div>
-            <div class="col-lg-7  rounded-3">
+            <div class="col-lg-7 rounded-3">
                 <div class="item border bg-white">
                     <div class="row m-3 item-header">
                         <div class="col-lg-3 col-6">
@@ -210,71 +211,72 @@
                         </div>
                     </div>
                     <div class="row item-body m-3">
-                        <div class="col-lg-6 d-flex justify-content-center">
-                            <img src="resources/images/fashion/fashion6-1.jpg" width="100" height="100" alt="" class="me-2">
-                            <img src="resources/images/fashion/fashion7-1.jpg" width="100" height="100" alt="">
+                        <h5 class="mt-2 mb-2">Order Items (2)</h5>
+                        <hr>
+                        <div class="item mb-3">
+                            <div class="row d-flex justify-content-center align-items-center">
+                                <div class="col-4">
+                                    <img src="../resources/images/fashion/fashion6-1.jpg" alt="" width="100"
+                                        height="110">
+                                </div>
+                                <div class="col-8">
+                                    <h6>White Fur Slippers</h6>
+                                    <span class="text-muted">$10</span> <br>
+                                    <span class="text-muted">Amount: 1</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-6 d-flex justify-content-center align-items-center mt-2">
-                            <a href="orders/order1.html" class="btn btn-order-details">Order Details</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item border bg-white mt-4">
-                    <div class="row m-3 item-header">
-                        <div class="col-lg-3 col-6">
-                            <span class="text-muted tracking-title">ORDER NO:</span> <br>
-                            <span class="tracking-content">871090437</span>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <span class="text-muted tracking-title">SHIPPED DATE:</span><br>
-                            <span class="tracking-content">25 Sep, 2021</span>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <span class="text-muted tracking-title">STATUS:</span> <br>
-                            <span class="tracking-content">In Processing</span>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <span class="text-muted tracking-title">ORDER AMOUNT:</span> <br>
-                            <span class="tracking-content">$75.00</span>
-                        </div>
-                    </div>
-                    <div class="row item-body m-3">
-                        <div class="col-lg-6 d-flex justify-content-center">
-                            <img src="resources/images/fashion/fashion10-1.jpg" width="100" height="100" alt="">
-                        </div>
-                        <div class="col-lg-6 d-flex justify-content-center align-items-center mt-2">
-                            <a href="#" class="btn btn-order-details">Order Details</a>
+                        <hr>
+                        <div class="item mt-2">
+                            <div class="row d-flex justify-content-center align-items-center">
+                                <div class="col-4">
+                                    <img src="../resources/images/fashion/fashion7-1.jpg" alt="" width="100"
+                                        height="110">
+                                </div>
+                                <div class="col-8">
+                                    <h6>Swiss Court Pro II</h6>
+                                    <span class="text-muted">$50</span> <br>
+                                    <span class="text-muted">Amount: 1</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="item border bg-white mt-4">
-                    <div class="row m-3 item-header">
-                        <div class="col-lg-3 col-6">
-                            <span class="text-muted tracking-title">ORDER NO:</span> <br>
-                            <span class="tracking-content">891230563</span>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <span class="text-muted tracking-title">SHIPPED DATE:</span><br>
-                            <span class="tracking-content">07 Sep, 2021</span>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <span class="text-muted tracking-title">STATUS:</span> <br>
-                            <span class="tracking-content">Delivered</span>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <span class="text-muted tracking-title">ORDER AMOUNT:</span> <br>
-                            <span class="tracking-content">$69.00</span>
-                        </div>
+                <div class="item border bg-white mt-2 p-3">
+                    <h5 class="mt-2 mb-2">Order Total</h5>
+                    <div class="d-flex justify-content-between">
+                        <span>Subtotal</span>
+                        <span>$60</span>
                     </div>
-                    <div class="row item-body m-3">
-                        <div class="col-lg-6 d-flex justify-content-center">
-                            <img src="resources/images/electronic/electronic8-1.jpg" width="100" height="100" alt="" class="me-2">
-                            <img src="resources/images/electronic/electronic7-1.jpg" width="100" height="100" alt="" class="me-2">
-                            <a href="#" class="btn btn-more d-flex justify-content-center align-items-center">+1 <br> more</a>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <span>Shipping</span>
+                        <span>$00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold">
+                        <span>Total</span>
+                        <span>$60</span>
+                    </div>
+                </div>
+                <div class="item border bg-white mt-2 p-3">
+                    <h5 class="mt-2 mb-2">Shipping Details</h5>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h6>Shipping Address:</h6>
+                            <p class="text-muted">
+                                Daniel Robinson,
+                                3997 Raccoon Run,
+                                Kingston, 45644,
+                                United States,
+                                6146389574
+                            </p>
                         </div>
-                        <div class="col-lg-6 d-flex justify-content-center align-items-center mt-2">
-                            <a href="#" class="btn btn-order-details">Order Details</a>
+                        <div class="col-lg-6">
+                            <h6>Payment Method:</h6>
+                            <p class="text-muted">
+                                Payment on delivery
+                            </p>
                         </div>
                     </div>
                 </div>
