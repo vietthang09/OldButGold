@@ -12,6 +12,13 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -23,63 +30,42 @@
 
 <body>
 
-    <!-- Navigation -->
     <!-- Navbar for desktop -->
-    <nav class="navbar fixed-top bg-white shadow-sm rounded">
+    <nav class="navbar fixed-top bg-white shadow-sm rounded navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">OBG</a>
-            <form class="d-flex">
-                <input type="text" class="form-control" placeholder="Search...">
-                <button class="btn btn-outline-primary border-0">
+            <a class="navbar-brand d-flex justify-content-between" href="../index.html">
+                <img src="../resources/images/logo.png" alt="" width="24" height="24"
+                    class="d-inline-block align-text-top">
+                OBG
+            </a>
+            <form class="d-flex w-50">
+                <input type="text" class="form-control search-box" placeholder="Search...">
+                <button class="btn btn-search">
                     <i class="fas fa-search"></i>
                 </button>
             </form>
             <ul class="nav for-desktop">
                 <li class="nav-item">
-                    <button class="btn me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                    <button class="btn btn-nav me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
                         <i class="far fa-bell" data-bs-toggle="tooltip" data-bs-placement="bottom"
                             title="Notification"></i>
-                        <span class="position-relative top-0 start-0 translate-middle badge bg-danger"
-                            style="font-size: 10px;">2</span>
                     </button>
 
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                        aria-labelledby="offcanvasRightLabel">
-                        <div class="offcanvas-header">
-                            <h5 id="offcanvasRightLabel"><i class="far fa-bell"></i> Notification</h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <strong>Dennis</strong> wants to buy your stuff
-                                <br>
-                                <a href="#" class="text-success">Click here to view more</a>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                <strong>Bryan</strong> wants to exchange items with you
-                                <a href="#" class="text-success">Click here to view more</a>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                            </div>
-                        </div>
-                    </div>
+
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn me-2" data-bs-toggle="modal" data-bs-target="#Modal">
+                    <a href="../post.html" class="btn btn-nav me-2">
                         <i class="far fa-clipboard" data-bs-toggle="tooltip" data-bs-placement="bottom"
                             title="Post"></i>
-                    </button>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="charity.html" class="btn me-2">
+                    <a href="../charity.html" class="btn btn-nav me-2">
                         <i class="fas fa-gift" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Charity"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="cart.html" class="btn me-5">
+                    <a href="../cart.html" class="btn btn-nav me-5">
                         <i class="fas fa-shopping-cart" data-bs-toggle="tooltip" data-bs-placement="bottom"
                             title="Cart"></i>
                     </a>
@@ -91,10 +77,11 @@
                             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
                                 class="rounded-circle">
                         </a>
-                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">My order</a></li>
-                            <li><a class="dropdown-item" href="#">My Timeline</a></li>
+                        <ul class="dropdown-menu text-small shadow border-0 p-3">
+                            <li><a class="dropdown-item" href="../profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="../orders.html">Orders</a></li>
+                            <li><a class="dropdown-item" href="../deal.html">Deal</a></li>
+                            <li><a class="dropdown-item" href="../items.html">My items</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -105,656 +92,176 @@
             </ul>
         </div>
     </nav>
+    <!-- End Navbar for desktop-->
 
-    <div class="modal" id="Modal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary">
-                    <h5 class="modal-title text-white" id="exampleModalLabel">Post</h5>
-                    <!-- <div class="progress-bar">
-                        <div class="step">
-                            <p>
-                                Name
-                            </p>
-                            <div class="bullet">
-                                <span>1</span>
-                            </div>
-                            <div class="check fas fa-check"></div>
-                        </div>
-                        <div class="step">
-                            <p>
-                                Contact
-                            </p>
-                            <div class="bullet">
-                                <span>2</span>
-                            </div>
-                            <div class="check fas fa-check"></div>
-                        </div>
-                        <div class="step">
-                            <p>
-                                Birth
-                            </p>
-                            <div class="bullet">
-                                <span>3</span>
-                            </div>
-                            <div class="check fas fa-check"></div>
-                        </div>
-                        <div class="step">
-                            <p>
-                                Submit
-                            </p>
-                            <div class="bullet">
-                                <span>4</span>
-                            </div>
-                            <div class="check fas fa-check"></div>
-                        </div>
-                    </div> -->
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-outer">
-                        <form action="#">
-                            <div class="page slide-page">
-                                <div class="title">
-                                    Basic Info:
-                                </div>
-                                <div class="field">
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="email" placeholder="name@example.com">
-                                        <label for="floatingInput" id="labelemail">Email address</label>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Last Name
-                                    </div>
-                                    <input type="text">
-                                </div>
-                                <div class="field">
-                                    <button class="firstNext next">Next</button>
-                                </div>
-                            </div>
-                            <div class="page">
-                                <div class="title">
-                                    Contact Info:
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Email Address
-                                    </div>
-                                    <input type="text">
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Phone Number
-                                    </div>
-                                    <input type="Number">
-                                </div>
-                                <div class="field btns">
-                                    <button class="prev-1 prev">Previous</button>
-                                    <button class="next-1 next">Next</button>
-                                </div>
-                            </div>
-                            <div class="page">
-                                <div class="title">
-                                    Date of Birth:
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Date
-                                    </div>
-                                    <input type="text">
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Gender
-                                    </div>
-                                    <select>
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                        <option>Other</option>
-                                    </select>
-                                </div>
-                                <div class="field btns">
-                                    <button class="prev-2 prev">Previous</button>
-                                    <button class="next-2 next">Next</button>
-                                </div>
-                            </div>
-                            <div class="page">
-                                <div class="title">
-                                    Login Details:
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Username
-                                    </div>
-                                    <input type="text">
-                                </div>
-                                <div class="field">
-                                    <div class="label">
-                                        Password
-                                    </div>
-                                    <input type="password">
-                                </div>
-                                <div class="field btns">
-                                    <button class="prev-3 prev">Previous</button>
-                                    <button class="submit">Submit</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- <div class="tab-content">
-                        <div class="tab-pane fade show active" id="project-add-details" role="tabpanel">
-                            <h6>Description</h6>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingTitle"
-                                    placeholder="name@example.com">
-                                <label for="floatingTitle">Title</label>
-                            </div>
-                            <div class="form-floating">
-                                <textarea class="form-control" id="floatingDescription"
-                                    placeholder="Leave a description here"></textarea>
-                                <label for="floatingDescription">Description</label>
-                            </div>
-                            <hr>
-                            <h6>Category</h6>
-                            <input class="form-control" list="datalistOptions" id="DataList"
-                                placeholder="Type to search...">
-                            <datalist id="datalistOptions">
-                                <option value="Fashion">
-                                <option value="Electronic">
-                                <option value="Children">
-                                <option value="Household">
-                                <option value="Vehicle">
-                                <option value="Other">
-                            </datalist>
-                            <hr>
-                            <h6>Optimization</h6>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="switchExchange">
-                                <label class="form-check-label" for="switchExchange">Exchange</label>
-                            </div>
-
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="switchSale">
-                                <label class="form-check-label" for="switchSale">Sale</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingPrice"
-                                    placeholder="name@example.com">
-                                <label for="floatingPrice">Price</label>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-                <!-- <div class="modal-footer">
-                    <button type="button" class="btn">Save changes</button>
-                </div> -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel"><i class="far fa-bell"></i> Notification</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Dennis</strong> wants to buy your stuff
+                <br>
+                <a href="#" class="text-success">Click here to view more</a>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Bryan</strong> wants to exchange items with you
+                <a href="#" class="text-success">Click here to view more</a>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         </div>
     </div>
-    <script>
-        const slidePage = document.querySelector(".slide-page");
-        const nextBtnFirst = document.querySelector(".firstNext");
-        const prevBtnSec = document.querySelector(".prev-1");
-        const nextBtnSec = document.querySelector(".next-1");
-        const prevBtnThird = document.querySelector(".prev-2");
-        const nextBtnThird = document.querySelector(".next-2");
-        const prevBtnFourth = document.querySelector(".prev-3");
-        const submitBtn = document.querySelector(".submit");
-        const progressText = document.querySelectorAll(".step p");
-        const progressCheck = document.querySelectorAll(".step .check");
-        const bullet = document.querySelectorAll(".step .bullet");
-        let current = 1;
-        nextBtnFirst.addEventListener("click", function (event) {
-            let x = document.getElementById("email").value;
-            let text;
-            if(isNaN(x) || x<1 || x>10){
-                text = "Loi";
-                document.getElementById("labelemail").innerHTML = text;
-            } else{
-                text = "Email address";
-                event.preventDefault();
-                slidePage.style.marginLeft = "-25%";
-                bullet[current - 1].classList.add("active");
-                progressCheck[current - 1].classList.add("active");
-                progressText[current - 1].classList.add("active");
-                current += 1;
-                document.getElementById("labelemail").innerHTML = text;
-            }
-            
-        });
-        nextBtnSec.addEventListener("click", function (event) {
-            event.preventDefault();
-            slidePage.style.marginLeft = "-50%";
-            bullet[current - 1].classList.add("active");
-            progressCheck[current - 1].classList.add("active");
-            progressText[current - 1].classList.add("active");
-            current += 1;
-        });
-        nextBtnThird.addEventListener("click", function (event) {
-            event.preventDefault();
-            slidePage.style.marginLeft = "-75%";
-            bullet[current - 1].classList.add("active");
-            progressCheck[current - 1].classList.add("active");
-            progressText[current - 1].classList.add("active");
-            current += 1;
-        });
-        submitBtn.addEventListener("click", function () {
-            bullet[current - 1].classList.add("active");
-            progressCheck[current - 1].classList.add("active");
-            progressText[current - 1].classList.add("active");
-            current += 1;
-            setTimeout(function () {
-                alert("Your Form Successfully Signed up");
-                location.reload();
-            }, 800);
-        });
-        prevBtnSec.addEventListener("click", function (event) {
-            event.preventDefault();
-            slidePage.style.marginLeft = "0%";
-            bullet[current - 2].classList.remove("active");
-            progressCheck[current - 2].classList.remove("active");
-            progressText[current - 2].classList.remove("active");
-            current -= 1;
-        });
-        prevBtnThird.addEventListener("click", function (event) {
-            event.preventDefault();
-            slidePage.style.marginLeft = "-25%";
-            bullet[current - 2].classList.remove("active");
-            progressCheck[current - 2].classList.remove("active");
-            progressText[current - 2].classList.remove("active");
-            current -= 1;
-        });
-        prevBtnFourth.addEventListener("click", function (event) {
-            event.preventDefault();
-            slidePage.style.marginLeft = "-50%";
-            bullet[current - 2].classList.remove("active");
-            progressCheck[current - 2].classList.remove("active");
-            progressText[current - 2].classList.remove("active");
-            current -= 1;
-        });
-    </script>
-    <!-- End Navbar for desktop-->
 
     <!-- Navbar for mobile -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-bottom justify-content-center">
         <ul class="nav for-mobile">
             <li class="nav-item">
-                <button class="btn me-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight-mobile">
+                <button class="btn btn-nav me-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
                     <i class="far fa-bell"></i>
                 </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-mobile"
-                    aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                        <h5 id="offcanvasRightLabel">Notification</h5>
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>Dennis</strong> wants to buy your stuff
-                            <br>
-                            <a href="#" class="text-success">Click here to view more</a>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <strong>Bryan</strong> wants to exchange items with you
-                            <a href="#" class="text-success">Click here to view more</a>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    </div>
-                </div>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn me-4" data-bs-toggle="modal" data-bs-target="#Modal">
+                <a href="../post.html" class="btn btn-nav me-4">
                     <i class="far fa-clipboard"></i>
-                </button>
+                </a>
             </li>
             <li class="nav-item">
-                <a href="charity.html" class="btn me-4">
+                <a href="../charity.html" class="btn btn-nav me-4">
                     <i class="fas fa-gift"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="btn me-4">
+                <a href="../cart.html" class="btn btn-nav me-4">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="d-block link-dark text-decoration-none">
+                <a href="../profile.html" class="d-block link-dark text-decoration-none">
                     <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                 </a>
             </li>
         </ul>
     </nav>
     <!-- End Navbar for mobile -->
-    <!-- End Navigation -->
 
     <!-- Content -->
+    <div class="mt-3">-</div>
     <div class="container mt-5">
         <!-- Filters -->
         <div class="d-flex justify-content-between shadow-sm p-3">
-            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#filters"
+            <button class="btn btn-filters" type="button" data-bs-toggle="collapse" data-bs-target="#filters"
                 aria-expanded="false" aria-controls="collapseExample">
                 <i class="fas fa-filter"></i>
                 Filters
                 <i class="fas fa-sort-down"></i>
             </button>
             <div class="d-flex">
-                <a class="nav-link-style me-3" href="#"><i class="fas fa-chevron-left"></i></a>
+                <a class="nav-link-style me-3" href="#"><i class="fas fa-chevron-left text-danger"></i></a>
                 <span class="fs-md">1 / 5</span>
-                <a class="nav-link-style ms-3" href="#"><i class="fas fa-chevron-right"></i></a>
+                <a class="nav-link-style ms-3" href="#"><i class="fas fa-chevron-right text-danger"></i></a>
             </div>
         </div>
         <div class="collapse mb-3" id="filters">
-            <div class="card card-body remove-border shadow-sm">
+            <div class="card card-body border-0">
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="card">
-                            <div class="card-header">
-                                <h6 class="widget-title ">Categories</h6>
+                            <div class="card-header bg-white border-0">
+                                <h6 class="ps-4 pt-2">Categories</h6>
                             </div>
                             <div class="card-body">
                                 <ul>
                                     <li>
-                                        <a href="fashion.html" class="text-decoration-none active">Fashion</a>
+                                        <a href="fashion.html"
+                                            class="text-decoration-none text-dark category-hover">Fashion</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-decoration-none">Electronics</a>
+                                        <a href="#"
+                                            class="text-decoration-none text-dark category-hover">Electronics</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-decoration-none">Kids' Furniture</a>
+                                        <a href="#" class="text-decoration-none text-dark category-hover">Kids'
+                                            Furniture</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-decoration-none">Household</a>
+                                        <a href="#" class="text-decoration-none text-dark category-hover">Household</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-decoration-none">Vehicle</a>
+                                        <a href="#" class="text-decoration-none text-dark category-hover">Vehicle</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-decoration-none">All</a>
+                                        <a href="#" class="text-decoration-none text-dark category-hover">All</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="col-lg-4">
-                        <div class="card mb-grid-gutter">
-                            <div class="card-body px-4">
-                                <div class="widget">
-                                    <h6 class="widget-title">Price range</h6>
-                                    <div class="range-slider" data-start-min="250" data-start-max="680" data-min="0"
-                                        data-max="1000" data-step="1">
-                                        <div class="range-slider-ui"></div>
-                                        <div class="d-flex pb-1">
-                                            <div class="w-50 pe-2 me-2">
-                                                <div class="input-group input-group-sm"><span
-                                                        class="input-group-text">$</span>
-                                                    <input class="form-control range-slider-value-min" type="text">
-                                                </div>
-                                            </div>
-                                            <div class="w-50 ps-2">
-                                                <div class="input-group input-group-sm"><span
-                                                        class="input-group-text">$</span>
-                                                    <input class="form-control range-slider-value-max" type="text">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="floatingInput" placeholder="1">
+                                    <label for="floatingInput">Price From</label>
                                 </div>
-                            </div>
-                            <div class="card mb-grid-gutter">
-                                <div class="card-body px-4">
-                                    <div class="widget widget-filter">
-                                        <h6 class="widget-title">Brand</h6>
-                                        <div class="input-group input-group-sm mb-2">
-                                            <input class="widget-filter-search form-control rounded-end pe-5"
-                                                type="text" placeholder="Search"><i
-                                                class="ci-search position-absolute top-50 end-0 translate-middle-y fs-sm me-3"></i>
-                                        </div>
-                                        <ul class="widget-list widget-filter-list list-unstyled pt-1 overflow-scroll"
-                                            style="max-height: 11rem;" data-simplebar data-simplebar-auto-hide="false">
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="adidas">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="adidas">Adidas</label>
-                                                </div><span class="fs-xs text-muted">425</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="ataylor">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="ataylor">Ann Taylor</label>
-                                                </div><span class="fs-xs text-muted">15</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="armani">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="armani">Armani</label>
-                                                </div><span class="fs-xs text-muted">18</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="banana">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="banana">Banana Republic</label>
-                                                </div><span class="fs-xs text-muted">103</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="bilabong">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="bilabong">Bilabong</label>
-                                                </div><span class="fs-xs text-muted">27</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="birkenstock">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="birkenstock">Birkenstock</label>
-                                                </div><span class="fs-xs text-muted">10</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="klein">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="klein">Calvin Klein</label>
-                                                </div><span class="fs-xs text-muted">365</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="columbia">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="columbia">Columbia</label>
-                                                </div><span class="fs-xs text-muted">508</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="converse">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="converse">Converse</label>
-                                                </div><span class="fs-xs text-muted">176</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="dockers">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="dockers">Dockers</label>
-                                                </div><span class="fs-xs text-muted">54</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="fruit">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="fruit">Fruit of the Loom</label>
-                                                </div><span class="fs-xs text-muted">739</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="hanes">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="hanes">Hanes</label>
-                                                </div><span class="fs-xs text-muted">92</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="choo">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="choo">Jimmy Choo</label>
-                                                </div><span class="fs-xs text-muted">17</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="levis">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="levis">Levi's</label>
-                                                </div><span class="fs-xs text-muted">361</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="lee">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="lee">Lee</label>
-                                                </div><span class="fs-xs text-muted">264</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="wearhouse">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="wearhouse">Men's Wearhouse</label>
-                                                </div><span class="fs-xs text-muted">75</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="newbalance">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="newbalance">New Balance</label>
-                                                </div><span class="fs-xs text-muted">218</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="nike">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="nike">Nike</label>
-                                                </div><span class="fs-xs text-muted">810</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="navy">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="navy">Old Navy</label>
-                                                </div><span class="fs-xs text-muted">147</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="polo">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="polo">Polo Ralph Lauren</label>
-                                                </div><span class="fs-xs text-muted">64</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="puma">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="puma">Puma</label>
-                                                </div><span class="fs-xs text-muted">370</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="reebok">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="reebok">Reebok</label>
-                                                </div><span class="fs-xs text-muted">506</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="skechers">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="skechers">Skechers</label>
-                                                </div><span class="fs-xs text-muted">209</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="hilfiger">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="hilfiger">Tommy Hilfiger</label>
-                                                </div><span class="fs-xs text-muted">487</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="armour">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="armour">Under Armour</label>
-                                                </div><span class="fs-xs text-muted">90</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="urban">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="urban">Urban Outfitters</label>
-                                                </div><span class="fs-xs text-muted">152</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="vsecret">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="vsecret">Victoria's Secret</label>
-                                                </div><span class="fs-xs text-muted">238</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="wolverine">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="wolverine">Wolverine</label>
-                                                </div><span class="fs-xs text-muted">29</span>
-                                            </li>
-                                            <li
-                                                class="widget-filter-item d-flex justify-content-between align-items-center">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" id="wrangler">
-                                                    <label class="form-check-label widget-filter-item-text"
-                                                        for="wrangler">Wrangler</label>
-                                                </div><span class="fs-xs text-muted">115</span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="floatingInput" placeholder="1">
+                                    <label for="floatingInput">Price To</label>
                                 </div>
                             </div>
                         </div>
+                        <div class="card">
+                            
+                        </div>
                     </div>
                     <div class="col-lg-4">
+                        <div class="card-body px-4">
+                            <div class="widget widget-filter">
+                                <h6 class="widget-title">Brand</h6>
+                                <div class="input-group input-group-sm mb-2">
+                                    <input class="widget-filter-search form-control rounded-end pe-5" type="text"
+                                        placeholder="Search"><i
+                                        class="ci-search position-absolute top-50 end-0 translate-middle-y fs-sm me-3"></i>
+                                </div>
+                                <ul class="widget-list widget-filter-list list-unstyled pt-1 overflow-scroll"
+                                    style="max-height: 11rem;" data-simplebar data-simplebar-auto-hide="false">
+                                    <li
+                                        class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="adidas">
+                                            <label class="form-check-label widget-filter-item-text"
+                                                for="adidas">Adidas</label>
+                                        </div><span class="fs-xs text-muted">425</span>
+                                    </li>
+                                    <li
+                                        class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="ataylor">
+                                            <label class="form-check-label widget-filter-item-text" for="ataylor">Ann
+                                                Taylor</label>
+                                        </div><span class="fs-xs text-muted">15</span>
+                                    </li>
+                                    <li
+                                        class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="armani">
+                                            <label class="form-check-label widget-filter-item-text"
+                                                for="armani">Armani</label>
+                                        </div><span class="fs-xs text-muted">18</span>
+                                    </li>
+                                    <li
+                                        class="widget-filter-item d-flex justify-content-between align-items-center mb-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="banana">
+                                            <label class="form-check-label widget-filter-item-text" for="banana">Banana
+                                                Republic</label>
+                                        </div><span class="fs-xs text-muted">103</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -905,28 +412,99 @@
         <!-- End Products -->
         <nav class="d-flex justify-content-between pt-2" aria-label="Page navigation">
             <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#"><i class="ci-arrow-left me-2"></i>Prev</a></li>
+                <li class="page-item"><a class="page-link" href="#"><i class="ci-arrow-left me-2"></i>Prev</a></li>
             </ul>
             <ul class="pagination">
-              <li class="page-item d-sm-none"><span class="page-link page-link-static">1 / 5</span></li>
-              <li class="page-item active d-none d-sm-block" aria-current="page"><span class="page-link">1<span class="visually-hidden">(current)</span></span></li>
-              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">2</a></li>
-              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">3</a></li>
-              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">4</a></li>
-              <li class="page-item d-none d-sm-block"><a class="page-link" href="#">5</a></li>
+                <li class="page-item d-sm-none"><span class="page-link page-link-static">1 / 5</span></li>
+                <li class="page-item active d-none d-sm-block" aria-current="page"><span class="page-link">1<span
+                            class="visually-hidden">(current)</span></span></li>
+                <li class="page-item d-none d-sm-block"><a class="page-link" href="#">2</a></li>
+                <li class="page-item d-none d-sm-block"><a class="page-link" href="#">3</a></li>
+                <li class="page-item d-none d-sm-block"><a class="page-link" href="#">4</a></li>
+                <li class="page-item d-none d-sm-block"><a class="page-link" href="#">5</a></li>
             </ul>
             <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#" aria-label="Next">Next<i class="ci-arrow-right ms-2"></i></a></li>
+                <li class="page-item"><a class="page-link" href="#" aria-label="Next">Next<i
+                            class="ci-arrow-right ms-2"></i></a></li>
             </ul>
-          </nav>
-        
+        </nav>
+
     </div>
     <!-- End Content -->
+
+    <!-- Footer -->
+    <footer id="footer" class="footer mb-3">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 footer-info">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <span> About OBG</span>
+                        </a>
+                        <p>OBG is a marketplace where people can purchase, sell, swap, and donate unwanted products. All
+                            you have to do is provide us with some details and photos about the item you no longer need,
+                            and we'll take care of the rest. Our goal is to encourage people to live a more frugal
+                            lifestyle and to minimize waste as much as possible.</p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-links">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Fashion</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Electronics</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Kids' Furniture</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Household</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Vehicle</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                        <h4>Contact Us</h4>
+                        <p>
+                            470 Tran Dai Nghia<br>
+                            Ngu Hanh Son, Da Nang<br>
+                            Viet Nam<br><br>
+                            <strong>Phone:</strong> 18006789<br>
+                            <strong>Email:</strong> obg@gmail.com<br>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>OBG</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="#">Fabulous 3</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+
+    <!-- Tooltip -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <!-- End Tooltip -->
+
 </body>
 
 </html>
