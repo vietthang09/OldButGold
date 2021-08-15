@@ -36,7 +36,7 @@
     <!-- Navbar for desktop -->
     <nav class="navbar fixed-top bg-white shadow-sm rounded navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand d-flex justify-content-between" href="index.html">
                 <img src="resources/images/logo.png" alt="" width="24" height="24"
                     class="d-inline-block align-text-top">
                 OBG
@@ -102,10 +102,11 @@
                             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
                                 class="rounded-circle">
                         </a>
-                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                        <ul class="dropdown-menu text-small shadow border-0">
                             <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">My order</a></li>
-                            <li><a class="dropdown-item" href="#">My Timeline</a></li>
+                            <li><a class="dropdown-item" href="orders.html">Orders</a></li>
+                            <li><a class="dropdown-item" href="deal.html">Deal</a></li>
+                            <li><a class="dropdown-item" href="items.html">My items</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -158,12 +159,12 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="btn me-4">
+                <a href="cart.html" class="btn me-4">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="d-block link-dark text-decoration-none">
+                <a href="profile.html" class="d-block link-dark text-decoration-none">
                     <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                 </a>
             </li>
@@ -186,31 +187,31 @@
                         <span class="text-danger">Your information</span>
                     </h4>
                     <ul class="list-group mb-3">
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <li class="list-group-item d-flex justify-content-between lh-sm border-0">
                             <div>
                                 <h6 class="my-0">Your name: </h6>
                             </div>
                             <span class="text-muted">William Tom</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <li class="list-group-item d-flex justify-content-between lh-sm border-0">
                             <div>
                                 <h6 class="my-0">Phone number:</h6>
                             </div>
                             <span class="text-muted">0123456789</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <li class="list-group-item d-flex justify-content-between lh-sm border-0">
                             <div>
                                 <h6 class="my-0">Email:</h6>
                             </div>
                             <span class="text-muted">info@gmail.com</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <li class="list-group-item d-flex justify-content-between lh-sm border-0">
                             <div>
                                 <h6 class="my-0">Address:</h6>
                             </div>
                             <span class="text-muted">Somewhere</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-center lh-sm">
+                        <li class="list-group-item d-flex justify-content-center lh-sm border-0">
                             <a href="profile.html" class="btn btn-edit w-50">Edit</a>
                         </li>
                     </ul>
@@ -221,15 +222,16 @@
                         <div class="row g-3">
                             <div class="col-sm-12">
                                 <label for="title" class="form-label">Title</label>
-                                <input type="text" class="form-control" id="title" placeholder="" value="" required>
+                                <input type="text" class="form-control form-input" id="title" placeholder="" value=""
+                                    required>
                                 <div class="invalid-feedback">
                                     Valid title is required.
                                 </div>
                             </div>
-                            
+
                             <div class="col-sm-12">
                                 <label for="description" class="form-label">Description</label>
-                                <textarea class="form-control" id="description" rows="5"></textarea>
+                                <textarea class="form-control form-input" id="description" rows="5"></textarea>
                                 <div class="invalid-feedback">
                                     Valid description is required.
                                 </div>
@@ -237,27 +239,23 @@
 
                             <div class="col-sm-6">
                                 <label for="brand" class="form-label">Brand</label>
-                                <input type="text" class="form-control" id="brand" required>
+                                <input type="text" class="form-control form-input" id="brand" required>
                                 <div class="invalid-feedback">
                                     Valid brand is required.
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <label for="amount" class="form-label">Amount</label>
-                                <input type="number" class="form-control" id="amount" min="1" required>
+                                <input type="number" class="form-control form-input" id="amount" min="1" required>
                                 <div class="invalid-feedback">
                                     Valid title is required.
                                 </div>
                             </div>
 
                             <div class="col-sm-12">
-                                <label for="upload" class="form-label">Upload </label>
-                                <textarea class="form-control" id="upload" rows="5"
-                                    placeholder="Your images will display here"></textarea>
-                                <div class="file btn btn-edit">
-                                    Choose from files
-                                    <input type="file" name="file" />
-                                </div>
+                                <!-- Code in here -->
+                                
+                                <!-- Code in here -->
                             </div>
 
 
@@ -268,23 +266,22 @@
                         <h4 class="mb-3">Option</h4>
 
                         <div class="my-3">
-                            <div class="form-check">
-                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
-                                    required>
-                                <label class="form-check-label" for="credit">Exchange</label>
-                            </div>
-                            <div class="form-check">
-                                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-                                <label class="form-check-label" for="debit">Sale</label>
-                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Exchange</label>
+                              </div>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                <label class="form-check-label" for="flexSwitchCheckChecked">Sale</label>
+                              </div>
                         </div>
 
                         <div class="row gy-3">
                             <div class="col-md-12">
-                                <label for="cc-name" class="form-label">Price</label>
-                                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                                <label for="price" class="form-label">Price</label>
+                                <input type="text" class="form-control form-input" id="price">
                                 <div class="invalid-feedback">
-                                    Name on card is required
+                                    Valid price is required
                                 </div>
                             </div>
 

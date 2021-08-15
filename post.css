@@ -2,7 +2,9 @@
 :root {
     scroll-behavior: smooth;
   }
-  
+  body{
+    font-family: 'Poppins', sans-serif;
+  }
   a {
     color: #4154f1;
     text-decoration: none;
@@ -26,48 +28,40 @@
  /* End Reset  */
 /* Navbar */
 .navbar-brand{
-    color: #e85a4f;
-    font-weight: 700;
+  color: #e85a4f;
+  font-weight: 700;
 }
 .navbar-brand:hover{
-    color: #e85a4f;
+  color: #e85a4f;
+}
+.form-control{
+  border: none;
+  background-color: #f7f9fc;
 }
 .form-control:focus{
-    box-shadow: none;
-    border: #e85a4f 1px solid;
+  box-shadow: none;
 }
 .btn{
-    font-size: 20px;
-    color: #e85a4f;
-    transition: 0.2s;
+  font-size: 20px;
+  color: #e85a4f;
+  transition: 0.2s;
 }
 .btn:hover{
-    color: #ffffff;
-    background-color: #e85a4f;
-    box-shadow: 0px 5px 10px rgba(253, 90, 79, 0.4);
+  color: #ffffff;
+  background-color: #e85a4f;
+  box-shadow: 0px 5px 10px rgba(253, 90, 79, 0.4);
 }
 .btn:focus{
-    box-shadow: none;
+  box-shadow: none;
 }
 /* End Navbar */
 
 /* Post */
-.file {
-    position: relative;
-    overflow: hidden;
-    margin-top: 20px;
-    width: 100%;
-    border: none;
-    border-radius: 0;
-    font-size: 15px;
-    background-color: #e85a4f;
+
+.form-input:focus{
+  background: #ebecf1;
 }
-.file input {
-    position: absolute;
-    opacity: 0;
-    right: 0;
-    top: 0;
-}
+
 /* End Post */
 
 /* Footer */
