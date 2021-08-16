@@ -111,6 +111,39 @@ a{
     right: 0;
     top: 0;
 }
+.btn-twitter{
+  color: #1da1f2;
+  padding: 5px;
+  border-radius: 5px;
+  background: rgba(29,161,242,.08);
+  transition: 0.2s;
+}
+.btn-twitter:hover{
+  color: #ffffff;
+  background: #1da1f2;
+}
+.btn-instagram{
+  padding: 5px;
+  border-radius: 5px;
+  color: #5851db;
+  background: rgba(88,81,219,.08);
+  transition: 0.2s;
+}
+.btn-instagram:hover{
+  color: #ffffff;
+  background: #5851db;
+}
+.btn-facebook{
+ padding: 5px;
+ border-radius: 5px;
+ color: #3b5998;
+ background: rgba(59,89,152,.08);
+ transition: 0.2s;
+}
+.btn-facebook:hover{
+ color: #ffffff;
+ background: #3b5998;
+}
 /* End Profile */
 
 /* Footer */
