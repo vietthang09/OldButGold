@@ -1,17 +1,14 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OBG | Charity</title>
-    <link rel="icon" href="src/images/logo.png">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- import fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -21,183 +18,366 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="charity.css">
+
+    <title>OBG | Charity</title>
+    <link rel="icon" href="resources/images/logo.png">
 </head>
 
 <body>
-    <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">OBG</a>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Notification
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Empty</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Charity</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-            </ul>
 
+    <!-- Navbar for desktop -->
+    <nav class="navbar fixed-top bg-danger rounded navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex justify-content-between" href="index.html">
+                <img src="resources/images/logo.png" alt="" width="24" height="24"
+                    class="d-inline-block align-text-top">
+                OBG
+            </a>
+            <form class="d-flex w-50">
+                <input type="text" class="form-control" placeholder="Search...">
+                <button class="btn btn-outline-primary border-0">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <ul class="nav for-desktop">
+                <li class="nav-item">
+                    <button class="btn me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                        <i class="far fa-bell" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Notification"></i>
+                    </button>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <h5 id="offcanvasRightLabel"><i class="far fa-bell"></i> Notification</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Dennis</strong> wants to buy your stuff
+                                <br>
+                                <a href="#" class="text-success">Click here to view more</a>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>Bryan</strong> wants to exchange items with you
+                                <a href="#" class="text-success">Click here to view more</a>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="post.html" class="btn me-2">
+                        <i class="far fa-clipboard" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Post"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="charity.html" class="btn me-2">
+                        <i class="fas fa-gift" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Charity"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="cart.html" class="btn me-5">
+                        <i class="fas fa-shopping-cart" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Cart"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <div class="flex-shrink-0 dropdown mt-2">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
+                                class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small shadow border-0 p-3">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="orders.html">Orders</a></li>
+                            <li><a class="dropdown-item" href="deal.html">Deal</a></li>
+                            <li><a class="dropdown-item" href="items.html">My items</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </nav>
-    <div class="home">
-        <div class="free-collection">
-            <div class="detail">
-                <h1 class="slogan">Free collection service</h1>
-                <p class="script">We offer a free collection service for your furniture, electricals, homewares and more
-                </p>
-                <button type="button" class="btn" data-toggle="modal" data-target="#myModal">Book a free
-                    collection</button>
+    <!-- End Navbar for desktop-->
 
-            </div>
-            <img src="src/images/charity/free_collection.png" alt="photo">
-        </div>
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Free collection</h4>
+    <!-- Navbar for mobile -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger fixed-bottom justify-content-center">
+        <ul class="nav for-mobile">
+            <li class="nav-item">
+                <button class="btn me-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight-mobile">
+                    <i class="far fa-bell"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight-mobile"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">Notification</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputName">Full name</label>
-                                    <input type="text" class="form-control" id="inputName" placeholder="Full name">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="inputPhone">Phone number</label>
-                                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone number">
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label for="inputAddress">Address</label>
-                                    <input type="text" class="form-control" id="inputAddress"
-                                        placeholder="1234 Main St">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-check col-md-12">
-                                    <label>
-                                        Thanks for your giving. We will contact to you soon
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <button type="submit" class="btn btn-primary col-md-12">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <div class="offcanvas-body">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Dennis</strong> wants to buy your stuff
+                            <br>
+                            <a href="#" class="text-success">Click here to view more</a>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Bryan</strong> wants to exchange items with you
+                            <a href="#" class="text-success">Click here to view more</a>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
                     </div>
                 </div>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn me-4" data-bs-toggle="modal" data-bs-target="#Modal">
+                    <i class="far fa-clipboard"></i>
+                </button>
+            </li>
+            <li class="nav-item">
+                <a href="charity.html" class="btn me-4">
+                    <i class="fas fa-gift"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="cart.html" class="btn me-4">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+                <a href="profile.html" class="d-block link-dark text-decoration-none">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- End Navbar for mobile -->
 
-            </div>
-        </div>
-        <div class="transfer" style="background-image: url(src/images/charity/background.jpg);">
-            <div class="detail">
-                <h1 class="slogan">Transfer money</h1>
-                <p class="script">Simple - Easy - Quick</p>
-            </div>
-            <div class="card">
-                <form>
-                    <h1 class="card__title">Payment Information</h1>
-                    <div class="card__row">
-                        <div class="card__col">
-                            <label for="cardNumber" class="card__label">Card Number</label>
-                            <span>123456789</span>
+    <div class="home container-fluid mt-5">
+        <div class="row free-collection">
+            <div class="col-lg-7">
+                <div class="d-flex justify-content-center align-items-center w-100 h-50">
+                    <div class="row container">
+                        <div class="col-lg-12">
+                            <h1 class="text-white">Free collection service</h1>
                         </div>
-                        <div class="card__col card__chip">
-                            <img src="src/images/charity/chip.svg" alt="chip" />
+                        <div class="col-lg-12">
+                            <p class="text-white fs-">We offer a free collection service for your furniture,
+                                electricals,
+                                homewares and more</p>
                         </div>
-                    </div>
-                    <div class="card__row">
-                        <div class="card__col">
-                            <label for="cardExpiry" class="card__label">Bank Name</label>
-                            <span>Vietnam Bank for Agriculture and <br>Rural Development</span>
+                        <div class="col-lg-12">
+                            <button type="button" class="btn-book bg-white text-danger border-0 rounded-3 p-2"
+                                data-bs-toggle="modal" data-bs-target="#myModal">
+                                Book a free collection
+                                <i class="fas fa-id-card-alt"></i>
+                            </button>
                         </div>
-                        <div class="card__col">
-                            <label for="cardCcv" class="card__label">Account Name</label>
-                            <span>For Love</span>
-                        </div>
-                        <div class="card__col card__brand"><i id="cardBrand"></i></div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="scroll">
-        <div class="main-content">
-            <div class="left box">
-                <h2>About us</h2>
-                <div class="content">
-                    <p>OBG is a marketplace where people can purchase, sell, swap, and donate unwanted products. All
-                        you have to do is provide us with some details and photos about the item you no longer need,
-                        and we'll take care of the rest. Our goal is to encourage people to live a more frugal
-                        lifestyle and to minimize waste as much as possible.</p>
-                    <div class="social">
-                        <a href="#"><span class="fab fa-facebook-f"></span></a>
-                        <a href="#"><span class="fab fa-twitter"></span></a>
-                        <a href="#"><span class="fab fa-instagram"></span></a>
-                        <a href="#"><span class="fab fa-youtube"></span></a>
                     </div>
                 </div>
             </div>
-
-            <div class="center box">
-                <h2>Address</h2>
-                <div class="content">
-                    <div class="place">
-                        <span class="fas fa-map-marker-alt"></span>
-                        <span class="text">Ngu Hanh Son, Da Nang</span>
-                    </div>
-                    <div class="phone">
-                        <span class="fas fa-mobile-alt"></span>
-                        <span class="text">0906066078</span>
-                    </div>
-                    <div class="email">
-                        <span class="fas fa-envelope"></span>
-                        <span class="text">abc@example.com</span>
-                    </div>
-                </div>
+            <div class="col-lg-5">
+                <img src="resources/images/charity/free_collection.png" width="100%" alt="photo">
             </div>
-
-            <div class="right box">
-                <h2>Feedback</h2>
-                <div class="content">
-                    <form action="#">
-                        <div class="email">
-                            <div class="text">Email *</div>
-                            <input type="email" required>
+        </div>
+        <div class="transfer row" style="background-image: url(resources/images/charity/background.jpg);">s
+            <div class="col-lg-5 container">
+                <div class="card">
+                    <form>
+                        <h1 class="card__title">Payment Information</h1>
+                        <div class="card__row" style="align-items: center;">
+                            <div class="card__col">
+                                <label for="cardNumber" class="card__label">Card Number</label>
+                                <span>123456789</span>
+                            </div>
+                            <div class="card__col card__chip">
+                                <img src="resources/images/charity/chip.svg" alt="chip" />
+                            </div>
                         </div>
-                        <div class="msg">
-                            <div class="text">Message *</div>
-                            <textarea rows="2" cols="25" required></textarea>
-                        </div>
-                        <div class="btn">
-                            <button type="submit">Send</button>
+                        <div class="card__row">
+                            <div class="card__col">
+                                <label for="cardExpiry" class="card__label">Bank Name</label>
+                                <span>Vietnam Bank for Agriculture and Rural Development</span>
+                            </div>
+                            <div class="card__col">
+                                <label for="cardCcv" class="text-white">Account Name</label>
+                                <span>For Love</span>
+                            </div>
+                            <div class="card__col card__brand"><i id="cardBrand"></i></div>
                         </div>
                     </form>
                 </div>
             </div>
+            <div class="detail col-lg-6 text-white">
+                <div class="d-flex justify-content-center">
+                    <h1 class="slogan">Transfer money</h1>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <p class="script">Simple - Easy - Quick</p>
+                </div>
+            </div>
         </div>
-        <div class="bottom">
-            <center>
-                <span class="credit">Created By VKU | </span>
-                <span class="far fa-copyright"></span><span> 2021 All rights reserved.</span>
-            </center>
+    </div>
+
+    <div class="modal fade " id="myModal" tabindex="-1" aria-labelledby="myModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Free collection</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="form-row row">
+                            <div class="form-group  col-md-6">
+                                <label for="inputName">Full name</label>
+                                <input type="text" class="form-control " id="inputName" placeholder="Full name"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Full name is required
+                                </div>
+                            </div>
+                            <div class="form-group  col-md-6">
+                                <label for="inputPhone">Phone number</label>
+                                <input type="text" class="form-control" id="inputPhone" placeholder="Phone number"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Phone number is required
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row row">
+                            <div class="form-group  col-md-12">
+                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"
+                                    required>
+                                <div class="invalid-feedback">
+                                    Address is required
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row row">
+                            <div class="mt-2 mb-2 col-md-12">
+                                <label>
+                                    Thanks for your giving. We will contact to you soon
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row col-md-12">
+                            <button type="submit" class="btn btn-primary col-md-12"
+                                style="width: 100%;">Submit</button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 footer-info">
+                        <a href="index.html" class="logo d-flex align-items-center">
+                            <span> About OBG</span>
+                        </a>
+                        <p>OBG is a marketplace where people can purchase, sell, swap, and donate unwanted products. All
+                            you have to do is provide us with some details and photos about the item you no longer need,
+                            and we'll take care of the rest. Our goal is to encourage people to live a more frugal
+                            lifestyle and to minimize waste as much as possible.</p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-links">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Fashion</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Electronics</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Kids' Furniture</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Household</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Vehicle</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                        <h4>Contact Us</h4>
+                        <p>
+                            470 Tran Dai Nghia<br>
+                            Ngu Hanh Son, Da Nang<br>
+                            Viet Nam<br><br>
+                            <strong>Phone:</strong> 18006789<br>
+                            <strong>Email:</strong> obg@gmail.com<br>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>OBG</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="#">Fabulous 3</a>
+            </div>
         </div>
     </footer>
+    <!-- End Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+    </script>
+
+    <!-- Tooltip -->
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <!-- End Tooltip -->
+
 </body>
 
 </html>
