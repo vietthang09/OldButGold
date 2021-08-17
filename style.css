@@ -16,10 +16,32 @@
   ul li{
     list-style: none;
   }
- /* End Reset  */
   
 body{
   font-family: 'Poppins', sans-serif;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(179, 177, 177);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgb(136, 136, 136);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+  background: rgb(68, 68, 68);
+  border-radius: 10px;
 }
 /* End Reset */
 
@@ -275,81 +297,6 @@ body{
     color: #012970;
   }
 /* End Footer */
-
-/* Back to top */
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-  background: #4154f1;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  transition: all 0.4s;
-}
-
-.back-to-top i {
-  font-size: 24px;
-  color: #fff;
-  line-height: 0;
-}
-
-.back-to-top:hover {
-  background: #6776f4;
-  color: #fff;
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
-/* End Back to top */
-
-/* Loading */
-.loader-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid #e85a4f;
-  animation: loader 2s infinite ease;
-}
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: #e85a4f;
-  animation: loader-inner 2s infinite ease-in;
-}
-@keyframes loader {
-  0% { transform: rotate(0deg);}
-  25% { transform: rotate(180deg);}
-  50% { transform: rotate(180deg);}
-  75% { transform: rotate(360deg);}
-  100% { transform: rotate(360deg);}
-}
-@keyframes loader-inner {
-  0% { height: 0%;}
-  25% { height: 0%;}
-  50% { height: 100%;}
-  75% { height: 100%;}
-  100% { height: 0%;}
-}
-/* End Loading */
 
 /* Amination */
 .fade-out{
