@@ -5,19 +5,17 @@
 }
 
 a {
+    color: #4154f1;
     text-decoration: none;
 }
 
 a:hover {
+    color: #717ff5;
     text-decoration: none;
 }
 
 ul li {
     list-style: none;
-}
-
-.remove-border {
-    border: none;
 }
 
 body {
@@ -90,38 +88,6 @@ html::-webkit-scrollbar-thumb:active {
 
 
 /* End Navbar */
-
-
-/* Hero */
-
-.hero {
-    background-image: url('../resources/images/categories/fashion.jpg');
-    background-position: center;
-    background-size: cover;
-    height: 50vh;
-}
-
-.text-white {
-    color: #ffffff !important;
-}
-
-
-/* End Hero */
-
-
-/* Main */
-
-.nav-tabs .nav-item .nav-link {
-    color: #e85a4f;
-}
-
-.nav-tabs .nav-item .nav-link.active {
-    color: #e85a4f;
-    background: #f5f9fe;
-}
-
-
-/* End Main */
 
 
 /* Button */
@@ -432,11 +398,5 @@ html::-webkit-scrollbar-thumb:active {
 @media only screen and (max-width: 480px) {
     .for-desktop {
         display: none;
-    }
-    .hero {
-        height: 20vh;
-    }
-    .img-hover {
-        padding: 0 30px;
     }
 }

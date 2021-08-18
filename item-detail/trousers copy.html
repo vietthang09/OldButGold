@@ -28,7 +28,7 @@
     <!-- Navbar for desktop -->
     <nav class="navbar fixed-top bg-white shadow-sm rounded navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand d-flex justify-content-between" href="../index.html">
+            <a class="navbar-brand d-flex justify-content-between" href="index.html">
                 <img src="../resources/images/logo.png" alt="" width="24" height="24" class="d-inline-block align-text-top"> OBG
             </a>
             <form class="d-flex w-50">
@@ -47,17 +47,17 @@
 
                 </li>
                 <li class="nav-item">
-                    <a href="../post.html" class="btn me-2">
+                    <a href="post.html" class="btn me-2">
                         <i class="far fa-clipboard" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Post"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../charity.html" class="btn me-2">
+                    <a href="charity.html" class="btn me-2">
                         <i class="fas fa-gift" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Charity"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../cart.html" class="btn me-5">
+                    <a href="cart.html" class="btn me-5">
                         <i class="fas fa-shopping-cart" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Cart"></i>
                     </a>
                 </li>
@@ -67,10 +67,10 @@
                             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                         </a>
                         <ul class="dropdown-menu text-small shadow border-0 p-3">
-                            <li><a class="dropdown-item" href="../profile.html">Profile</a></li>
-                            <li><a class="dropdown-item" href="../orders.html">Orders</a></li>
-                            <li><a class="dropdown-item" href="../deal.html">Deal</a></li>
-                            <li><a class="dropdown-item" href="../items.html">My items</a></li>
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="orders.html">Orders</a></li>
+                            <li><a class="dropdown-item" href="deal.html">Deal</a></li>
+                            <li><a class="dropdown-item" href="items.html">My items</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -82,7 +82,7 @@
         </div>
     </nav>
     <!-- End Navbar for desktop-->
-
+    s
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 id="offcanvasRightLabel"><i class="far fa-bell"></i> Notification</h5>
@@ -130,22 +130,22 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="../post.html" class="btn me-4">
+                <button type="button" class="btn me-4" data-bs-toggle="modal" data-bs-target="#Modal">
                     <i class="far fa-clipboard"></i>
-                </a>
+                </button>
             </li>
             <li class="nav-item">
-                <a href="../charity.html" class="btn me-4">
+                <a href="charity.html" class="btn me-4">
                     <i class="fas fa-gift"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../cart.html" class="btn me-4">
+                <a href="cart.html" class="btn me-4">
                     <i class="fas fa-shopping-cart"></i>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="../profile.html" class="d-block link-dark text-decoration-none">
+                <a href="profile.html" class="d-block link-dark text-decoration-none">
                     <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                 </a>
             </li>
@@ -175,72 +175,158 @@
 
     <div class="mt-2">-</div>
 
-    <!-- Hero -->
-    <div class="hero d-flex align-items-center justify-content-center">
-        <div class="row">
-            <div class="col-lg-12">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb breadcrumb-transparent justify-content-center mb-4">
-                        <li class="breadcrumb-item"><a href="../index.html" class="text-white">Home</a></li>
-                        <li class="breadcrumb-item"><a href="../page-listing/fashion.html" class="text-white">Fashion</a></li>
-                        <li class="breadcrumb-item text-white active fw-light">Trousers</li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="col-lg-12">
-                <h2 class="text-center text-white">Trousers</h2>
-            </div>
-            <div class="col-lg-12">
-                <p class="text-center text-white">
-                    <i class="fas fa-map-marker-alt"></i> 26, Quebec, BC, Canada
-                </p>
+    <section>
+        <!-- Product detail -->
+        <div class="container shadow-sm">
+            <div class="card mt-5 pb-5" style="border: none;">
+                <div class="row mt-5">
+                    <aside class="col-md-7">
+                        <article>
+                            <div class="img-big-wrap">
+                                <img class="product-image" id="product-image" src="../resources/images/fashion/fashion1-2.jpg" width="100%">
+                            </div>
+                            <div class="mt-2 d-flex justify-content-center align-items-center">
+                                <img class="me-3" onclick="showImage(this)" src="../resources/images/fashion/fashion1-1.jpg" width="80px">
+                                <img class="me-3" onclick="showImage(this)" src="../resources/images/fashion/fashion1-2.jpg" width="80px">
+                                <img class="me-3" onclick="showImage(this)" src="../resources/images/fashion/fashion1-3.jpg" width="80px">
+                                <img class="me-3" onclick="showImage(this)" src="../resources/images/fashion/fashion1-4.jpg" width="80px">
+                            </div>
+                        </article>
+                        <script>
+                            function showImage(smallImage) {
+                                var fullImage = document.getElementById("product-image");
+                                fullImage.src = smallImage.src;
+                            }
+                        </script>
+                    </aside>
+                    <main class="col-md-5">
+                        <div class="product-details ms-auto pb-3 pt-3">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <a href="#pills-comment-tab">
+                                    <span class="text-dark">74 Comments</span>
+                                </a>
+                                <button class="btn-like" data-bs-toggle="tooltip" title="Like">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="mb-3">
+                                <h3>Trousers</h3>
+                                <span class="h3 text-danger">$18.<small>99</small></span>
+                            </div>
+                            <form method="post" class="mb-3">
+                                <div class="d-flex align-items-center">
+                                    <button class="btn-primary me-2 d-block w-100 fs-6" type="submit" data-bs-toggle="tooltip" title="Add to cart">
+                                        <!-- <i class="fas fa-cart-plus"></i> --> Add to card
+                                    </button>
+                                    <button class="btn-primary me-2 d-block w-100 fs-6" type="submit" data-bs-toggle="tooltip" title="Buy">
+                                        <!-- <i class="fas fa-money-bill-wave-alt"></i> --> Buy now 
+                                    </button>
+                                    <button class="btn-primary d-block w-100 fs-6" type="submit" data-bs-toggle="tooltip" title="Exchange">
+                                        <!-- <i class="fas fa-arrows-alt-h"></i> --> Exchange now
+                                    </button>
+                                </div>
+                            </form>
+                            <!-- Product panels-->
+                            <div class="accordion mb-4" id="productPanels">
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <a class="accordion-button collapsed" href="#productInfo" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="productInfo">
+                                            <i class="fas fa-info-circle text-muted fs-lg align-middle mt-n1 me-2"></i>Product info
+                                        </a>
+                                    </h3>
+                                    <div class="accordion-collapse collapse show" id="productInfo" data-bs-parent="#productPanels">
+                                        <div class="accordion-body">
+                                            <h6 class="fs-sm mb-2">Brand</h6>
+                                            <ul class="fs-sm ps-4">
+                                                <li class="text-muted">Lorem ipsum</li>
+                                            </ul>
+                                            <h6 class="fs-sm mb-2">Size</h6>
+                                            <ul class="fs-sm ps-4">
+                                                <li class="text-muted">Small</li>
+                                            </ul>
+                                            <h6 class="fs-sm mb-2">Status</h6>
+                                            <ul class="fs-sm ps-4">
+                                                <li class="text-muted">95%</li>
+                                            </ul>
+                                            <h6 class="fs-sm mb-2">Amount</h6>
+                                            <ul class="fs-sm ps-4">
+                                                <li class="text-muted">2</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <a class="accordion-button collapsed" href="#contact" role="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="shippingOptions">
+                                            <i class="fas fa-id-card-alt text-muted lead align-middle mt-n1 me-2"></i> Contact
+                                        </a>
+                                    </h3>
+                                    <div class="accordion-collapse collapse" id="contact" data-bs-parent="#productPanels">
+                                        <div class="accordion-body fs-sm">
+                                            <div class="d-flex justify-content-between border-bottom pb-2">
+                                                <div>
+                                                    <div class="fw-semibold text-dark">Phonenumber</div>
+                                                    <div class="fs-sm text-muted">12345678</div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between border-bottom py-2">
+                                                <div>
+                                                    <div class="fw-semibold text-dark">Email</div>
+                                                    <div class="fs-sm text-muted">info@gmail.com</div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between border-bottom py-2">
+                                                <div>
+                                                    <div class="fw-semibold text-dark">Address</div>
+                                                    <div class="fs-sm text-muted">Somewhere</div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between pt-2">
+                                                <a class="btn-share btn-twitter me-2 my-2" href="#"><i
+                                                        class="fab fa-twitter"></i> Twitter</a>
+                                                <a class="btn-share btn-instagram me-2 my-2" href="#"><i
+                                                        class="fab fa-instagram"></i> Instagram</a>
+                                                <a class="btn-share btn-facebook my-2" href="#"><i
+                                                        class="fab fa-facebook"></i> Facebook</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- End Hero -->
+        <!-- End Product detail -->
 
-    <!-- Main -->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-8">
-                <ul class="nav nav-tabs d-flex justify-content-center">
-                    <li class="nav-item">
-                        <button class="nav-link active border-0 pb-3" data-bs-toggle="tab" data-bs-target="#about" type="button">
-                            <i class="far fa-address-card"></i> About
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link border-0 pb-3" data-bs-toggle="tab" data-bs-target="#comments" type="button">
-                            <i class="far fa-comment"></i> Comments
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link border-0 pb-3" data-bs-toggle="tab" data-bs-target="#location" type="button">
-                            <i class="fas fa-map-marker-alt"></i> Location
-                        </button>
-                    </li>
-                </ul>
-                <div class="tab-content mt-2">
-                    <!-- About -->
-                    <div class="tab-pane fade show active" id="about">
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, ipsa, neque eveniet magni excepturi unde, eum eos quibusdam cupiditate repudiandae exercitationem ducimus dolore quae architecto illo! Molestiae illo doloremque ab laudantium cumque. Corporis
-                            officia ipsum aliquam qui, assumenda suscipit. Aperiam laborum ipsum quos nulla minima. Laborum, magni quaerat labore quam maxime libero, ipsum, cumque molestias quibusdam reprehenderit tempora id? Quaerat deleniti voluptatem
-                            aut perferendis rem architecto dignissimos? Odio commodi facere repellat illum incidunt eum, voluptas tempora, ipsam accusamus mollitia eveniet beatae facilis provident totam nam dicta vero ut accusantium labore quia hic sunt
-                            iure? Repudiandae aut minus voluptas dolores! Repellat!
-                        </p>
-                    </div>
-                    <!-- End About -->
-                    <!-- Comments -->
-                    <div class="tab-pane fade" id="comments">
-                        <div class="card bg-white border border-light p-4 mb-4">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <div><a href="#" class="h5 text-dark">Awesome place</a>
-                                    <ul class="list-unstyled d-flex mt-1 mb-0 text-muted">
-                                        <li class="list-item small me-3">by Margaret Mead</li>
-                                        <li class="list-item small">2 weeks ago</li>
-                                    </ul>
+        <!-- Product Comment and Description -->
+        <div class="container mt-5 mb-5">
+            <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item me-2" role="presentation">
+                    <button class="nav-link active" id="pills-comment-tab" data-bs-toggle="pill" data-bs-target="#pills-comment" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Comment</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-description-tab" data-bs-toggle="pill" data-bs-target="#pills-description" type="button" role="tab" aria-controls="pills-description" aria-selected="false">Description</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-location-tab" data-bs-toggle="pill" data-bs-target="#pills-location" type="button" role="tab" aria-controls="pills-location" aria-selected="false">Location</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-comment" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card bg-white border border-light p-4 mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div><a href="#" class="h5 text-dark">Samuel</a>
+                                        <ul class="list-unstyled d-flex mt-1 mb-0 text-muted">
+                                            <li class="list-item small me-3">by Margaret Mead</li>
+                                            <li class="list-item small">2 weeks ago</li>
+                                        </ul>
+                                    </div>
                                 </div>
+                                <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, repellat.</p>
                                 <div class="text-nowrap">
                                     <button class="btn-thumbs-up" type="button">
                                         <i class="far fa-thumbs-up"></i>
@@ -252,76 +338,71 @@
                                     </button>
                                 </div>
                             </div>
-                            <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, repellendus.</p>
-                        </div>
-                        <form method="post">
-                            <div class="d-flex justify-content-between align-items-center mb-3 mt-5">
-                                <h2 class="h5 m-0">Add a Comment</h2>
+                            <div class="card bg-white border border-light p-4 mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div><a href="#" class="h5 text-dark">Samuel</a>
+                                        <ul class="list-unstyled d-flex mt-1 mb-0 text-muted">
+                                            <li class="list-item small me-3">by Margaret Mead</li>
+                                            <li class="list-item small">2 weeks ago</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, repellat.</p>
+                                <div class="text-nowrap">
+                                    <button class="btn-thumbs-up" type="button">
+                                        <i class="far fa-thumbs-up"></i>
+                                        <span class="text-muted">15</span>
+                                    </button>
+                                    <span class="text-muted">|</span>
+                                    <button class="btn-thumbs-down" type="button">
+                                        <i class="far fa-thumbs-down"></i> 3
+                                    </button>
+                                </div>
                             </div>
-                            <textarea name="description" class="form-control border" placeholder="Add a comment" rows="6" data-bind-characters-target="#charactersRemaining" maxlength="1000" required=""></textarea>
-                            <div class="d-flex justify-content-between mt-3"><small class="font-weight-light"><span id="charactersRemaining">1000</span> characters remaining</small> <button type="submit" class="btn btn-primary">Add comment</button></div>
-                        </form>
-                    </div>
-                    <!-- End Comments -->
-                    <!-- Location -->
-                    <div class="tab-pane fade" id="location">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d174614.29109535282!2d-71.48177793296392!3d46.85651774416249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8968a05db8893%3A0x8fc52d63f0e83a03!2zVGjDoG5oIHBo4buRIFF1w6liZWMsIFF1w6liZWMsIENhbmFkYQ!5e0!3m2!1svi!2s!4v1629251346192!5m2!1svi!2s"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                    <!-- End Location -->
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card bg-soft border-light p-3">
-                    <div class="d-flex align-items-baseline"><span class="h3 font-weight-bold mb-0 mr-1">$ 250</span></div>
-                </div>
-                <div class="card border-light mt-4 p-3"><button class="btn btn-primary">Buy Now</button></div>
-                <div class="card border-light mt-4 p-3">
-                    <h5 class="font-weight-normal">Property Owner</h5>
-                    <div class="media d-flex align-items-center my-3">
-                        <a href="#" class="avatar-lg me-2">
-                            <img class="img-fluid rounded-circle" src="../resources/images/avatar/15.jpg" width="42" alt="avatar">
-                        </a>
-                        <div class="avatar-name">
-                            <a class="text-dark" href="#">Jose Leos</a>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary mb-3">Exchange</button>
-                </div>
-                <div class="card border-light mt-4 p-3">
-                    <h5 class="font-weight-normal">Contact</h5>
-                    <div class="d-flex justify-content-between border-bottom pb-2">
-                        <div>
-                            <div class="fw-semibold text-dark">Phonenumber</div>
-                            <div class="fs-sm text-muted">12345678</div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between border-bottom py-2">
-                        <div>
-                            <div class="fw-semibold text-dark">Email</div>
-                            <div class="fs-sm text-muted">info@gmail.com</div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between border-bottom py-2">
-                        <div>
-                            <div class="fw-semibold text-dark">Address</div>
-                            <div class="fs-sm text-muted">Somewhere</div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between pt-2">
-                        <a class="btn-share btn-twitter me-2 my-2" href="#"><i
-                                class="fab fa-twitter"></i> Twitter</a>
-                        <a class="btn-share btn-instagram me-2 my-2" href="#"><i
-                                class="fab fa-instagram"></i> Instagram</a>
-                        <a class="btn-share btn-facebook my-2" href="#"><i
-                                class="fab fa-facebook"></i> Facebook</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Main -->
 
+                            <div class="text-center">
+                                <button class="btn btn-load" type="button">
+                                    <i class="fas fa-undo"></i>
+                                    Load more reviews
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="pb-5">
+                                <form method="post">
+                                    <div class="d-flex justify-content-between align-items-center mb-3 mt-5">
+                                        <h2 class="h5 m-0">Add a review</h2>
+                                    </div>
+                                    <textarea name="description" class="form-control border" placeholder="Add a review" rows="6" data-bind-characters-target="#charactersRemaining" maxlength="1000" required=""></textarea>
+                                    <div class="d-flex justify-content-between mt-3"><small class="font-weight-light"><span id="charactersRemaining">1000</span> characters remaining</small> <button type="submit" class="btn btn-primary animate-up-2">Add review</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-description" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus cum laudantium blanditiis, voluptates repudiandae quisquam tempore reiciendis inventore sapiente ut id provident animi esse quaerat fuga veritatis repellat enim iure doloribus dolorum
+                    pariatur eos alias voluptatum? Cumque sit recusandae, maiores, ipsum optio dolorum porro molestias voluptates dignissimos culpa officiis voluptatibus quod. Ducimus, eum laboriosam sint voluptas maiores impedit fugit odit eaque blanditiis
+                    earum amet non sunt nisi voluptates deserunt voluptatum aspernatur, beatae placeat nemo est id sapiente ipsum natus modi? Laudantium ex, libero, vero delectus consequuntur quasi cum eligendi sint beatae eum, est expedita accusantium
+                    non voluptas repellendus quisquam illum.
+                </div>
+                <div class="tab-pane fade" id="pills-location" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d174689.10939266978!2d-71.3149230745655!3d46.833505001232766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8968a05db8893%3A0x8fc52d63f0e83a03!2zVGjDoG5oIHBo4buRIFF1w6liZWMsIFF1w6liZWMsIENhbmFkYQ!5e0!3m2!1svi!2s!4v1629209419094!5m2!1svi!2s"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <script>
+                var firstTabEl = document.querySelector('#myTab li:last-child button')
+                var firstTab = new bootstrap.Tab(firstTabEl)
+                firstTab.show()
+            </script>
+        </div>
+        <!-- End Product review and Description -->
+
+    </section>
+
+    <hr>
     <!-- Style with -->
     <section>
         <div class="container">
