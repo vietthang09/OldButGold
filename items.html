@@ -7,22 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <title>OBG | My items</title>
-    <link rel="stylesheet" href="items.css">
+    <link rel="stylesheet" href="resources/css/items.css">
     <link rel="icon" href="resources/images/logo.png">
 
 </head>
@@ -32,10 +28,8 @@
     <!-- Navbar for desktop -->
     <nav class="navbar fixed-top bg-white shadow-sm rounded navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="resources/images/logo.png" alt="" width="24" height="24"
-                    class="d-inline-block align-text-top">
-                OBG
+            <a class="navbar-brand d-flex justify-content-between" href="index.html">
+                <img src="resources/images/logo.png" alt="" width="24" height="24" class="d-inline-block align-text-top"> OBG
             </a>
             <form class="d-flex w-50">
                 <input type="text" class="form-control search-box" placeholder="Search...">
@@ -54,8 +48,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="post.html" class="btn btn-nav me-2">
-                        <i class="far fa-clipboard" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                            title="Post"></i>
+                        <i class="far fa-clipboard" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Post"></i>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -65,21 +58,18 @@
                 </li>
                 <li class="nav-item">
                     <a href="cart.html" class="btn btn-nav me-5">
-                        <i class="fas fa-shopping-cart" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                            title="Cart"></i>
+                        <i class="fas fa-shopping-cart" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Cart"></i>
                     </a>
                 </li>
                 <li class="nav-item">
                     <div class="flex-shrink-0 dropdown mt-2">
-                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
-                                class="rounded-circle">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                         </a>
-                        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                        <ul class="dropdown-menu text-small shadow border-0 p-3">
                             <li><a class="dropdown-item" href="profile.html">Profile</a></li>
                             <li><a class="dropdown-item" href="orders.html">Orders</a></li>
-                            <li><a class="dropdown-item" href="deal.html">Deal</a></li>
+                            <li><a class="dropdown-item" href="deal.html">Deals</a></li>
                             <li><a class="dropdown-item" href="items.html">My items</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -92,26 +82,6 @@
         </div>
     </nav>
     <!-- End Navbar for desktop-->
-
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <h5 id="offcanvasRightLabel"><i class="far fa-bell"></i> Notification</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Dennis</strong> wants to buy your stuff
-                <br>
-                <a href="#" class="text-success">Click here to view more</a>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Bryan</strong> wants to exchange items with you
-                <a href="#" class="text-success">Click here to view more</a>
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        </div>
-    </div>
 
     <!-- Navbar for mobile -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-bottom justify-content-center">
@@ -145,23 +115,41 @@
     </nav>
     <!-- End Navbar for mobile -->
 
-    <!-- Items --> 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel"><i class="far fa-bell"></i> Notification</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Dennis</strong> wants to buy your stuff
+                <br>
+                <a href="#" class="text-success">Click here to view more</a>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Bryan</strong> wants to exchange items with you
+                <a href="#" class="text-success">Click here to view more</a>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Items -->
     <div class="mt-3">_</div>
     <div class="container mt-5 mb-5">
-        <div class="row"> 
-            <div class="col-lg-4 shadow-sm bg-white rounded-3 h-50">
+        <div class="row">
+            <div class="col-lg-4 shadow-sm bg-white rounded-3 h-50 info">
                 <div class="avatar">
                     <div class="d-flex justify-content-center">
-                        <img src="https://github.com/mdo.png" alt="avatar" width="120" height="120"
-                            class="rounded-circle">
+                        <img src="https://github.com/mdo.png" alt="avatar" width="120" height="120" class="rounded-circle">
                     </div>
                     <h4 class="text-center">William Tom</h4>
                 </div>
                 <div class="list">
                     <ul class="list-group p-4">
                         <li class="border-top-0 border-start-0 border-end-0 list-group-item ">
-                            <a href="profile.html"
-                                class="text-decoration-none d-flex justify-content-between align-items-center text-dark">
+                            <a href="profile.html" class="text-decoration-none d-flex justify-content-between align-items-center text-dark">
                                 Profile <i class="fas fa-arrow-right"></i>
                             </a>
                         </li>
@@ -188,8 +176,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <a href="post.html" class="btn btn-submit-new-item w-100 p-3">
-                            <i class="fas fa-plus"></i>
-                            Submit New Item
+                            <i class="fas fa-plus"></i> Submit New Item
                         </a>
                     </div>
                 </div>
@@ -200,8 +187,7 @@
                         <div class="card mb-3 border-0 shadow-sm">
                             <div class="row g-0">
                                 <div class="col-lg-4">
-                                    <img src="resources/images/fashion/fashion8-1.jpg" class="img-fluid rounded-3 p-2"
-                                        alt="item-image">
+                                    <img src="resources/images/fashion/fashion8-1.jpg" class="img-fluid rounded-3 p-2" alt="item-image">
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="card-body">
@@ -218,13 +204,13 @@
                                                             <i class="fas fa-ellipsis-h"></i>
                                                         </button>
                                                         <ul class="dropdown-menu dropdown-menu-white shadow border-0">
-                                                          <li><a class="dropdown-item" href="#"><i class="far fa-edit"></i> Edit Item</a></li>
-                                                          <li><a class="dropdown-item text-danger" href="#"><i class="far fa-trash-alt"></i> Delete</a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="far fa-edit"></i> Edit Item</a></li>
+                                                            <li><a class="dropdown-item text-danger" href="#"><i class="far fa-trash-alt"></i> Delete</a></li>
                                                         </ul>
-                                                      </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </p> 
+                                        </p>
                                         <h5 class="card-title">Fitbit Versa 2</h5>
                                         <p class="fs-6 text-white badge bg-danger">Sale</p>
                                         <p class="fs-6 text-white badge bg-success">Exchange</p>
@@ -238,19 +224,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                          <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                          </li>
-                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                          </li>
-                        </ul>
-                    </nav> -->
                 </div>
                 <!-- End Items -->
             </div>
@@ -267,10 +240,8 @@
                         <a href="index.html" class="logo d-flex align-items-center">
                             <span> About OBG</span>
                         </a>
-                        <p>OBG is a marketplace where people can purchase, sell, swap, and donate unwanted products. All
-                            you have to do is provide us with some details and photos about the item you no longer need,
-                            and we'll take care of the rest. Our goal is to encourage people to live a more frugal
-                            lifestyle and to minimize waste as much as possible.</p>
+                        <p>OBG is a marketplace where people can purchase, sell, swap, and donate unwanted products. All you have to do is provide us with some details and photos about the item you no longer need, and we'll take care of the rest. Our goal
+                            is to encourage people to live a more frugal lifestyle and to minimize waste as much as possible.</p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
@@ -280,22 +251,22 @@
                     </div>
 
                     <div class="col-lg-3 col-md-12 footer-links">
-                        <h4>Categories</h4>
-                        <ul>
-                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Fashion</a></li>
-                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Electronics</a></li>
-                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Kids' Furniture</a></li>
-                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Household</a></li>
-                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Vehicle</a></li>
-                        </ul>
+                        <h4 class="text-center">Categories</h4>
+                        <div class="d-flex justify-content-center">
+                            <ul>
+                                <li><i class="fas fa-chevron-right"></i></i> <a href="page-listing/fashion.html">Fashion</a></li>
+                                <li><i class="fas fa-chevron-right"></i></i> <a href="#">Electronics</a></li>
+                                <li><i class="fas fa-chevron-right"></i></i> <a href="#">Kids' Furniture</a></li>
+                                <li><i class="fas fa-chevron-right"></i></i> <a href="#">Household</a></li>
+                                <li><i class="fas fa-chevron-right"></i></i> <a href="#">Vehicle</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                         <h4>Contact Us</h4>
                         <p>
-                            470 Tran Dai Nghia<br>
-                            Ngu Hanh Son, Da Nang<br>
-                            Viet Nam<br><br>
+                            470 Tran Dai Nghia<br> Ngu Hanh Son, Da Nang<br> Viet Nam<br><br>
                             <strong>Phone:</strong> 18006789<br>
                             <strong>Email:</strong> obg@gmail.com<br>
                         </p>
@@ -318,13 +289,11 @@
     <!-- End Footer -->
 
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Tooltip -->
     <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
     </script>
