@@ -23,6 +23,10 @@
     <!-- Icon -->
     <link rel="icon" href="resources/images/logo.png">
 
+    <!-- Leaflets -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
     <title>OBG | Home</title>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -184,7 +188,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center">
-                    <h1 class="hero-title">Buy anything without spending money</h1>
+                    <h1 class="hero-title">Buy anything without spending money !?</h1>
                     <div class="text-center text-lg-start">
                         <a href="#categories" class="btn-get-started d-inline-flex align-items-center justify-content-center align-self-center">
                             <span>Get Started</span><i class="fas fa-arrow-down"></i>
@@ -221,7 +225,7 @@
 
                 <div class="row align-items-md-stretch mb-4">
                     <div class="col-md-6 mb-4">
-                        <a href="#" class="remove-underline">
+                        <a href="page-listing/electronics.html" class="remove-underline">
                             <div class="h-100 p-5 text-white rounded-3 fade-out" style="background-image: url(resources/images/categories/electronic.jpg); background-position: center left; background-size: cover;">
                                 <p class="fs-4 fw-bold text-white text-hover badge bg-warning"><i class="fas fa-tag"></i> Electronics</p>
                                 <p>Flatscreen TVs, television sets, MP3 players, video recorders, DVD players, radio receivers,...
@@ -300,7 +304,7 @@
                                     <img src="resources/images/avatar/01.jpg" width="32" height="32" class="rounded-circle" alt="avatar">
                                 </div>
                                 <div class="col ms-2">
-                                    <a href="#" class="text-muted">Samuel</a>
+                                    <a href="profiles/samuel.html" class="text-muted">Samuel</a>
                                 </div>
                                 <div class="col-auto">
                                     <button class="btn" onclick="Toasty( )">
@@ -965,6 +969,51 @@
         </div>
     </section>
     <!-- End Most Popular -->
+
+    <!-- Map View -->
+    <div class="container">
+        <div id="mapid" style="height: 180px;"></div>
+        <script>
+            var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                maxZoom: 18,
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1
+            }).addTo(mymap);
+
+            L.marker([51.5, -0.09]).addTo(mymap)
+                .bindPopup("<b>Hello world!</b><br />Trang di lay chong roi :).").openPopup();
+
+            L.circle([51.508, -0.11], 500, {
+                color: 'red',
+                fillColor: '#f03',
+                fillOpacity: 0.5
+            }).addTo(mymap).bindPopup("");
+
+            L.polygon([
+                [51.509, -0.08],
+                [51.503, -0.06],
+                [51.51, -0.047]
+            ]).addTo(mymap).bindPopup("Trang đi lấy chồng rồi.");
+
+
+            var popup = L.popup();
+
+            function onMapClick(e) {
+                popup
+                    .setLatLng(e.latlng)
+                    .setContent("You clicked the map at " + e.latlng.toString())
+                    .openOn(mymap);
+            }
+
+            mymap.on('click', onMapClick);
+        </script>
+    </div>
+    <!-- End Map View -->
 
     <!-- Donors -->
     <section>

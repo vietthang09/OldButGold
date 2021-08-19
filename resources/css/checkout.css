@@ -1,0 +1,118 @@
+/* Reset */
+
+:root {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #4154f1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #717ff5;
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(179, 177, 177);
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136);
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 10px;
+}
+
+
+/* End Reset */
+
+
+/* Navbar */
+
+.navbar-brand {
+    color: #e85a4f;
+    font-weight: 700;
+}
+
+.navbar-brand:hover {
+    color: #e85a4f;
+}
+
+.form-control {
+    border: none;
+    background-color: #f7f9fc;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.btn {
+    font-size: 20px;
+    color: #e85a4f;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    color: #ffffff;
+    background-color: #e85a4f;
+    box-shadow: 0px 5px 10px rgba(253, 90, 79, 0.4);
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+
+/* End Navbar */
+
+
+/* Pay */
+
+
+/* End Pay */
+
+
+/* Big tablet to 1200px; */
+
+@media only screen and (min-width:1200px) {
+    .for-mobile {
+        display: none;
+    }
+}
+
+
+/* Small phones from 0 to 480px; */
+
+@media only screen and (max-width: 480px) {
+    .for-desktop {
+        display: none;
+    }
+    .hero-title {
+        font-size: 30px !important;
+        text-align: center;
+    }
+}
