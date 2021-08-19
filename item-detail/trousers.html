@@ -21,6 +21,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <!-- --- Link Zoom image--- -->
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://www.jqueryscript.net/demo/Powerful-Multi-Functional-jQuery-Lightbox-Plugin-Magnific-Popup/dist/magnific-popup.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://www.jqueryscript.net/demo/Powerful-Multi-Functional-jQuery-Lightbox-Plugin-Magnific-Popup/dist/jquery.magnific-popup.js"></script>
+
 </head>
 
 <body>
@@ -223,7 +230,36 @@
                 <div class="tab-content mt-2">
                     <!-- About -->
                     <div class="tab-pane fade show active" id="about">
-                        <p class="description">
+                        <div class="popup-gallery">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="../resources/images/fashion/fashion1-1.jpg">
+                                        <img src="../resources/images/fashion/fashion1-1.jpg" width="100%">
+                                    </a>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="../resources/images/fashion/fashion1-2.jpg">
+                                        <img src="../resources/images/fashion/fashion1-2.jpg" width="100%">
+                                    </a>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="../resources/images/fashion/fashion1-3.jpg">
+                                        <img src="../resources/images/fashion/fashion1-3.jpg" width="100%">
+                                    </a>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="../resources/images/fashion/fashion1-4.jpg">
+                                        <img src="../resources/images/fashion/fashion1-4.jpg" width="100%">
+                                    </a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <p class="mt-5">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, ipsa, neque eveniet magni excepturi unde, eum eos quibusdam cupiditate repudiandae exercitationem ducimus dolore quae architecto illo! Molestiae illo doloremque ab laudantium cumque. Corporis
                             officia ipsum aliquam qui, assumenda suscipit. Aperiam laborum ipsum quos nulla minima. Laborum, magni quaerat labore quam maxime libero, ipsum, cumque molestias quibusdam reprehenderit tempora id? Quaerat deleniti voluptatem
                             aut perferendis rem architecto dignissimos? Odio commodi facere repellat illum incidunt eum, voluptas tempora, ipsam accusamus mollitia eveniet beatae facilis provident totam nam dicta vero ut accusantium labore quia hic sunt
@@ -256,12 +292,10 @@
                         </div>
                         <form method="post">
                             <div class="d-flex justify-content-between align-items-center mb-3 mt-5">
-                                <h5>Add a Comment</h5>
+                                <h2 class="h5 m-0">Add a Comment</h2>
                             </div>
                             <textarea name="description" class="form-control border" placeholder="Add a comment" rows="6" data-bind-characters-target="#charactersRemaining" maxlength="1000" required=""></textarea>
-                            <div class="d-flex justify-content-between mt-3">
-                                <small class="font-weight-light"><span id="charactersRemaining">1000</span> characters remaining</small>
-                                <button type="submit" class="btn btn-primary fs-6">Add comment</button></div>
+                            <div class="d-flex justify-content-between mt-3"><small class="font-weight-light"><span id="charactersRemaining">1000</span> characters remaining</small> <button type="submit" class="btn btn-primary">Add comment</button></div>
                         </form>
                     </div>
                     <!-- End Comments -->
@@ -275,12 +309,10 @@
             </div>
             <div class="col-lg-4">
                 <div class="card bg-soft border-light p-3">
-                    <div class="d-flex"><span class="h3">$ 250</span></div>
+                    <div class="d-flex align-items-baseline"><span class="h3 font-weight-bold mb-0 mr-1">$ 250</span></div>
                 </div>
+                <div class="card border-light mt-4 p-3"><button class="btn btn-primary">Buy Now</button></div>
                 <div class="card border-light mt-4 p-3">
-                    <a href="../checkout.html" class="btn btn-primary fixed-bottom-mobile fixed-buy-now">Buy Now</a>
-                </div>
-                <div class="card border-light mt-4 p-3 ">
                     <h5 class="font-weight-normal">Property Owner</h5>
                     <div class="media d-flex align-items-center my-3">
                         <a href="#" class="avatar-lg me-2">
@@ -290,24 +322,7 @@
                             <a class="text-dark" href="#">Jose Leos</a>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary mb-3 fixed-bottom-mobile" data-bs-toggle="modal" data-bs-target="#exchange">Exchange</button>
-                    <div class="modal fade" id="exchange" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <button type="button" class="btn btn-primary mb-3">Exchange</button>
                 </div>
                 <div class="card border-light mt-4 p-3">
                     <h5 class="font-weight-normal">Contact</h5>
@@ -326,13 +341,13 @@
                     <div class="d-flex justify-content-between border-bottom py-2">
                         <div>
                             <div class="fw-semibold text-dark">Address</div>
-                            <div class="fs-sm text-muted">26, Quebec, BC, Canada</div>
+                            <div class="fs-sm text-muted">Somewhere</div>
                         </div>
                     </div>
                     <div class="d-flex justify-content-between pt-2">
-                        <a class="btn-share btn-twitter me-1 my-2" href="#"><i
+                        <a class="btn-share btn-twitter me-2 my-2" href="#"><i
                                 class="fab fa-twitter"></i> Twitter</a>
-                        <a class="btn-share btn-instagram me-1 my-2" href="#"><i
+                        <a class="btn-share btn-instagram me-2 my-2" href="#"><i
                                 class="fab fa-instagram"></i> Instagram</a>
                         <a class="btn-share btn-facebook my-2" href="#"><i
                                 class="fab fa-facebook"></i> Facebook</a>
@@ -347,177 +362,133 @@
     <section>
         <div class="container">
             <h2 class="h3 text-center pb-4">Style with</h2>
-            <div class="carousel owl-carousel">
-                <div class="card remove-border card-hover mb-5">
-                    <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
-                        <span class="d-table badge bg-success mb-1">Exchange</span>
-                        <span class="d-table badge bg-danger">Sale</span>
-                    </div>
-                    <a href="#">
-                        <img src="../resources/images/fashion/fashion2-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-fix">
-                    </a>
-                    <div class="card-body rounded-3">
-                        <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
-                        <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <div class="row align-items-center g-0">
-                            <div class="col-auto">
-                                <img src="../resources/images/avatar/02.jpg" width="32" height="32" class="rounded-circle" alt="">
-                            </div>
-                            <div class="col ms-2">
-                                <a href="#" class="text-muted">Dennis</a>
-                            </div>
-                            <div class="col-auto">
-                                <button class="btn" onclick="Toasty( )">
-                                    <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Add to card"></i>
-                                </button>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card remove-border card-hover mb-5">
+                        <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
+                            <span class="d-table badge bg-success mb-1">Exchange</span>
+                            <span class="d-table badge bg-danger">Sale</span>
+                        </div>
+                        <a href="#">
+                            <img src="../resources/images/fashion/fashion2-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-hover">
+                        </a>
+                        <div class="card-body rounded-3">
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
+                            <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="row align-items-center g-0">
+                                <div class="col-auto">
+                                    <img src="../resources/images/avatar/02.jpg" width="32" height="32" class="rounded-circle" alt="">
+                                </div>
+                                <div class="col ms-2">
+                                    <a href="#" class="text-muted">Dennis</a>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn" onclick="Toasty( )">
+                                        <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Add to card"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card remove-border card-hover mb-5">
-                    <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
-                        <span class="d-table badge bg-success mb-1">Exchange</span>
-                        <span class="d-table badge bg-danger">Sale</span>
-                    </div>
-                    <a href="#">
-                        <img src="../resources/images/fashion/fashion3-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-fix">
-                    </a>
-                    <div class="card-body rounded-3">
-                        <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
-                        <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <div class="row align-items-center g-0">
-                            <div class="col-auto">
-                                <img src="../resources/images/avatar/03.jpg" width="32" height="32" class="rounded-circle" alt="">
-                            </div>
-                            <div class="col ms-2">
-                                <a href="#" class="text-muted">Dennis</a>
-                            </div>
-                            <div class="col-auto">
-                                <button class="btn" onclick="Toasty( )">
-                                    <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Add to card"></i>
-                                </button>
+                <div class="col-lg-3">
+                    <div class="card remove-border card-hover mb-5">
+                        <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
+                            <span class="d-table badge bg-success mb-1">Exchange</span>
+                            <span class="d-table badge bg-danger">Sale</span>
+                        </div>
+                        <a href="#">
+                            <img src="../resources/images/fashion/fashion3-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-hover">
+                        </a>
+                        <div class="card-body rounded-3">
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
+                            <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="row align-items-center g-0">
+                                <div class="col-auto">
+                                    <img src="../resources/images/avatar/03.jpg" width="32" height="32" class="rounded-circle" alt="">
+                                </div>
+                                <div class="col ms-2">
+                                    <a href="#" class="text-muted">Dennis</a>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn" onclick="Toasty( )">
+                                        <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Add to card"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card remove-border card-hover mb-5">
-                    <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
-                        <span class="d-table badge bg-success mb-1">Exchange</span>
-                        <span class="d-table badge bg-danger">Sale</span>
-                    </div>
-                    <a href="#">
-                        <img src="../resources/images/fashion/fashion4-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-fix">
-                    </a>
-                    <div class="card-body rounded-3">
-                        <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
-                        <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <div class="row align-items-center g-0">
-                            <div class="col-auto">
-                                <img src="../resources/images/avatar/04.jpg" width="32" height="32" class="rounded-circle" alt="">
-                            </div>
-                            <div class="col ms-2">
-                                <a href="#" class="text-muted">Dennis</a>
-                            </div>
-                            <div class="col-auto">
-                                <button class="btn" onclick="Toasty( )">
-                                    <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Add to card"></i>
-                                </button>
+                <div class="col-lg-3">
+                    <div class="card remove-border card-hover mb-5">
+                        <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
+                            <span class="d-table badge bg-success mb-1">Exchange</span>
+                            <span class="d-table badge bg-danger">Sale</span>
+                        </div>
+                        <a href="#">
+                            <img src="../resources/images/fashion/fashion4-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-hover">
+                        </a>
+                        <div class="card-body rounded-3">
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
+                            <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="row align-items-center g-0">
+                                <div class="col-auto">
+                                    <img src="../resources/images/avatar/04.jpg" width="32" height="32" class="rounded-circle" alt="">
+                                </div>
+                                <div class="col ms-2">
+                                    <a href="#" class="text-muted">Dennis</a>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn" onclick="Toasty( )">
+                                        <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Add to card"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card remove-border card-hover mb-5">
-                    <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
-                        <span class="d-table badge bg-success mb-1">Exchange</span>
-                        <span class="d-table badge bg-danger">Sale</span>
-                    </div>
-                    <a href="#">
-                        <img src="../resources/images/fashion/fashion5-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-fix">
-                    </a>
-                    <div class="card-body rounded-3">
-                        <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
-                        <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <div class="row align-items-center g-0">
-                            <div class="col-auto">
-                                <img src="../resources/images/avatar/05.jpg" width="32" height="32" class="rounded-circle" alt="">
-                            </div>
-                            <div class="col ms-2">
-                                <a href="#" class="text-muted">Dennis</a>
-                            </div>
-                            <div class="col-auto">
-                                <button class="btn" onclick="Toasty( )">
-                                    <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Add to card"></i>
-                                </button>
-                            </div>
+                <div class="col-lg-3">
+                    <div class="card remove-border card-hover mb-5">
+                        <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
+                            <span class="d-table badge bg-success mb-1">Exchange</span>
+                            <span class="d-table badge bg-danger">Sale</span>
                         </div>
-                    </div>
-                </div>
-                <div class="card remove-border card-hover mb-5">
-                    <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
-                        <span class="d-table badge bg-success mb-1">Exchange</span>
-                        <span class="d-table badge bg-danger">Sale</span>
-                    </div>
-                    <a href="#">
-                        <img src="../resources/images/fashion/fashion6-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-fix">
-                    </a>
-                    <div class="card-body rounded-3">
-                        <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
-                        <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <div class="row align-items-center g-0">
-                            <div class="col-auto">
-                                <img src="../resources/images/avatar/06.jpg" width="32" height="32" class="rounded-circle" alt="">
-                            </div>
-                            <div class="col ms-2">
-                                <a href="#" class="text-muted">Dennis</a>
-                            </div>
-                            <div class="col-auto">
-                                <button class="btn" onclick="Toasty( )">
-                                    <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Add to card"></i>
-                                </button>
+                        <a href="#">
+                            <img src="../resources/images/fashion/fashion5-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-hover">
+                        </a>
+                        <div class="card-body rounded-3">
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
+                            <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="row align-items-center g-0">
+                                <div class="col-auto">
+                                    <img src="../resources/images/avatar/05.jpg" width="32" height="32" class="rounded-circle" alt="">
+                                </div>
+                                <div class="col ms-2">
+                                    <a href="#" class="text-muted">Dennis</a>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn" onclick="Toasty( )">
+                                        <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Add to card"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            $(".carousel").owlCarousel({
-                margin: 10,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        // nav: false,
-                    },
-                    600: {
-                        items: 2,
-                        // nav: false,
-                    },
-                    1000: {
-                        items: 4,
-                        // nav: false,
-                    }
-                }
-            });
-        </script>
     </section>
     <!-- End Style with -->
 
@@ -525,177 +496,133 @@
     <section>
         <div class="container">
             <h2 class="h3 text-center pb-4">You may also like</h2>
-            <div class="carousel2 owl-carousel">
-                <div class="card remove-border card-hover mb-5">
-                    <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
-                        <span class="d-table badge bg-success mb-1">Exchange</span>
-                        <span class="d-table badge bg-danger">Sale</span>
-                    </div>
-                    <a href="#">
-                        <img src="../resources/images/electronic/electronic1-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-fix">
-                    </a>
-                    <div class="card-body rounded-3">
-                        <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
-                        <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <div class="row align-items-center g-0">
-                            <div class="col-auto">
-                                <img src="../resources/images/avatar/07.jpg" width="32" height="32" class="rounded-circle" alt="">
-                            </div>
-                            <div class="col ms-2">
-                                <a href="#" class="text-muted">Dennis</a>
-                            </div>
-                            <div class="col-auto">
-                                <button class="btn" onclick="Toasty( )">
-                                    <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Add to card"></i>
-                                </button>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card remove-border card-hover mb-5">
+                        <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
+                            <span class="d-table badge bg-success mb-1">Exchange</span>
+                            <span class="d-table badge bg-danger">Sale</span>
+                        </div>
+                        <a href="#">
+                            <img src="../resources/images/electronic/electronic1-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-hover">
+                        </a>
+                        <div class="card-body rounded-3">
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
+                            <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="row align-items-center g-0">
+                                <div class="col-auto">
+                                    <img src="../resources/images/avatar/07.jpg" width="32" height="32" class="rounded-circle" alt="">
+                                </div>
+                                <div class="col ms-2">
+                                    <a href="#" class="text-muted">Dennis</a>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn" onclick="Toasty( )">
+                                        <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Add to card"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card remove-border card-hover mb-5">
-                    <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
-                        <span class="d-table badge bg-success mb-1">Exchange</span>
-                        <span class="d-table badge bg-danger">Sale</span>
-                    </div>
-                    <a href="#">
-                        <img src="../resources/images/children/children2-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-fix">
-                    </a>
-                    <div class="card-body rounded-3">
-                        <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
-                        <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <div class="row align-items-center g-0">
-                            <div class="col-auto">
-                                <img src="../resources/images/avatar/08.jpg" width="32" height="32" class="rounded-circle" alt="">
-                            </div>
-                            <div class="col ms-2">
-                                <a href="#" class="text-muted">Dennis</a>
-                            </div>
-                            <div class="col-auto">
-                                <button class="btn" onclick="Toasty( )">
-                                    <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Add to card"></i>
-                                </button>
+                <div class="col-lg-3">
+                    <div class="card remove-border card-hover mb-5">
+                        <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
+                            <span class="d-table badge bg-success mb-1">Exchange</span>
+                            <span class="d-table badge bg-danger">Sale</span>
+                        </div>
+                        <a href="#">
+                            <img src="../resources/images/children/children2-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-hover">
+                        </a>
+                        <div class="card-body rounded-3">
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
+                            <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="row align-items-center g-0">
+                                <div class="col-auto">
+                                    <img src="../resources/images/avatar/08.jpg" width="32" height="32" class="rounded-circle" alt="">
+                                </div>
+                                <div class="col ms-2">
+                                    <a href="#" class="text-muted">Dennis</a>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn" onclick="Toasty( )">
+                                        <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Add to card"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card remove-border card-hover mb-5">
-                    <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
-                        <span class="d-table badge bg-success mb-1">Exchange</span>
-                        <span class="d-table badge bg-danger">Sale</span>
-                    </div>
-                    <a href="#">
-                        <img src="../resources/images/household/household4-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-fix">
-                    </a>
-                    <div class="card-body rounded-3">
-                        <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
-                        <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <div class="row align-items-center g-0">
-                            <div class="col-auto">
-                                <img src="../resources/images/avatar/09.jpg" width="32" height="32" class="rounded-circle" alt="">
-                            </div>
-                            <div class="col ms-2">
-                                <a href="#" class="text-muted">Dennis</a>
-                            </div>
-                            <div class="col-auto">
-                                <button class="btn" onclick="Toasty( )">
-                                    <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Add to card"></i>
-                                </button>
+                <div class="col-lg-3">
+                    <div class="card remove-border card-hover mb-5">
+                        <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
+                            <span class="d-table badge bg-success mb-1">Exchange</span>
+                            <span class="d-table badge bg-danger">Sale</span>
+                        </div>
+                        <a href="#">
+                            <img src="../resources/images/household/household4-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-hover">
+                        </a>
+                        <div class="card-body rounded-3">
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
+                            <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="row align-items-center g-0">
+                                <div class="col-auto">
+                                    <img src="../resources/images/avatar/09.jpg" width="32" height="32" class="rounded-circle" alt="">
+                                </div>
+                                <div class="col ms-2">
+                                    <a href="#" class="text-muted">Dennis</a>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn" onclick="Toasty( )">
+                                        <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Add to card"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="card remove-border card-hover mb-5">
-                    <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
-                        <span class="d-table badge bg-success mb-1">Exchange</span>
-                        <span class="d-table badge bg-danger">Sale</span>
-                    </div>
-                    <a href="#">
-                        <img src="../resources/images/vehicle/vehicle3-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-fix">
-                    </a>
-                    <div class="card-body rounded-3">
-                        <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
-                        <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <div class="row align-items-center g-0">
-                            <div class="col-auto">
-                                <img src="../resources/images/avatar/11.jpg" width="32" height="32" class="rounded-circle" alt="">
-                            </div>
-                            <div class="col ms-2">
-                                <a href="#" class="text-muted">Dennis</a>
-                            </div>
-                            <div class="col-auto">
-                                <button class="btn" onclick="Toasty( )">
-                                    <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Add to card"></i>
-                                </button>
-                            </div>
+                <div class="col-lg-3">
+                    <div class="card remove-border card-hover mb-5">
+                        <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
+                            <span class="d-table badge bg-success mb-1">Exchange</span>
+                            <span class="d-table badge bg-danger">Sale</span>
                         </div>
-                    </div>
-                </div>
-                <div class="card remove-border card-hover mb-5">
-                    <div class="position-absolute start-0 top-0 pt-3 ps-3" style="z-index: 11;">
-                        <span class="d-table badge bg-success mb-1">Exchange</span>
-                        <span class="d-table badge bg-danger">Sale</span>
-                    </div>
-                    <a href="#">
-                        <img src="../resources/images/vehicle/vehicle5-2.jpg" alt="" width="100%" height="225" class="rounded-3 img-fix">
-                    </a>
-                    <div class="card-body rounded-3">
-                        <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
-                        <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <div class="row align-items-center g-0">
-                            <div class="col-auto">
-                                <img src="../resources/images/avatar/10.jpg" width="32" height="32" class="rounded-circle" alt="">
-                            </div>
-                            <div class="col ms-2">
-                                <a href="#" class="text-muted">Dennis</a>
-                            </div>
-                            <div class="col-auto">
-                                <button class="btn" onclick="Toasty( )">
-                                    <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
-                                        title="Add to card"></i>
-                                </button>
+                        <a href="#">
+                            <img src="../resources/images/vehicle/vehicle3-1.jpg" alt="" width="100%" height="225" class="rounded-3 img-hover">
+                        </a>
+                        <div class="card-body rounded-3">
+                            <p class="card-text text-secondary"><i class="fas fa-map-marked text-muted"></i> Toronto</p>
+                            <h5 class="card-title hover-color-red fs-base">HP COMPUTER</h5>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="row align-items-center g-0">
+                                <div class="col-auto">
+                                    <img src="../resources/images/avatar/11.jpg" width="32" height="32" class="rounded-circle" alt="">
+                                </div>
+                                <div class="col ms-2">
+                                    <a href="#" class="text-muted">Dennis</a>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn" onclick="Toasty( )">
+                                        <i class="fas fa-cart-plus" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Add to card"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            $(".carousel2").owlCarousel({
-                margin: 10,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        // nav: false,
-                    },
-                    600: {
-                        items: 2,
-                        // nav: false,
-                    },
-                    1000: {
-                        items: 4,
-                        // nav: false,
-                    }
-                }
-            });
-        </script>
     </section>
     <!-- End Also like -->
 
@@ -719,16 +646,14 @@
                     </div>
 
                     <div class="col-lg-3 col-md-12 footer-links">
-                        <h4 class="text-center">Categories</h4>
-                        <div class="d-flex justify-content-center">
-                            <ul>
-                                <li><i class="fas fa-chevron-right"></i></i> <a href="page-listing/fashion.html">Fashion</a></li>
-                                <li><i class="fas fa-chevron-right"></i></i> <a href="#">Electronics</a></li>
-                                <li><i class="fas fa-chevron-right"></i></i> <a href="#">Kids' Furniture</a></li>
-                                <li><i class="fas fa-chevron-right"></i></i> <a href="#">Household</a></li>
-                                <li><i class="fas fa-chevron-right"></i></i> <a href="#">Vehicle</a></li>
-                            </ul>
-                        </div>
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Fashion</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Electronics</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Kids' Furniture</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Household</a></li>
+                            <li><i class="fas fa-chevron-right"></i></i> <a href="#">Vehicle</a></li>
+                        </ul>
                     </div>
 
                     <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
@@ -788,6 +713,24 @@
         })
     </script>
     <!-- End Tooltip -->
+
+    <!-- ----- Zoom image---- -->
+    <script>
+        $(document).ready(function() {
+            $('.popup-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1]
+                },
+
+            });
+        });
+    </script>
 </body>
 
 </html>
