@@ -73,116 +73,49 @@ a {
 
 /* End Navbar */
 
-
-/* Information */
+.info {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+    z-index: 99;
+}
 
 
 /* List */
 
+.list-group-item,
+.fa-arrow-right {
+    transition: 0.2s;
+}
+
+.list-group-item:hover {
+    background: #f5f9fe;
+}
+
+.list-group-item:hover .fa-arrow-right {
+    transform: translateX(10px);
+}
+
 
 /* End List */
-
-.btn-save {
-    background: #e85a4f;
-    color: #ffffff;
-    transition: 0.2s;
-}
-
-.btn-save:hover {
-    background: #161616;
-    color: #ffffff;
-}
-
-
-/* End Information */
-
-
-/* Profile */
-
-.emp-profile {
-    padding: 3%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    border-radius: 0.5rem;
-    background: #fff;
-}
-
-.profile-img {
-    text-align: center;
-}
-
-.profile-img img {
-    width: 70%;
-    height: 100%;
-}
-
-.profile-img .file {
-    position: relative;
-    overflow: hidden;
-    margin-top: -20%;
-    width: 70%;
-    border: none;
-    border-radius: 0;
-    font-size: 15px;
-    background: #212529b8;
-}
-
-.profile-img .file input {
-    position: absolute;
-    opacity: 0;
-    right: 0;
-    top: 0;
-}
-
-.btn-twitter {
-    color: #1da1f2;
-    padding: 5px;
-    border-radius: 5px;
-    background: rgba(29, 161, 242, .08);
-    transition: 0.2s;
-}
-
-.btn-twitter:hover {
-    color: #ffffff;
-    background: #1da1f2;
-}
-
-.btn-instagram {
-    padding: 5px;
-    border-radius: 5px;
-    color: #5851db;
-    background: rgba(88, 81, 219, .08);
-    transition: 0.2s;
-}
-
-.btn-instagram:hover {
-    color: #ffffff;
-    background: #5851db;
-}
-
-.btn-facebook {
-    padding: 5px;
-    border-radius: 5px;
-    color: #3b5998;
-    background: rgba(59, 89, 152, .08);
-    transition: 0.2s;
-}
-
-.btn-facebook:hover {
-    color: #ffffff;
-    background: #3b5998;
-}
-
-
-/* End Profile */
 
 
 /* Items */
 
+.btn-submit-new-item {
+    border: #e85a4f 1px solid;
+    color: #e85a4f;
+    transition: 0.2s;
+}
+
+.btn-submit-new-item:hover {
+    background: #e85a4f;
+    color: #ffffff;
+}
+
 .img-fluid {
     height: 200px;
     width: 200px;
-    object-fit: cover;
 }
 
 .time {
@@ -197,6 +130,114 @@ a {
         width: 350px;
         height: 300px;
     }
+}
+
+.form-input:focus {
+    background: #ebecf1;
+}
+
+.file-upload {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #e85a4f;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.file-upload-btn:hover {
+    background: #474746;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+
+.file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-upload-wrap {
+    margin-top: 20px;
+    border: 1px dashed #e85a4f;
+    position: relative;
+}
+
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+
+.drag-text {
+    text-align: center;
+}
+
+.drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #e85a4f;
+    padding: 60px 0;
+}
+
+.file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #cd4535;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #b02818;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.remove-image:active {
+    border: 0;
+    transition: all .2s ease;
 }
 
 
@@ -317,20 +358,6 @@ a {
 /* End Footer */
 
 
-/* Animation */
-
-.card-hover {
-    transition: 0.2s;
-}
-
-.card-hover:hover {
-    transform: translateY(-5px);
-}
-
-
-/* End Amination */
-
-
 /* Big tablet to 1200px; */
 
 @media only screen and (min-width:1200px) {
@@ -345,5 +372,10 @@ a {
 @media only screen and (max-width: 480px) {
     .for-desktop {
         display: none;
+    }
+    .info {
+        position: -webkit-sticky;
+        position: sticky;
+        top: -100px;
     }
 }

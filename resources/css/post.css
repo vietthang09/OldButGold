@@ -4,6 +4,13 @@
   }
   body{
     font-family: 'Poppins', sans-serif;
+    /* position: relative; */
+  }
+  #btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
   }
   a {
     color: #4154f1;
@@ -61,66 +68,37 @@
 .form-input:focus{
   background: #ebecf1;
 }
-.file-upload {
-  background-color: #ffffff;
-  margin: 0 auto;
-  padding: 20px;
+
+/* image upload */
+.image_container {
+  height: 120px;
+  width: 200px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px;
 }
 
-.file-upload-btn {
-  width: 100%;
-  margin: 0;
-  color: #fff;
-  background: #e85a4f;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  transition: all .2s ease;
-  outline: none;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.file-upload-btn:hover {
-  background: #474746;
-  color: #ffffff;
-  transition: all .2s ease;
-  cursor: pointer;
-}
-
-.file-upload-btn:active {
-  border: 0;
-  transition: all .2s ease;
-}
-
-.file-upload-content {
-  display: none;
-  text-align: center;
-}
-
-.file-upload-input {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+.image_container img {
   height: 100%;
-  outline: none;
-  opacity: 0;
+  width: auto;
+  object-fit: cover;
+}
+
+.image_container span {
+  top: -6px;
+  right: 8px;
+  color: red;
+  font-size: 28px;
+  font-weight: normal;
   cursor: pointer;
 }
 
-.image-upload-wrap {
-  margin-top: 20px;
-  border: 1px dashed #e85a4f;
-  position: relative;
-}
-
-
+/* 
 .image-title-wrap {
   padding: 0 15px 15px 15px;
   color: #222;
-}
-
+} */
+/* 
 .drag-text {
   text-align: center;
 }
@@ -164,7 +142,7 @@
 .remove-image:active {
   border: 0;
   transition: all .2s ease;
-}
+} */
 /* End Post */
 
 /* Footer */
