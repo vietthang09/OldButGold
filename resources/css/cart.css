@@ -264,7 +264,8 @@ a {
     }
     .for-mobile-fixed-bottom {
         position: fixed;
-        bottom: 0;
+        bottom: 60px;
         z-index: 11;
+        width: 93%;
     }
 }
