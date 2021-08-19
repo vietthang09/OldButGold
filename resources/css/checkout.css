@@ -92,7 +92,44 @@ html::-webkit-scrollbar-thumb:active {
 
 /* Pay */
 
+.container-form-check{
+    max-width: 450px;
+    margin-top: 65px;
+    box-shadow: 1px 2px 2px 2px rgb(211, 211, 211);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+}
+.thongtin .form-requid-info{
+    margin-bottom: 15px;
 
+}
+
+.thongtin .form-requid-info input{
+    border: 1px solid rgb(67, 150, 245);
+    /* margin-bottom: 15px; */
+    height: 45px;
+    font-size: 1.2rem;
+    
+}
+.list-group .list-group-item{
+    padding-top: 2%;
+    font-size: 1.2rem;
+    
+}
+.list-group .list-group-item  .form-label{
+    margin: 0;
+
+}
+
+.fa-user-lock{
+    font-size: 20px;
+    color: rgb(168, 167, 167);
+}
+.btn-thanhtoan{
+    border-radius: 20px;
+    background-color: rgb(58, 126, 214);
+}
 /* End Pay */
 
 
