@@ -122,6 +122,12 @@ a {
     color: #424767;
 }
 
+.btn-confirm {
+    background: #e85a4f;
+    border: none;
+    color: #ffffff;
+}
+
 
 /* Small phones from 0 to 480px; */
 

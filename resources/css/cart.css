@@ -115,6 +115,29 @@ a {
 /* End Cart */
 
 
+/* Pay */
+
+.container-form-check {
+    max-width: 450px;
+    margin-top: 65px;
+    box-shadow: 1px 2px 2px 2px rgb(211, 211, 211);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+}
+
+.thongtin .form-requid-info {
+    margin-bottom: 15px;
+}
+
+.thongtin .form-requid-info input {
+    border: 1px solid rgb(67, 150, 245);
+    /* margin-bottom: 15px; */
+    height: 45px;
+    font-size: 1.2rem;
+}
+
+
 /* Footer */
 
 .footer {
@@ -233,24 +256,6 @@ a {
 
 @media only screen and (min-width:1200px) {
     .for-mobile {
-        display: none;
-    }
-}
-
-
-/* Small tablet to big tablet from 768x to 1023px */
-
-@media only screen and (min-width:1023px) {
-    .for-mobile {
-        display: none;
-    }
-}
-
-
-/* Small phones to small tablets */
-
-@media only screen and (max-width: 767px) {
-    .for-desktop {
         display: none;
     }
 }

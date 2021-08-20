@@ -169,30 +169,28 @@
                         <a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="item-detail/trousers.html"><img src="resources/images/fashion/fashion1-1.jpg" width="160" alt="Product"></a>
                         <div class="pt-2">
                             <h3 class="fs-base mb-2"><a href="item-detail/trousers.html" class="text-dark">Trousers</a></h3>
-                            <div class="fs-lg text-accent pt-2">$154.<small>00</small></div>
+                            <div class="fs-lg text-accent pt-2">$50.<small>00</small></div>
                         </div>
                     </div>
                     <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
                         <label class="form-label" for="quantity1">Quantity</label>
-                        <input class="form-control" type="number" id="quantity1" min="1" value="1">
+                        <input class="form-control" type="number" id="quantity1" min="0" max="3" value="0">
                         <button class="btn-remove px-0 text-danger" type="button"><i class="far fa-trash-alt"></i><span class="fs-sm"> Remove</span></button>
                     </div>
                 </div>
-                <!-- Item-->
-                <div class="d-sm-flex justify-content-between align-items-center my-2 pb-3 border-bottom">
-                    <div class="d-block d-sm-flex align-items-center text-center text-sm-start">
-                        <a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="#"><img src="resources/images/fashion/fashion10-1.jpg" width="160" alt="Product"></a>
-                        <div class="pt-2">
-                            <h3 class="product-title fs-base mb-2"><a href="#" class="text-dark">Vintage handbag</a></h3>
-                            <div class="fs-lg text-accent pt-2">$79.<small>50</small></div>
-                        </div>
-                    </div>
-                    <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start" style="max-width: 9rem;">
-                        <label class="form-label" for="quantity2">Quantity</label>
-                        <input class="form-control" type="number" id="quantity2" min="1" value="1">
-                        <button class="btn-remove px-0 text-danger" type="button"><i class="far fa-trash-alt"></i><span class="fs-sm"> Remove</span></button>
-                    </div>
-                </div>
+                <script>
+                    const quantity1 = document.getElementById('quantity1');
+                    quantity1.addEventListener('input', updateValue);
+
+                    function updateValue(e) {
+                        sub.textContent = e.target.value * 50;
+                        if (quantity1.value > 0) {
+                            shipping.textContent = 10;
+                        } else {
+                            shipping.textContent = 0;
+                        }
+                    }
+                </script>
 
             </section>
             <!-- Sidebar-->
@@ -201,11 +199,109 @@
                     <div class="py-2 px-xl-2">
                         <div class="text-center mb-2 pb-2 border-bottom">
                             <h2 class="h6 mb-3 pb-1">Subtotal</h2>
-                            <h3 class="fw-normal">$265.<small>00</small></h3>
+                            <div class="d-flex justify-content-center">
+                                <span class="h3">$</span>
+                                <h3 class="fw-normal" id="sub"> 00</h3>
+                                <span class="h3">.00</span>
+                            </div>
                         </div>
-                        <h6 class="text-center">Shipping: $25</h6>
+                        <div class="d-flex justify-content-center">
+                            <h6 class="text-center">Shipping: $</h6>
+                            <span class="h6" id="shipping">00</span>
+                            <span class="h6">.00</span>
+                        </div>
                     </div>
-                </div><a class="btn-checkout d-block w-100 mt-4" href="checkout.html"><i class="fas fa-credit-card"></i> Proceed to Checkout</a>
+                </div>
+                <a class="btn-checkout d-block w-100 mt-4" href="#" data-bs-toggle="modal" data-bs-target="#checkout"><i class="fas fa-credit-card"></i> Proceed to Checkout</a>
+                <!-- Modal -->
+                <div class="modal fade" id="checkout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Checkout</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" class="needs-validation" novalidate>
+                                    <ul class="list-group mb-3">
+                                        <li class="list-group-item ">
+                                            <input type="radio" name="pay" class="form-check-input" id="bankpay" onclick="checkradio()">
+                                            <label for="bankpay" class="form-label">Payment by domestic card</label>
+                                            <br>
+                                            <img class="mr-2" style="width: 40px;" src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg" alt="Visa">
+                                            <img class="mr-2" style="width: 40px;" src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg" alt="American Express">
+                                            <img class="mr-2" style="width: 40px;" src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg" alt="Mastercard">
+                                        </li>
+                                        <li class="list-group-item ">
+                                            <input type="radio" name="pay" class="form-check-input" id="thanhtoannhan" onclick="checkradio()" checked>
+                                            <label for="thanhtoannhan" class="form-label">Payment on delivery</label>
+
+                                        </li>
+
+
+                                    </ul>
+                                    <div class="thongtin mt-3 " id="formrequid" style="display: none;">
+                                        <div class="d-flex justify-content-between me-1 align-item-center">
+                                            <h5>Customer information</h5>
+                                            <i class="fas fa-user-lock"></i>
+                                        </div>
+                                        <div class="form-requid-info">
+                                            <input type="text" class="form-control" placeholder="Card number" required>
+                                            <div class="invalid-feedback">
+                                                Card number is requided
+                                            </div>
+
+                                        </div>
+                                        <div class="form-requid-info">
+                                            <input type="text" class="form-control" placeholder="Expiration date" required>
+                                            <div class="invalid-feedback">
+                                                Expiration date is requided
+                                            </div>
+
+                                        </div>
+                                        <div class="form-requid-info">
+                                            <input type="password" class="form-control" placeholder="Password" required>
+                                            <div class="invalid-feedback">
+                                                Password is requided
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-tieptheo text-center w-100">
+                                        <button class="btn text-light btn-checkout" type="submit" name="submit">Confirm</button>
+                                    </div>
+                                </form>
+                                <script>
+                                    function checkradio() {
+                                        var check = document.getElementById('bankpay').checked;
+                                        var form = document.getElementById('formrequid');
+                                        if (check == true) {
+                                            form.style.display = "block";
+
+                                        }
+                                        if (check == false) {
+                                            form.style.display = "none";
+                                        }
+                                    }
+                                    (function() {
+                                        'user strict'
+                                        var forms = document.querySelectorAll('.needs-validation')
+                                        Array.prototype.slice.call(forms)
+                                            .forEach(function(form) {
+                                                form.addEventListener('submit', function(event) {
+                                                    if (!form.checkValidity()) {
+
+                                                        event.preventDefault()
+                                                        event.stopPropagation()
+                                                    }
+                                                    form.classList.add('was-validated')
+                                                }, false)
+                                            })
+                                    })()
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </aside>
         </div>
     </section>
@@ -268,7 +364,7 @@
     <!-- End Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+    <script src="resources/js/main.js"></script>
 </body>
 
 </html>

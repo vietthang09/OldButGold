@@ -266,8 +266,6 @@
 
                         </div>
 
-                        <hr class="my-4">
-
                         <h4 class="mb-3">Option</h4>
 
                         <div class="my-3">
@@ -289,9 +287,39 @@
                                     Valid price is required
                                 </div>
                             </div>
-                            <button class="w-100 text-center btn-edit btn-lg btn" type="submit">Confirm</button>
+
 
                         </div>
+                        <hr>
+                        <div class="my-2">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="map" onclick="check_map()">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Public on Map</label>
+                            </div>
+                            <div class="col-md-12" id="map_display" style="display: none;">
+                                <label for="price" class="form-label">Greeting</label>
+                                <input type="text" class="form-control form-input" required>
+                                <div class="invalid-feedback">
+                                    Valid Greeting is required
+                                </div>
+                            </div>
+                            <script>
+                                function check_map() {
+                                    var map = document.getElementById('map').checked;
+                                    var map_display = document.getElementById('map_display');
+                                    if (map == true) {
+                                        map_display.style.display = "block";
+
+                                    } else {
+                                        map_display.style.display = "none";
+                                    }
+
+                                }
+                            </script>
+                        </div>
+                        <button class="w-100 text-center btn-edit btn-lg btn" type="submit">Confirm</button>
+
+
                     </form>
                 </div>
             </div>
@@ -443,7 +471,6 @@
     <!-- -----Script of checkbox---------- -->
     <script>
         function checkradio() {
-            var exchange = document.getElementById('flexSwitchCheckDefault').checked;
             var price = document.getElementById('flexSwitchCheckChecked').checked;
             var thegia = document.getElementById('thegia');
             if (price == true) {
@@ -452,7 +479,6 @@
             } else {
                 thegia.style.display = "none";
             }
-
         }
     </script>
 

@@ -20,6 +20,11 @@
     <title>OBG | Edit item</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../resources/images/logo.png">
+    <!-- --- Link Zoom image--- -->
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://www.jqueryscript.net/demo/Powerful-Multi-Functional-jQuery-Lightbox-Plugin-Magnific-Popup/dist/magnific-popup.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://www.jqueryscript.net/demo/Powerful-Multi-Functional-jQuery-Lightbox-Plugin-Magnific-Popup/dist/jquery.magnific-popup.js"></script>
 
 </head>
 
@@ -179,7 +184,7 @@
                         <div class="row g-3">
                             <div class="col-sm-12">
                                 <label for="title" class="form-label">Title</label>
-                                <input type="text" class="form-control form-input" id="title" placeholder="" value="" required>
+                                <input type="text" class="form-control form-input" id="title" placeholder="Fitbit Versa 2" value="" required>
                                 <div class="invalid-feedback">
                                     Valid title is required.
                                 </div>
@@ -187,7 +192,8 @@
 
                             <div class="col-sm-12">
                                 <label for="description" class="form-label">Description</label>
-                                <textarea class="form-control form-input" id="description" rows="5" required></textarea>
+                                <textarea class="form-control form-input" id="description" rows="5" placeholder="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, ipsa, neque eveniet magni excepturi unde, eum eos quibusdam cupiditate repudiandae exercitationem ducimus dolore quae architecto illo! Molestiae illo doloremque ab laudantium cumque. Corporis officia ipsum aliquam qui, assumenda suscipit. Aperiam laborum ipsum quos nulla minima. Laborum, magni quaerat labore quam maxime libero, ipsum, cumque molestias quibusdam reprehenderit tempora id? Quaerat deleniti voluptatem aut perferendis rem architecto dignissimos? Odio commodi facere repellat illum incidunt eum, voluptas tempora, ipsam accusamus mollitia eveniet beatae facilis provident totam nam dicta vero ut accusantium labore quia hic sunt iure? Repudiandae aut minus voluptas dolores! Repellat!"
+                                    required></textarea>
                                 <div class="invalid-feedback">
                                     Valid description is required.
                                 </div>
@@ -196,7 +202,6 @@
                             <div class="col-sm-4">
                                 <label for="category" class="form-label">Category</label>
                                 <select name="category" id="category" class="form-select" required>
-                                    <option value>Choose ....</option>
                                     <option >Fashion</option>
                                     <option >Electronic</option>
                                     <option >Kid's furniture</option>
@@ -217,69 +222,37 @@
                             </div>
                             <div class="col-sm-4">
                                 <label for="amount" class="form-label">Amount</label>
-                                <input type="number" class="form-control form-input" id="amount" min="1" required>
+                                <input type="number" class="form-control form-input" id="amount" min="1" value="1" required>
                                 <div class="invalid-feedback">
                                     Valid title is required.
                                 </div>
                             </div>
 
                             <div class="col-sm-12">
-                                <div class="file-upload">
-                                    <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button>
+                                <div class="popup-gallery">
+                                    <div class="row">
+                                        <div class="col-md-3 mt-3">
+                                            <a href="../resources/images/fashion/fashion8-1.jpg">
+                                                <img src="../resources/images/fashion/fashion8-1.jpg" width="100%" class="for-mobile-preview">
+                                            </a>
 
-                                    <div class="image-upload-wrap">
-                                        <input class="file-upload-input" type='file' required onchange="readURL(this);" accept="image/*">
+                                        </div>
+                                        <div class="col-md-3 mt-3">
+                                            <a href="../resources/images/fashion/fashion8-2.jpg">
+                                                <img src="../resources/images/fashion/fashion8-2.jpg" width="100%" class="for-mobile-preview">
+                                            </a>
 
-                                        <div class="drag-text">
-                                            <h3>Drag and drop a file or select add Image</h3>
                                         </div>
-                                        <div class="invalid-feedback">Add image</div>
-                                    </div>
-                                    <div class="file-upload-content">
-                                        <img class="file-upload-image" src="#" alt="your image" />
-                                        <div class="image-title-wrap">
-                                            <button type="button" onclick="removeUpload()" class="remove-image">Remove
-                                                <span class="image-title">Uploaded Image</span></button>
+                                        <div class="col-md-3 mt-3">
+                                            <a href="../resources/images/fashion/fashion8-3.jpg">
+                                                <img src="../resources/images/fashion/fashion8-3.jpg" width="100%" class="for-mobile-preview">
+                                            </a>
+
                                         </div>
                                     </div>
+
                                 </div>
-                                <script>
-                                    function readURL(input) {
-                                        if (input.files && input.files[0]) {
-
-                                            var reader = new FileReader();
-
-                                            reader.onload = function(e) {
-                                                $('.image-upload-wrap').hide();
-
-                                                $('.file-upload-image').attr('src', e.target.result);
-                                                $('.file-upload-content').show();
-
-                                                $('.image-title').html(input.files[0].name);
-                                            };
-
-                                            reader.readAsDataURL(input.files[0]);
-
-                                        } else {
-                                            removeUpload();
-                                        }
-                                    }
-
-                                    function removeUpload() {
-                                        $('.file-upload-input').replaceWith($('.file-upload-input').clone());
-                                        $('.file-upload-content').hide();
-                                        $('.image-upload-wrap').show();
-                                    }
-                                    $('.image-upload-wrap').bind('dragover', function() {
-                                        $('.image-upload-wrap').addClass('image-dropping');
-                                    });
-                                    $('.image-upload-wrap').bind('dragleave', function() {
-                                        $('.image-upload-wrap').removeClass('image-dropping');
-                                    });
-                                </script>
                             </div>
-
-
                         </div>
 
                         <hr class="my-4">
@@ -288,7 +261,7 @@
 
                         <div class="my-3">
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked>
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Exchange</label>
                             </div>
                             <div class="form-check form-switch">
@@ -305,7 +278,7 @@
                                     Valid price is required
                                 </div>
                             </div>
-                            <button class="w-100 text-center btn-edit btn-lg btn" type="submit">Confirm</button>
+                            <button class="w-100 text-center btn-edit btn-lg btn-confirm" type="submit">Confirm</button>
 
                         </div>
                     </form>
@@ -382,6 +355,37 @@
         })
     </script>
     <!-- End Tooltip -->
+    <script>
+        function checkradio() {
+            var exchange = document.getElementById('flexSwitchCheckDefault').checked;
+            var price = document.getElementById('flexSwitchCheckChecked').checked;
+            var thegia = document.getElementById('thegia');
+            if (price == true) {
+                thegia.style.display = "block";
+
+            } else {
+                thegia.style.display = "none";
+            }
+
+        }
+    </script>
+    <!-- ----- Zoom image---- -->
+    <script>
+        $(document).ready(function() {
+            $('.popup-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0, 1]
+                },
+
+            });
+        });
+    </script>
 </body>
 
 </html>
